@@ -1,3 +1,6 @@
 source/
 *.psd
+Anyway.esproj/*
+Anyway.esproj/
 Anyway.esproj
+*.esproj
