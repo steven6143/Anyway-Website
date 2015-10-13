@@ -33,7 +33,7 @@ a{
 	font-size: 1.6em;
 	background: #FFF;
 	height: auto;
-	border-top: 0.625em solid #2c3146;
+	border-top: 0.625em solid #333;
 	border-bottom: 0.125em solid rgba(0,0,0,0.1);
 	padding-bottom: 1.5em;
 }
@@ -63,52 +63,52 @@ h1 img{
 	height: auto;
 	border-bottom: 1px solid #DDD;
 	overflow: hidden;
-	-webkit-transition: all .2s ease-out 0s;
+	-webkit-transition: background-size .3s ease-out 0s;
 	background-color: #2C3146;
-	background-size: 1344px 315px;
-	background-position: top center;
+	background-size: 1230px 820px;
+	background-position: center center;
 	background-repeat: no-repeat;
 }
 .item:hover{
-	background-size: 1280px 300px;
-	-webkit-transition: all .2s ease-in 0s;
+	background-size: 1200px 800px;
+	-webkit-transition: background-size .15s ease-in 0s;
 	border-color: #FFF;
 }
 .inner-item{
 	position: relative;
 	background: rgba(250,250,250,1);
 	height: 100%;
-	-webkit-transition: all .3s ease-in 0s;
-	padding: 3em 0 1em;
+	-webkit-transition: background .3s ease-in 0s;
+	padding: 3em 0 2.4em;
 }
-.inner-item:hover{
+.item:hover .inner-item{
 	background: rgba(255,255,255,0);
-	-webkit-transition: all .15s ease-out 0s;
+	-webkit-transition: background .15s ease-out 0s;
 }
-.item-text{
-	-webkit-transition: all .2s ease-out 0s;
+.item-text, .item-text a{
+	-webkit-transition-duration: .15s;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-property: background, color;
 }
 .item:hover .item-text{
 	color: #FFF;
-	opacity: 0.95;
-	text-shadow: 0 .1em .1em rgba(0,0,0,0.2);
+	text-shadow: 0 .1em .2em rgba(0,0,0,0.2);
 }
 h2{
 	font-size: 3em;
 	font-family:"Merriweather", "HY CuSongTi", "Songti SC", serif;
 	font-weight: 700;
 	z-index: 999;
+	padding: 0 1em;
 }
 h2 span{
 	opacity: 0.4;
-	font-weight: 100;
+	font-weight: 400;
+	font-family: "Merriweather";
 }
-.item-logo{
-	margin: .18em 1em 0 0;
-	display: none;
-}
-.item-logo img{
-	max-width: 10em;
+h2 span:before{
+	content: "№ ";
+
 }
 .item-desc{
 	max-width: 60%;
@@ -117,31 +117,46 @@ h2 span{
 	text-align: left;
 	margin: 1.5em auto 1em;
 	width: 50em;
-	line-height: 1.5;
+	line-height: 1.65;
 	position: relative;
 	text-align: justify;
 	text-justify: ideographic;
 }
-.item-desc:before{
-	content: "“ ";
+.item-desc:before,
+.item-desc:after{
+	content: "“";
 	font-size: 1em;
-	font-weight: 300;
+	font-family: 'Times New Roman';
+	font-weight: 700;
 	position: absolute;
 	display: block;
 	font-size: 3em;
-	left: -0.5em;
-	top: -0.4em;
+	left: -0.6em;
+	top: -0.6em;
 	opacity: 0.2;
 }
+.item-desc:after{
+	content: "”";
+	left: none;
+	top: none;
+	position: static;
+	display: inline-block;
+	line-height: 0;
+	-webkit-transform: translate(0em, .6em);	
+}
 .item-meta{
-	margin: 1.5em 0 1em;
+	margin: 1.8em 0 0;
+	padding: 0 1em;
 	font-weight: 400;
 	width: 100%;
-	font-size: 1em;
+	font-size: 0.8em;
 	text-align: center;
 }
 .item-meta, .item-meta a{
 	color: #0cb;
+	text-decoration: none;
+}
+.item-meta a{
 }
 .item-meta span{
 	margin: 0 .5em;
@@ -157,22 +172,36 @@ h2 span{
 }
 .item-btns{
 	margin-top: 1em;
+	margin: 0 auto;
+	width: auto;
+	height: auto;
 }
 .item-btn{
-	display: block;
-	margin: 0 auto;
+	display: inline-block;
 	color: #fff;
-	background: #f60c3e;
 	border-radius: 2em;
-	padding: .2em .6em;
-	font-size: 0.8em;
+	padding: .2em .7em .25em .4em;
+	background: none;
+	font-size: 1.2em;
 	cursor: pointer;
 	font-weight: 700;
-	-webkit-transition: all .15s ease-in-out 0s;
+	margin: 0 .4em;
+	color: #333;
+	-webkit-transition: all .15s ease-in 0s;
 }
 .item:hover .item-btn{
-	background: rgba(255,255,255,1);
-	color: #333;
+	background: #fff;
+}
+.item-btn i{
+	color: #f60c3e;
+	-webkit-transition: color .15s ease-in 0s;
+}
+.item-btn:hover{
+	background: #f60c3e !important;
+	color: #fff;
+}
+.item-btn:hover i{
+	color: #fff;
 }
 /*~JD-full*/
 nav .item-logo{
@@ -211,14 +240,25 @@ h4{
 .footer{
 	clear: both;
 	font-size: 1.4em;
-	margin: 2em 0 2em;
+	padding: 2em 0 2em;
 	background: #fff;
+	height: auto;
 }
 .footer a{
 	font-weight: 700;
 	text-decoration: none;
 }
-
+/*~Small Reslotuion*/
+@media screen and (max-width: 1100px) {
+	.item-desc{
+		max-width: 70%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.item-desc{
+		max-width: 80%;
+	}
+}
 /*~Mobile*/
 @media screen and (max-device-width: 480px){
 	body{
@@ -227,15 +267,14 @@ h4{
 	*{
 		-webkit-transition: none !important;
 	}
-	.item:hover{
-		background-size: 1344px 315px;
-		background: none;
+	.item{
+		background-size: 1200px 800px;
 	}
 }
 
 /*~Unique Backgrounds*/
 .ep002{
-	background-color: #2a2a2a ;
+	background-color: #2e5f46 ;
 	background-image: url('images/bg-ep002.jpg');
 }
 .ep001{
@@ -244,5 +283,5 @@ h4{
 }
 .ark{
 	background-color: #a5a47d ;
-	background-image: url('images/company-bg-ark.jpg');
+	background-image: url('images/bg-ep000.jpg');
 }
