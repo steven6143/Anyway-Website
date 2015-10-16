@@ -8,55 +8,23 @@
 	<meta name="keywords" content="设计, 播客, JJ Ying, Leon Gao, podcast, 创意" />
 	<title>Anyway.fm • 设计杂谈</title>
 	<script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?KyKEPiHvwlg%3D" charset="utf-8"></script>
+	<link href='https://fonts.googleapis.com/css?family=Merriweather:400,700|Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" rev="stylesheet" href="main.css" type="text/css" media="all" />
 	<link rel="stylesheet" rev="stylesheet" href="css/fontello.css" type="text/css" media="all" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="js/skrollr.min.js"></script>
-	<script type="text/javascript" src="js/t.min.js"></script>
-	<script type="text/javascript">
-	/*<![CDATA[*/
-	var fin=!1;
-	
-	$(function(){
-	
-		$('#t').t({
-		
-			speed:60,
-			delay:0.3,
-			speed_vary:true,
-			mistype:30,
-			
-			typing:function(elem,chars_total,chars_left,_char){
-			if(_char=='*')foo();
-			},
-		
-			fin:function(){			
-				if(fin==!1){
-					fin=!!1; //avoids triggering after 'add' cmd
-						$('#t').find('.t-caret').css("display","none");
-				}
-			}
-		
-		});
-	
-	});
-	/*]]>*/
-	</script>
-	
 </head>
 	<body>					
-		<div class="main" id="skrollr-body">
+		<div class="main">
 							
 			<div class="section header">
 				<div class="inner-section inner-header">
 					<div class="logo">
-						<img src="images/logo-new.png" alt="Anyway • FM 设计杂谈" />
+						<h1>
+							<img src="images/logo.png" alt="Anyway • FM 设计杂谈" />
+						</h1>
+						<div class="subtitle">由 JJ Ying 和 Leon Gao 主持的设计杂谈</div>
+						<div class="nav">联系我们 • iTunes 订阅 • 荔枝 FM 订阅</div>
 					</div>
-					<div class="subtitle" id="t">Anyway.FM<ins>0.3</ins> 是一档<mark>播客</mark>节目，<ins>1</ins><br />
-						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们，<ins>0.6</ins><del>只懂扯谈</del><ins>0.6</ins><del>专注嘴炮 30 年</del><ins>0.6</ins><del>想赚一些奶粉钱<ins>0.6</ins></del><ins>0.6</ins>让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
-					</div>
-					<div class="nav"><a href="#"><i class="icon-mail-alt"></i> 联系我们</a><span></span><a href="#"><i class="icon-apple"></i> iTunes 订阅</a><span></span><a href="#"><i class="icon-signal"></i> 荔枝 FM 订阅</a></div>
 				</div>
 			</div>
 			
@@ -66,7 +34,7 @@
 				
 					<div class="item ep002">
 						<div class="inner-item">
-							<h1 class="item-text"><span>2</span> 当年的那些图标大师们</h1>
+							<h2 class="item-text"><span>2</span> 当年的那些图标大师们</h2>
 							<div class="item-meta">
 								<span class="item-text item-meta-people">主播：<a href="http://TuYueZhi.com">JJ Ying</a> & <a href="http://LeonGao.com">Leon Gao</a></span><span class="item-text item-meta-date">日期：2015 年 10 月 9 日</span>
 							</div>
@@ -74,8 +42,8 @@
 								比起「字体设计师」、「工业设计师」等可以追述一些年头的 title 来说，「图标设计师」出现的年限其实还是非常短暂的，即使是 GUI 时代的鼻祖 Susan Kare 这样的人物其实也就离我们二三十年的光景而已，但他们当中依然已经有了一些可以树碑立传的人物出现了。
 							</div>
 							<div id="st-trigger-effects" class="item-btns">
-								<button data-effect="st-effect-9" class="item-btn"><i class="icon-play-circled"></i> 立即收听</button>
-								<button data-effect="st-effect-9" class="item-btn"><i class="icon-info-circled"></i> 更多详情</button>
+								<button data-effect="st-effect-9" class="item-btn"><i class="demo-icon icon-play-circled"></i> 立即收听</button>
+								<button data-effect="st-effect-9" class="item-btn"><i class="demo-icon icon-info-circled"></i> 更多详情</button>
 							</div>
 						</div>
 					</div>
@@ -83,7 +51,7 @@
 					
 					<div class="item ep001">
 						<div class="inner-item">
-							<h1 class="item-text"><span>1</span> 日本街头的图形标识</h1>
+							<h2 class="item-text"><span>1</span> 日本街头的图形标识</h2>
 							<div class="item-meta">
 								<span class="item-text item-meta-people">主播：<a href="http://TuYueZhi.com">JJ Ying</a> & <a href="http://LeonGao.com">Leon Gao</a></span><span class="item-text item-meta-date">日期：2015 年 10 月 9 日</span>
 							</div>
@@ -91,7 +59,7 @@
 								好基友俩刚带着各自的老婆一起去游了一次日本，对于沿途日本所见的各种视觉设计进行了一番点评，从路牌到吉祥物，日本的设计处处透露出他的迷人。好基友俩刚从日本旅游回来，对于沿途日本所见所闻进行了一番点评，从路牌到吉祥物，日本的设计处处透露出他的迷人。
 							</div>
 							<div id="st-trigger-effects" class="item-btns">
-								<button data-effect="st-effect-9" class="item-btn"><i class="icon-play-circled"></i> 立即收听</button>
+								<button data-effect="st-effect-9" class="item-btn"><i class="demo-icon icon-play-circled"></i> 立即收听</button>
 							</div>
 						</div>
 					</div>
@@ -99,7 +67,7 @@
 					
 					<div class="item ep000">
 						<div class="inner-item">
-							<h1 class="item-text"><span>0</span> Anyway.FM 诞生志</h1>
+							<h2 class="item-text"><span>0</span> Anyway.FM 诞生志</h2>
 							<div class="item-meta">
 								<span class="item-text item-meta-date">日期：2015 年 10 月 9 日</span>
 							</div>
@@ -125,7 +93,7 @@
 						勉强算 85 后一枚 <i>/</i> 理科（微电子）出身，从做皮肤开始误入设计圈 <i>/</i> 专职 UI 设计，偶尔码码 CSS <i>/</i> 在惠普待了 4 年做打印机界面，来到百度做输入法和浏览器，目前是 MUX 上海部门的负责人，虽然待的地方都是大公司，但却是个野路子 + 实战派设计师 <i>/</i> 写了快十年设计博客：图月志 <i>/</i> 最近几年知乎上的比较多 <i>/</i> 十多年的红魔伪球迷 <i>/</i> 声音没 Leon 有磁性，很渣，大家多担待
 					</div>
 					<div class="about-links">
-						<a href="#" class="about-link"><i class="icon-dribbble"></i></a><a href="#" class="about-link"><i class="icon-weibo"></i></a><a href="#" class="about-link"><i class="icon-github"></i></a><a href="#" class="about-link"><i class="icon-instagram"></i></a><a href="#" class="about-link"><i class="icon-twitter"></i></a><a href="#" class="about-link"><i class="icon-flickr"></i></a>
+						<a href="#" class="about-link"><i class="demo-icon icon-dribbble"></i></a><a href="#" class="about-link"><i class="demo-icon icon-weibo"></i></a><a href="#" class="about-link"><i class="demo-icon icon-github"></i></a><a href="#" class="about-link"><i class="demo-icon icon-instagram"></i></a><a href="#" class="about-link"><i class="demo-icon icon-twitter"></i></a><a href="#" class="about-link"><i class="demo-icon icon-flickr"></i></a>
 					</div>
 				</div>
 				
@@ -136,7 +104,7 @@
 						男 <i>/</i> 上海宁 <i>/</i> 算算时间大概能挤进中国大陆第二批图形界面设计民工潮 <i>/</i> 9 年工作经验，换了肯定不止 9 家公司，至今没啥能拿的出手的产品来显摆，跟人吹牛逼的时候只好晒晒微软、惠普、frogdesign、小米以及我锤的工作经历 <i>/</i> 网络蝗虫，只要是新的物联网产品基本都能搜到这颗红色的头像 <i>/</i> 为人刻薄，怕麻烦不喜欢交朋友（漂亮妹子除外）<i>/</i> 哦，基本就这些
 					</div>
 					<div class="about-links">
-						<a href="#" class="about-link"><i class="icon-dribbble"></i></a><a href="#" class="about-link"><i class="icon-weibo"></i></a><a href="#" class="about-link"><i class="icon-github"></i></a><a href="#" class="about-link"><i class="icon-instagram"></i></a><a href="#" class="about-link"><i class="icon-twitter"></i></a>
+						<a href="#" class="about-link"><i class="demo-icon icon-dribbble"></i></a><a href="#" class="about-link"><i class="demo-icon icon-weibo"></i></a><a href="#" class="about-link"><i class="demo-icon icon-github"></i></a><a href="#" class="about-link"><i class="demo-icon icon-instagram"></i></a><a href="#" class="about-link"><i class="demo-icon icon-twitter"></i></a>
 					</div>
 				</div>
 				
@@ -147,8 +115,7 @@
 				© 2015 <a href="http://anyway.fm">Anyway • FM</a>. All rights reserved.  
 			</div>
 		</div>	
-
-<script type="text/javascript">var s=skrollr.init();</script>		
+		
 <!-- Analytics -->
 <script>
 var _hmt = _hmt || [];
