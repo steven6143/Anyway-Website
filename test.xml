@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+    <title>Anyway - 测试</title>
+    <itunes:subtitle>让你的听觉更懂视觉</itunes:subtitle>        
+    <link>http://Anyway.FM</link>
+    <atom:link href="http://Anyway.FM/test.xml" rel="self" type="application/rss+xml" />
+    <description>由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈类 Podcast</description>
+    <language>zh-CN</language>
+    <itunes:category text="Arts">
+      <itunes:category text="Design"/>
+      <itunes:category text="Visual Arts" />
+    </itunes:category>
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News"/>
+    </itunes:category>
+    <itunes:image href="http://anyway.b0.upaiyun.com/images/cover.png" />
+    <itunes:keywords>设计,UI,JJ Ying,Leon Gao,视觉,界面,anyway</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:author>JJ Ying &amp; Leon Gao</itunes:author>
+    <itunes:owner>
+        <itunes:name>JJ Ying &amp; Leon Gao</itunes:name>
+        <itunes:email>hello@anyway.fm</itunes:email>
+    </itunes:owner>
+<item>
+        <title>№2: 当年的那些图标大师们</title>
+        <description>
+            <![CDATA[比起「字体设计师」、「工业设计师」等可以追述一些年头的 title 来说，「图标设计师」出现的年限是非常短暂的，即使从第一代 GUI 出现的时间算起也就距我们二三十年的光景而已，但他们当中依然已经有了一些可以树碑立传的人物出现了。所以就让我们来看看这几位 Leon 和 JJ 都很敬仰的大师们。<a name="entrymore"></a><br/><br/><h2>本期主播</h2><span class="hosts-name"><a href="http://JJYing.com" >JJ Ying</a></span> UI 设计师，设计博客<a href="http://TuYueZhi.com" >图月志</a>博主<br/><span class="hosts-name"><a href="http://leongao.com" >Leon Gao</a></span> UI 设计师，张江搬砖男<br/><br/><h2>内容提要</h2><span class="contents-time">04'30"</span> Apple 的第一代设计师 Susan Kare<br/><span class="contents-time">16'43"</span> 前 Iconfactory 视觉设计师 David Lanham<br/><span class="contents-time">28'40"</span> Yellow Icon 创始人、前 Apple 设计师 Everaldo Coelho<br/><span class="contents-time">35'20"</span> 其他设计师<br/><br/><h2>参考链接</h2><ol><li><a href="http://www.kare.com/" >Susan Kare 的个人网站</a></li><li><a href="https://www.wikiwand.com/en/Susan_Kare" >Susan Kare 的维基页面</a></li><li><a href="http://www.guidebookgallery.org/screenshots/macos11" >早期的 Macintosh 系统界面</a></li><li><a href="http://zhuanlan.zhihu.com/designers/19567510" >一周一位设计师 - Susan Kare</a></li><li><a href="http://www.myfonts.com/person/Susan_Kare/" >Susan Kare 的字体作品</a></li><li><a href="http://dlanham.com/" >David Lanham 的个人网站</a></li><li><a href="http://www.douban.com/photos/album/1618403002/" >我们收集的 David Lanham 作品集</a></li><li><a href="http://sketches.dlanham.com/" >David 的草图</a></li><li><a href="http://bigtowers.tumblr.com/" >David 与人合作的漫画</a></li><li><a href="http://photos.dlanham.com/ " >David 的摄影作品</a></li><li><a href="http://pixelpalooza.com/graphics/pixelpalooza/previews/2003/p03_osx1.jpg" >David&nbsp;&nbsp;当年的参赛作品 Invading Your Space</a></li><li><a href="http://iconfactory.com/" >Iconfactory 官方网站</a></li><li><a href="http://iconfactory.com/freeware/preview/soma" >David 的第一代 Somatic 图标集</a></li><li><a href="http://iconfactory.com/freeware/preview/agua" >David 的 Auga 图标集</a></li><li><a href="https://itunes.apple.com/us/app/hatch/id718835727?mt=8" >由 David 设计的手机游戏 Hatch</a></li><li><a href="http://www.everaldo.com/" >Everaldo Coelho 个人网站</a></li><li><a href="http://www.douban.com/photos/album/1618403028/" >我们收集的 Everaldo Coelho 作品集</a></li><li><a href="https://commons.wikimedia.org/wiki/Crystal_Clear" >Crystal Clear Icons</a></li><li><a href="http://iconmoon.com/blog2/my-old-site-1/" >JJ 的第一版个人网站</a></li><li><a href="https://www.flickr.com/photos/_everaldo/" >Everaldo 的 Flickr 相册</a></li><li><a href="http://louiemantia.com/" >Mantia 的个人网站</a></li><li><a href="https://web.archive.org/web/20140602140247/http://mantia.me/blog/steve-jobs-and-i/" >Mantia 写的《Steve Jobs and I》短文</a></li><li><a href="http://www.douban.com/photos/album/1618407688/" >Icoeye 以及 Na Wong 的一些作品</a></li></ol>
+]]>
+        </description>
+        <link>http://anyway.fm/japan-street-visual-elements/#title</link>
+        <itunes:explicit>no</itunes:explicit>
+        <guid isPermaLink="true">http://anyway.fm/japan-street-visual-elements/#title</guid>
+        <author>JJ Ying,Leon Gao</author>
+        <itunes:image href="http://anyway.b0.upaiyun.com/images/poster-1.png" />
+        <pubDate>Tue, 3 Nov 2015 12:14:40 +0800</pubDate>
+        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-2-final.mp3"></enclosure>
+        <itunes:duration>00:44:29</itunes:duration>
+    </item>
+    
+
+
+    <item>
+        <title>№1: 日本街头的图形标识</title>
+        <description>
+            <![CDATA[第一期节目终于诞生了！好基友俩这次想聊一聊日本，最近刚带着各自的老婆一起去旅了一游，沿途所见的各种视觉设计让我们十分感慨，从路牌到吉祥物，日本的设计处处透露出他的迷人，除了崇洋媚的情绪之外也进行了一番点评。<br/><br/><h2>本期主播</h2><span class="hosts-name"><a href="http://JJYing.com" >JJ Ying</a></span> UI 设计师，设计博客<a href="http://TuYueZhi.com" >图月志</a>博主<br/><span class="hosts-name"><a href="http://leongao.com" >Leon Gao</a></span> UI 设计师，张江搬砖男<br/><br/><h2>内容提要</h2><span class="contents-time">05'45"</span> 日本的厕所标识和东亚人对繁复视觉设计的接受程度<br/><span class="contents-time">13'40"</span> 日本与中国的字体设计、品牌意识<br/><span class="contents-time">25'30"</span> 日本的独特的动漫文化<br/><span class="contents-time">30'10"</span> 最近频频出现的互联网企业换标：Google、Medium、Opera、500px、VSCO<br/><br/><h2>参考链接</h2><ol><li><a href="http://www.douban.com/photos/album/1618135740/" >Leon 和 JJ 在日本街头拍摄的照片相册</a></li><li><a href="http://www.wikiwand.com/zh/%E5%AE%B6%E7%B4%8B" >日本的家纹</a></li><li><a href="http://blog.justfont.com/2015/08/jf-crowdfunding/" >台湾 justfont 的「金萱」字体众筹计划</a></li><li><a href="http://iconmoon.com/blog2/medium-2-0/" >Medium 品牌的活泼化</a></li><li><a href="http://www.underconsideration.com/brandnew/archives/new_logo_for_medium_done_in_house_with_psyops.php" >Brand New 的 Medium 换标评论</a></li><li><a href="https://meetthenew.500px.com/" >500px 换标官方站点</a></li><li><a href="https://www.designernews.co/stories/57464-vscos-new-logo" >VSCO Cam 的新 logo</a></li><li><a href="http://blogs.opera.com/news/2015/09/opera-new-logo-and-brand-identity/" >Opera 换标官方通告</a></li></ol>
+]]>
+        </description>
+        <link>http://anyway.fm/japan-street-visual-elements/#title</link>
+        <itunes:explicit>no</itunes:explicit>
+        <guid isPermaLink="true">http://anyway.fm/japan-street-visual-elements/#title</guid>
+        <author>JJ Ying,Leon Gao</author>
+        <itunes:image href="http://anyway.b0.upaiyun.com/images/poster-1.png" />
+        <pubDate>Thu, 29 Oct 2015 12:58:40 +0800</pubDate>
+        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/anyway-1-final.mp3"></enclosure>
+        <itunes:duration>00:43:14</itunes:duration>
+    </item>
+    
+    <item>
+        <title>№0: 鬼畜试音 × 第一期花絮</title>
+        <description>
+            <![CDATA[两个 UI 设计师 Leon Gao 和 JJ Ying 的播客节目终于要播出了！  Anyway.FM 开播第一期内容墙裂预告：日本街头的视觉标识  <br/><br/>关于 Leon：男 / 上海宁 / 算算时间大概能挤进中国大陆第二批图形界面设计民工潮 / 9 年工作经验，换了肯定不止 9 家公司，至今没啥能拿的出手的产品来显摆，跟人吹牛逼的时候只好晒晒微软、惠普、frogdesign、小米以及我锤的工作经历 / 网络蝗虫，只要是新的物联网产品基本都能搜到这颗红色的头像 / 为人刻薄，怕麻烦不喜欢交朋友（漂亮妹子除外）/ 哦，基本就这些<br/><br/>关于 JJ：勉强算 85 后一枚 / 理科（微电子）出身，从做皮肤开始误入设计圈 / 专职 UI 设计，偶尔码码 CSS / 在惠普待了 4 年做打印机界面，来到百度做输入法和浏览器，目前是 MUX 上海部门的负责人，虽然待的地方都是大公司，但却是个野路子 + 实战派设计师 / 写了快十年设计博客：图月志 / 最近几年知乎上的比较多 / 十多年的红魔伪球迷 / 声音没 Leon 有磁性，很渣，大家多担待]]>
+        </description>
+        <link>http://anyway.fm/anyway-fm-released/#title</link>
+        <itunes:explicit>no</itunes:explicit>
+        <guid isPermaLink="true">http://anyway.fm/anyway-fm-released/#title</guid>
+        <author>JJ Ying,Leon Gao</author>
+        <itunes:image href="http://anyway.b0.upaiyun.com/images/poster-0.png" />
+        <pubDate>Thu, 29 Oct 2015 11:58:40 +0800</pubDate>
+        <enclosure type="audio/mpeg" url="http://anyway.b0.upaiyun.com/audio/ng-1.mp3"></enclosure>
+        <itunes:duration>00:00:41</itunes:duration>
+    </item>    
+        
+</channel>
+</rss>
