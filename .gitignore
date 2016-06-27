@@ -1,8 +1,20 @@
 source/
 *.psd
-Anyway.esproj/*
-Anyway.esproj/
-Anyway.esproj
+*.esproj/*
 *.esproj
 *.espressostorage
 config.codekit
+.DS_Store
+Archive
+config.codekit
+temp
+Source Files
+data
+bak
+attachment
+temp
+template/default
+rss.txt
+Website - History
+Source
+*.psd
