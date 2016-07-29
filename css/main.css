@@ -114,6 +114,17 @@ mark{
 .tagline del{
 	text-decoration: none;
 }
+.t-caret{
+	animation: caretFlash .7s ease-out 0s infinite alternate;
+	transition: all .2s ease-out;
+}
+@keyframes caretFlash {
+	0% {opacity: 0;}
+	20% {opacity: 0;}
+	40% {opacity: 1;}
+	80% {opacity: 1;}
+	100% {opacity: 0;}
+}
 .nav{
 	margin:0 0 2em;
 	color: #333;
