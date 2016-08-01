@@ -28,7 +28,7 @@ input, select{
 }
 textarea{
 	font-size:12px; 
-	font-family: 'Tisa OT','Meta Serif OT',Corbel,'Hiragino Sans GB';
+	font-family: 'Tisa UBB','Meta Serif OT',Corbel,'Hiragino Sans GB';
 }
 option, textarea, select{
 	border:1px solid #999;
