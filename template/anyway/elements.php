@@ -142,8 +142,20 @@ $elements['displayfooter']=<<<eot
 		<a href="#"><img src="http://anyway-web.b0.upaiyun.com/images/logo-mini.png" alt="Anyway × FM 设计杂谈" /></a>
 	</div>
 	<div class="nav">
-		<a href="mailto:hello@anyway.fm" onclick="_hmt.push(['_trackEvent', 'contact', 'E-mail', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/mail2.svg" class="nav-icon"/> 联系我们</a><span></span><a href="http://weibo.com/anywayfm" onclick="_hmt.push(['_trackEvent', 'contact', 'Weibo', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/weibo2.svg" class="nav-icon"/> 微博</a><span></span><a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/> RSS</a><span></span><a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/> 荔枝 FM</a><span></span><a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg" class="nav-icon"/> 网易云音乐</a><span></span><a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/> iOS 播客</a>
+		<a href="javascript:loadScript('js/search.js','abc');"><img src="http://anyway-web.b0.upaiyun.com/images/mail2.svg" class="nav-icon"/> 搜索</a><span></span>
+		<a href="mailto:hello@anyway.fm" onclick="_hmt.push(['_trackEvent', 'contact', 'E-mail', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/mail2.svg" class="nav-icon"/> 联系我们</a><span></span>
+		<a href="http://weibo.com/anywayfm" onclick="_hmt.push(['_trackEvent', 'contact', 'Weibo', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/weibo2.svg" class="nav-icon"/> 微博</a><span></span>
+		<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/> RSS</a><span></span>
+		<a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/> 荔枝 FM</a><span></span>
+		<a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg" class="nav-icon"/> 网易云音乐</a><span></span>
+		<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/> iOS 播客</a>
 	</div>
+</div>
+
+<!--Search Bar-->
+<div class="search-bar">
+	<input type="text" class="st-default-search-input">
+	<a href="javascript:closeSearchbar();" class="search-close">取消</a>
 </div>
 
 <!-- Nav Bar -->
@@ -157,6 +169,32 @@ $(function() {
 		}
 	    setTimeout(arguments.callee, 40);
 });
+</script>
+
+<!-- Load Search JS -->
+<script type="text/javascript">
+function loadScript(url,callback){
+	$('.search-bar').addClass('search-bar-show');
+   var script = document.createElement("script");
+   script.type = "text/javascript"; 
+   script.src = url;
+   if (script.readyState){//IE 
+      script.onreadystatechange = function(){ 
+         if (script.readyState ==  "loaded" || script.readyState == "complete"){ 
+            script.onreadystatechange = null;
+            eval(callback + '()');
+         } 
+      }; 
+   } else { //Others: Firefox, Safari, Chrome, and Opera 
+      script.onload = function(){ 
+         eval(callback + '()');
+      }; 
+   }
+   document.body.appendChild(script);
+}
+function closeSearchbar() {
+	$('.search-bar').removeClass('search-bar-show');
+}
 </script>
 
 <!-- Baidu Analytics -->
