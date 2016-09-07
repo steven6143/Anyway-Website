@@ -142,7 +142,7 @@ $elements['displayfooter']=<<<eot
 		<a href="#"><img src="http://anyway-web.b0.upaiyun.com/images/logo-mini.png" alt="Anyway × FM 设计杂谈" /></a>
 	</div>
 	<div class="nav">
-		<a href="javascript:loadScript('js/search.js','abc');"><img src="http://anyway-web.b0.upaiyun.com/images/mail2.svg" class="nav-icon"/> 搜索</a><span></span>
+		<a href="javascript:loadScript('js/search.js','abc');"><img src="http://anyway-web.b0.upaiyun.com/images/search2.svg" class="nav-icon"/> 搜索</a><span></span>
 		<a href="mailto:hello@anyway.fm" onclick="_hmt.push(['_trackEvent', 'contact', 'E-mail', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/mail2.svg" class="nav-icon"/> 联系我们</a><span></span>
 		<a href="http://weibo.com/anywayfm" onclick="_hmt.push(['_trackEvent', 'contact', 'Weibo', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/weibo2.svg" class="nav-icon"/> 微博</a><span></span>
 		<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/> RSS</a><span></span>
@@ -154,7 +154,9 @@ $elements['displayfooter']=<<<eot
 
 <!--Search Bar-->
 <div class="search-bar">
+	<div class="search-text">标题、内容都可以搜~<br />实在搜不到请出门右转发邮件</div>
 	<input type="text" class="st-default-search-input">
+	
 	<a href="javascript:closeSearchbar();" class="search-close">取消</a>
 </div>
 

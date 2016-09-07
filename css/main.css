@@ -146,7 +146,6 @@ mark{
 	opacity: 1;
 }
 .nav span{
-	opacity: 0.5;
 	margin: 0 1.2em;
 }
 .nav-icon{
@@ -236,7 +235,7 @@ mark{
 	position: fixed;
 	height: auto;
 	background: #f60c3e;
-	top: -10em;
+	top: -20em;
 	opacity: 0;
 	left: 0;
 	z-index: 99999;
@@ -246,6 +245,12 @@ mark{
 	opacity: 1;
 	top: 0;
 }
+.search-text{
+	font-size: 1.3em;
+	line-height: 1.35;
+	color: #fff;
+	padding: 2em 0 0;
+}
 .search-bar .st-default-search-input{
 	border-radius: 0 !important;
 	margin: 1em 0 .5em;
@@ -253,7 +258,22 @@ mark{
 }
 .search-close{
 	display: block;
-	padding: .5em 0 1em;
+	padding: .5em 0;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.5em;
+	width: 5em;
+	margin: .5em auto 1em;
+	background: rgba(0, 0, 0, .15);
+}
+.search-close:hover{
+	background: rgba(0, 0, 0, .25);
+}
+.search-close:before{
+	content: "× ";
+	font-weight: 900;
+	font-size: 1em;
 }
 /*~Content*/
 .content{
@@ -953,7 +973,7 @@ h2 .h2-icon{
 		background-size: 1200px 800px;
 	}
 	.tagline{
-		font-size: 1.5rem;
+		font-size: 1.35rem;
 		font-weight: 900;
 		height: 4.5rem;
 	}
@@ -964,6 +984,9 @@ h2 .h2-icon{
 		display: block;
 		vertical-align: baseline;
 		font-size: 0.75em;
+	}
+	.nav span{
+		margin: 0 .9em;
 	}
 	h2{
 		margin-left: 0;
