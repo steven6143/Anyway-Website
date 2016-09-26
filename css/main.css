@@ -7,6 +7,7 @@ http://jjying.com*/
 	vertical-align: baseline;
 	outline: none;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 body{
 	text-rendering: optimizeLegibility;
