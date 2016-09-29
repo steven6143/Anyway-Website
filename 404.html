@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="all" name="robots" />
+	<meta name="author" content="JJ Ying" />
+	<meta name="description" content="Anyway.FM × 设计杂谈" />
+	<meta name="keywords" content="设计, 播客, JJ Ying, Leon Gao, podcast, 创意, 线下活动" />
+	<title>Anyway.404</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/favicon.png" />
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			vertical-align: baseline;
+			outline: none;
+			box-sizing: border-box;
+			-webkit-tap-highlight-color: transparent;
+		}
+		.main{
+			height: 100%;
+			height: 100vh;
+			width: 100%;
+			width: 100vw;
+			display: block;
+			background: #f60c3e;
+		}
+		.logo{
+			width: 50rem;
+			max-width: 80%;
+			margin: 0 auto;
+			position: relative;
+			top: 50%;
+			display: block;
+			transform: translateY(-50%);
+		}
+		.logo img{
+		 width: 100%;
+		}
+		.footer{
+			position: fixed;
+			bottom: 2em;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #fff;
+			opacity: .6;
+			font-weight: 400;
+			font-size: .7em;
+		}
+		.footer a{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>					
+<div class="main">
+	<a href="http://Anyway.FM" class="logo" title="返回 Anyway.FM 主页">
+		<img src="http://anyway-web.b0.upaiyun.com/images/404.png" alt="页面打不开我也没办法啊"/>
+	</a>
+	
+	<div class="footer">
+		<div class="inner-footer">
+			© 2016 <a href="http://Anyway.FM">Anyway.FM</a> 我们保留特喵的所有权利。 
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">var s=skrollr.init();</script>
+
+<!--Countdown-->
+<script type="text/javascript">
+	nowTime = Date.parse(new Date());
+	endTime = Date.parse("Oct 29, 2016 14:00");
+	dayDiff = Math.ceil(( endTime - nowTime ) / 1000 / 60 / 60 / 24);
+	if (dayDiff < 0) {
+		showDay = "00";
+	}
+	else if (dayDiff < 10) {
+		showDay = "0" + dayDiff;
+	}
+	else {
+		showDay = dayDiff;
+	}
+	$(".remaining-days").html(showDay);
+</script>
+
+<!-- Analytics -->
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?d6fc362c05908e5ce8d17df52dbc2586";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+<!-- Scroll Code -->
+	<script type="text/javascript">
+		$(function() {
+		  $('a[href*="#"]:not([href="#"])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
+	</script>
+
+
+</body>
+</html>
