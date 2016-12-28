@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="JJ Ying" />
+	<title>Anyway.FM 的 2016 年度总结</title>
+	<meta name="description" content="Anyway.FM 的 2016 年度总结度总结" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/favicon.ico" />
+	<script src="http://anyway-web.b0.upaiyun.com/2016/js/jquery-1.9.1.min.js"></script>
+	<script src="http://anyway-web.b0.upaiyun.com/2016/js/jquery.mousewheel.js"></script>
+	<script>
+	$(function(){
+		$("#page-wrap").wrapInner("<table cellspacing='0'><tr>");
+		$(".post").wrap("<td></td>");
+		$("body").mousewheel(function(event, delta) {
+			this.scrollLeft -= (delta * 30);
+			event.preventDefault();
+		});   
+	});
+	</script>
+	<style>
+	*{
+		margin: 0; 
+		padding: 0; 
+	}
+	body{ 
+		font-size: 62.5%; 
+		font-family: sans-serif;
+		background: #f7f7f7;
+		color: #4d4d4d; 
+	}
+	tr{ 
+		vertical-align: top;
+	}
+	.full{
+		width: 1400px;
+		height: 652px;
+	}
+	.post .bg{ 
+		display: block;
+	}
+	.leon{
+		width: 160px;
+		position: fixed;	
+		left: 25%;
+	}
+	#music-control{
+		position: fixed !important;	
+		left: none !important;
+		right: 20px;
+		top: 20px;
+		display: block;
+		width: 40px;
+		height: 40px;
+		z-index: 999;
+	}
+	.play{
+		background: url('http://anyway-web.b0.upaiyun.com/2016/images/sound.gif') no-repeat center center;
+	}
+	.pause{
+		background: url('http://anyway-web.b0.upaiyun.com/2016/images/sound2.gif') no-repeat center center;
+	}
+	.main{
+		position: absolute;
+		opacity: 1;
+		top: 0;
+	}
+	/*~Mobile*/
+	@media screen and (max-device-width: 480px){
+		.full{
+			width: 1120px;
+			height: 522px;
+			max-height: 85vh;
+		}
+		.leon{
+			width: 128px;
+		}
+		#music-control{
+			display: none;
+		}
+		audio{
+			display: none;
+		}
+	}
+	
+	</style>
+</head>
+
+<body>
+
+	<img src="http://anyway-web.b0.upaiyun.com/2016/images/leon1.gif" class="full leon"/>
+	<a href="#" id="music-control" class="play"></a>
+
+	<div id="page-wrap">
+		
+		<div class="post post-1">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg1.gif" class="full bg"/>
+		</div>
+		
+		<div class="post post-2">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg2.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-joke.gif" class="full main main-1"/>
+		</div>
+		
+		<div class="post post-3">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg4.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-episodes.gif" class="full main main-2"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg2.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-weekdays.gif" class="full main main-3"/>
+		</div>
+				
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg3.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-years.gif" class="full main main-4"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg2.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-guests.gif" class="full main main-5"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg3.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-links.gif" class="full main main-6"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg4.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-most-played.gif" class="full main main-7"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg2.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-members.gif" class="full main main-8"/>
+		</div>
+		
+		<div class="post">
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/bg3.gif" class="full bg"/>
+			<img src="http://anyway-web.b0.upaiyun.com/2016/images/main-friends.gif" class="full main main-9"/>
+		</div>
+		
+		<div class="post">
+			<a href="http://Anyway.FM" class="full main main-10" target="_blank"><img src="http://anyway-web.b0.upaiyun.com/2016/images/hero.gif" class="full main"/></a>			
+		</div>
+	
+	</div>
+	
+<!-- ~Baidu Analytics -->
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?d6fc362c05908e5ce8d17df52dbc2586";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+<!-- ~BGM -->
+
+
+<audio id='bgm' src='http://anyway-web.b0.upaiyun.com/2016/bgm.mp3' autoplay loop></audio>
+
+<script type="text/javascript">
+	var yourAudio = document.getElementById('bgm'),
+	    ctrl = document.getElementById('music-control');
+	
+	ctrl.onclick = function () {
+	
+	    var pause = ctrl.className === 'pause';
+	    ctrl.className = pause ? 'play' : 'pause';
+	
+	    var method = pause ? 'play' : 'pause';
+	    yourAudio[method]();
+	
+	    return false;
+	};
+	
+	function addOnBlurListener(onBlurCallback, onFocusCallback) {
+	  var hidden, visibilityState, visibilityChange; // check the visiblility of the page
+	
+	  if (typeof document.hidden !== "undefined") {
+	    hidden = "hidden"; visibilityChange = "visibilitychange"; visibilityState = "visibilityState";
+	  } else if (typeof document.mozHidden !== "undefined") {
+	    hidden = "mozHidden"; visibilityChange = "mozvisibilitychange"; visibilityState = "mozVisibilityState";
+	  } else if (typeof document.msHidden !== "undefined") {
+	    hidden = "msHidden"; visibilityChange = "msvisibilitychange"; visibilityState = "msVisibilityState";
+	  } else if (typeof document.webkitHidden !== "undefined") {
+	    hidden = "webkitHidden"; visibilityChange = "webkitvisibilitychange"; visibilityState = "webkitVisibilityState";
+	  }
+	
+	
+	  if (typeof document.addEventListener === "undefined" || typeof hidden === "undefined") {
+	    // not supported
+	  } else {
+	    document.addEventListener(visibilityChange, function() {
+	      switch (document[visibilityState]) {
+	        case "visible":
+	          if (onFocusCallback) onFocusCallback();
+	          break;
+	        case "hidden":
+	          if (onBlurCallback) onBlurCallback();
+	          break;
+	      }
+	    }, false);
+	  }
+	}
+	
+	function muteAudio() {
+	  var audios = document.getElementsByTagName('audio'),
+	    i, len = audios.length;
+	  for (i = 0; i < len; i++) {
+	    console.log(audios[i]);
+	    audios[i].muted = true;
+	  }
+	
+	}
+	
+	function unMuteAudio() {
+	  var audios = document.getElementsByTagName('audio'),
+	    i, len = audios.length;
+	  for (i = 0; i < len; i++) {
+	    console.log(audios[i]);
+	    audios[i].muted = false;
+	  }
+	
+	}
+	
+	addOnBlurListener(muteAudio, unMuteAudio);
+
+</script>
+
+</body>
+</html>

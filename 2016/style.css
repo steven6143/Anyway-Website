@@ -1,0 +1,63 @@
+*{
+	margin: 0; 
+	padding: 0; 
+}
+body{ 
+	font-size: 62.5%; 
+	font-family: sans-serif;
+	background: #f7f7f7;
+	color: #4d4d4d; 
+}
+tr{ 
+	vertical-align: top;
+}
+.full{
+	width: 1400px;
+	height: 652px;
+}
+.post .bg{ 
+	display: block;
+}
+.leon{
+	width: 160px;
+	position: fixed;	
+	left: 25%;
+}
+#music-control{
+	position: fixed !important;	
+	left: none !important;
+	right: 20px;
+	top: 20px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	z-index: 999;
+}
+.play{
+	background: url('images/sound.gif') no-repeat center center;
+}
+.pause{
+	background: url('images/sound2.gif') no-repeat center center;
+}
+.main{
+	position: absolute;
+	opacity: 1;
+	top: 0;
+}
+/*~Mobile*/
+@media screen and (max-device-width: 480px){
+	.full{
+		width: 1120px;
+		height: 522px;
+		max-height: 85vh;
+	}
+	.leon{
+		width: 128px;
+	}
+	#music-control{
+		display: none;
+	}
+	audio{
+		display: none;
+	}
+}
