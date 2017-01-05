@@ -12,8 +12,8 @@ $elements['header']=<<<eot
 		<link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="all" />
 		<link rel="stylesheet" rev="stylesheet" href="http://anyway-web.b0.upaiyun.com/css/fontello.css" type="text/css" media="all" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="js/t.min.js"></script>
+		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/t.min.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="Anyway.FM" href="http://anyway.fm/rss.xml" />
 		<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/favicon.ico" />
 		<link rel="apple-touch-icon" href="http://anyway-web.b0.upaiyun.com/images/apple-touch-icon-precomposed.png">
