@@ -10,7 +10,6 @@ $elements['header']=<<<eot
 		<title>{pagetitle}Anyway.FM × 设计杂谈 × 由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客</title>
 		{baseurl}
 		<link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="all" />
-		<link rel="stylesheet" rev="stylesheet" href="http://anyway-web.b0.upaiyun.com/css/fontello.css" type="text/css" media="all" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/t.min.js"></script>
@@ -58,7 +57,13 @@ $elements['displayheader']=<<<eot
 						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们<em>，</em><ins>0.4</ins><del>就喜欢扯谈设计</del><ins>0.4</ins><del>专注嘴炮 30 年</del><ins>0.4</ins><del>想赚一些奶粉钱<ins>0.4</ins></del><ins>0.6</ins>想让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
 					</div>		<a name="title"></a>
 					<div class="nav">
-						<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a><span></span><a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> iOS 播客</a><span></span><a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-header-nav'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi.svg" class="nav-icon"/> 荔枝 FM 订阅</a>
+						<a  class="mobile-hide" href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
+						<span class="mobile-hide"></span>
+						<a href="http://music.163.com/#/djradio?id=4969001" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-header-nav'])" data-balloon="在网易云音乐上订阅"><img src="http://anyway-web.b0.upaiyun.com/images/netease.svg" class="nav-icon"/> 网易云音乐</a>
+						<span></span>
+						<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"  data-balloon="在其他泛用型播客客户端中可以直接输入这个 RSS 来订阅"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a>
+						<span></span>
+						<a href="http://eepurl.com/cx2kIz" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> Anyway 邮报</a>
 					</div>
 				</div>
 			</div>  <!--End of 'Header'-->
@@ -208,6 +213,10 @@ function closeSearchbar() {
 	  s.parentNode.insertBefore(hm, s);
 	})();
 </script>
+
+<!-- Extra CSS -->
+<link rel="stylesheet" rev="stylesheet" href="http://anyway-web.b0.upaiyun.com/css/fontello.css" type="text/css" media="all" />
+<link rel="stylesheet" rev="stylesheet" href="http://anyway-web.b0.upaiyun.com/css/balloon.min.css" type="text/css" media="all" />
 
 eot;
 
