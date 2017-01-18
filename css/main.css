@@ -952,6 +952,10 @@ h2 .h2-icon{
 		-moz-transition: none !important;
 		-ms-transition: none !important;
 	}
+	.mobile-hide{
+		display: none !important;
+		visibility: hidden;
+	}
 	.about-name, .ds-user-name, h2{
 		font-family: sans-serif !important;
 	}
