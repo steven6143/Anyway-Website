@@ -6,7 +6,7 @@ $elements['header']=<<<eot
 		<meta charset="utf-8">
 		<meta content="all" name="robots" />
 		<meta name="author" content="JJ Ying" />
-		<meta name="description" content="Anyway.FM × 设计杂谈，由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客" />
+		<meta name="description" content="Anyway.FM × 设计杂谈，由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客，曾入选 2015 年度 Apple 年度最佳播客榜单" />
 		<title>{pagetitle}Anyway.FM × 设计杂谈 × 由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客</title>
 		{baseurl}
 		<link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="all" />
@@ -74,6 +74,12 @@ $elements['mainpage']=<<<eot
 		<div class="section content">
 			<div class="inner-section inner-content">
 				{mainpart}
+			</div>
+		</div>
+
+		<div class="section page-bar">
+			<div class="inner-section">
+				{pagebar}
 			</div>
 		</div>
 eot;
