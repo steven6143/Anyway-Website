@@ -51,17 +51,17 @@ $elements['displayheader']=<<<eot
 			<div class="section header">
 				<div class="inner-section inner-header">
 					<div class="logo">
-						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition"><img src="http://anyway-web.b0.upaiyun.com/images/logo.gif" alt="Anyway × FM 设计杂谈" /></a>
+						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition"><img src="http://anyway-web.b0.upaiyun.com/images/logo.gif" alt="Anyway.FM × 设计杂谈" /></a>
 					</div>
 					<div class="tagline" id="t"><i>Anyway.FM</i> 是一档<mark>播客</mark>节目，<ins>1</ins><br />
 						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们<em>，</em><ins>0.4</ins><del>就喜欢扯谈设计</del><ins>0.4</ins><del>专注嘴炮 30 年</del><ins>0.4</ins><del>想赚一些奶粉钱<ins>0.4</ins></del><ins>0.6</ins>想让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
 					</div>		<a name="title"></a>
 					<div class="nav">
-						<a  class="mobile-hide" href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
+						<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
 						<span class="mobile-hide"></span>
 						<a href="http://music.163.com/#/djradio?id=4969001" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-header-nav'])" data-balloon="在网易云音乐上订阅"><img src="http://anyway-web.b0.upaiyun.com/images/netease.svg" class="nav-icon"/> 网易云音乐</a>
 						<span></span>
-						<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"  data-balloon="在其他泛用型播客客户端中可以直接输入这个 RSS 来订阅"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a>
+						<a class="mobile-hide" href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"  data-balloon="在其他泛用型播客客户端中可以直接输入这个 RSS 来订阅"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a>
 						<span></span>
 						<a href="https://tinyletter.com/anyway-fm" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> Anyway 邮报</a>
 					</div>
@@ -107,7 +107,6 @@ $elements['displayfooter']=<<<eot
 	<div class="section body-text inner-about">
 	
 		<div class="about-single about-jj">
-			<!--<div class="about-avatar about-avatar-jj"><img src="http://anyway-web.b0.upaiyun.com/images/avatar-jj.jpg" alt="JJ Ying" /></div>-->
 			<div class="about-name">JJ <span>Ying</span></div>
 			<div class="about-desc">
 				勉强算 85 后 <i>/</i> 理科出身，从做皮肤开始误入设计圈 <i>/</i> 专职 UI 设计，偶尔码码 CSS <i>/</i> 在惠普待了 4 年做打印机界面，来到百度做输入法和浏览器，目前是 MUX 上海部门的负责人，虽然待的地方都是大公司，但却是个野路子 + 实战派设计师 <i>/</i> 写了快十年设计博客：<a href="http://TuYueZhi.com">图月志</a> <i>/</i> 最近几年<a href="http://www.zhihu.com/people/jjying">知乎</a>上的比较多 <i>/</i> 十多年的红魔伪球迷 <i>/</i> 声音没 Leon 有磁性，大家多担待
@@ -118,7 +117,6 @@ $elements['displayfooter']=<<<eot
 		</div>
 		
 		<div class="about-single about-leon">
-			<!--<div class="about-avatar about-avatar-leon"><img src="http://anyway-web.b0.upaiyun.com/images/avatar-leon.jpg" alt="Leon Gao" /></div>-->
 			<div class="about-name">Leon <span>Gao</span></div>
 			<div class="about-desc">
 				男 <i>/</i> 上海宁 <i>/</i> 算算时间大概能挤进中国大陆第二批图形界面设计民工潮 <i>/</i> 9 年工作经验，换了肯定不止 9 家公司，至今没啥能拿的出手的产品来显摆，跟人吹牛逼的时候只好晒晒微软、惠普、frogdesign、小米以及我锤的工作经历 <i>/</i> 网络蝗虫，只要是新的互联网产品基本都能搜到这颗红色的头像 <i>/</i> 为人刻薄，怕麻烦不喜欢交朋友（漂亮妹子除外）<i>/</i> 哦，基本就这些
