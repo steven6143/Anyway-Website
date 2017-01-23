@@ -46,12 +46,30 @@ $initialjs
 <script type="text/javascript" src="images/js/common.js"></script>
 <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
-
 //<![CDATA[
 var ajaxloadingIMG='admin/theme/{$themename}/ajaxloader.gif';
 var shutajax={$shutajax};
 //]]>
 </script>
+<script type="text/javascript">
+	  
+	function keypress2() //textarea输入长度处理   
+	{  
+	    var text1 = document.getElementById("entrysummary").value;  
+	    var len; //记录剩余字符串的长度
+	    var show = len + " 字";  
+	    if (text1.length >= 75) //textarea控件不能用maxlength属性，就通过这样显示输入字符数了   
+	    {  
+	        document.getElementById("entrysummary").value = text1.substr(0, 300);  
+	        len = text1.length - 75; 
+	        show = "-" + len + " 字";  
+	    } else {  
+	        len = 75 - text1.length;  
+	        show = len + " 字";  
+	    }  
+	    document.getElementById("charnumber").innerText = show;  
+	}  
+</script>  
 <script type="text/javascript" src="images/js/admin.js"></script>
 <script type="text/javascript" src="images/js/ajax.js"></script>
 <script type="text/javascript" src="images/js/adminmenu.js"></script>
