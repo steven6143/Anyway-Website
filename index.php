@@ -89,7 +89,7 @@ include_once ("inc/mod_basic.php");
 include_once ("data/mods.php");
 $extraheader=$mbcon['extraheader']."\n".@implode("\n", $section_prebody);
 
-$headerhtml=$t->set('header', array('blogname'=>$config['blogname'], 'blogdesc'=>$config['blogdesc'], 'csslocation'=>$csslocation, 'pagetitle'=>$pagetitle, 'ajax_js'=>$ajax_js, "extraheader"=>$extraheader, "blogkeywords"=>'<!--global:{additionalkeywords}-->'.$config['blogkeywords'], 'baseurl'=>$baseurl, 'language'=>$langname['languagename'], 'codeversion'=>$codeversion));
+$headerhtml=$t->set('header', array('blogname'=>$config['blogname'], 'blogdesc'=>$config['blogdesc'], 'csslocation'=>$csslocation, 'pagetitle'=>$pagetitle, 'pagedesc'=>$pagedesc, 'ajax_js'=>$ajax_js, "extraheader"=>$extraheader, "blogkeywords"=>'<!--global:{additionalkeywords}-->'.$config['blogkeywords'], 'baseurl'=>$baseurl, 'language'=>$langname['languagename'], 'codeversion'=>$codeversion));
 
 //Admin notification
 //$headerhtml.=$headerhtml_notifyadmin;

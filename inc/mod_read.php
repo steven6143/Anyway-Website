@@ -145,4 +145,4 @@ if (!$is_preview) {
 //announcebar();
 $ifannouncement="none";
 $bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none', 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>@implode('', $section_body_main), 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
-$pagetitle="{$records[0]['title']} × ";
+$pagetitle="{$records[0]['title']} • ";

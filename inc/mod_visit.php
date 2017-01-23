@@ -288,7 +288,7 @@ if ($job=='search') {
 		$mainpart=$t->set('contentpage', array('title'=>"{$lnc[224]} {$keyword}", 'contentbody'=>$showresult));
 		announcebar();
 		$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none', 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$mainpart, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
-		$pagetitle="{$lnc[225]} × ";
+		$pagetitle="{$lnc[225]} • ";
 	} else {
 		$pinch=array();
 		foreach ($result as $item) {
@@ -360,7 +360,7 @@ if ($job=='viewresult') {
 
 	$iftoppage=($mbcon['pagebarposition']=='down') ? 'none' : 'block';
 	$ifbottompage=($mbcon['pagebarposition']=='up') ? 'none' : 'block';
-	$pagetitle="{$lnc[225]} × ";
+	$pagetitle="{$lnc[225]} • ";
 	$mainpart=$t->set('contentpage', array('title'=>"{$lnc[224]} {$keyword}", 'contentbody'=>@implode('', $section_body_main)));
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>$pagebar, 'iftoppage'=>$iftoppage, 'ifbottompage'=>$ifbottompage, 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$mainpart, 'currentpage'=>$pageitems['currentpage'], 'previouspageurl'=>$pageitems['previouspageurl'], 'nextpageurl'=>$pageitems['nextpageurl'], 'turningpages'=>$pageitems['turningpages'], 'totalpages'=>$pageitems['totalpages'], 'previouspageexists'=>$pageitems['previouspageexists'], 'nextpageexists'=>$pageitems['nextpageexists']));

@@ -25,9 +25,7 @@ a{
 	color: #333;
 	cursor: hand;
 	z-index: 9999;
-	-webkit-transition: color .15s ease-in 0s;
-	-moz-transition: color .15s ease-in 0s;
-	-ms-transition: color .15s ease-in 0s;	
+	transition: color .15s ease-in 0s;
 }
 ::selection{ 
 	background: #f60c3e;
@@ -67,24 +65,17 @@ a{
 	border-bottom: 0.125rem dotted #ddd;
 	overflow: hidden;
 }
-@-webkit-keyframes 'bg-move' {
-	0% { background-position: 0px 0;}
-	100% {background-position: 0px 500px;}
-}
-@-moz-keyframes bg-move {
-	0% { background-position: 0px 0;}
-	100% {background-position: 0px 500px;}
-}
-@-ms-keyframes 'bg-move' {
-	0% { background-position: 0px 0;}
-	100% {background-position: 0px 500px;}
-}
 .logo{
 	max-width: 20em;
 	margin: 0 auto;
 }
 .logo img{
 	max-width: 100%;
+}
+.logo span{
+	text-indent: -9900px;
+	display: block;
+	line-height: 0;
 }
 .tagline{
 	font-size: 3rem;
@@ -139,9 +130,7 @@ mark{
 	display: inline-block;
 	height: 1.4rem;
 	vertical-align: middle;
-	-webkit-transition: opacity .15s ease-in 0s;
-	-moz-transition: opacity .15s ease-in 0s;	
-	-ms-transition: opacity .15s ease-in 0s;
+	transition: opacity .15s ease-in 0s;
 }
 .nav a:hover{
 	opacity: 1;
@@ -155,14 +144,10 @@ mark{
 	vertical-align: top;
 }
 .nav a img{
-	-webkit-transition: all .15s ease-in 0s;
-	-moz-transition: all .15s ease-in 0s;
-	-ms-transition: all .15s ease-in 0s;	
+	transition: all .15s ease-in 0s;
 }
 .nav a:hover img{
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
+	transform: scale(1.2);
 }
 /*~Mini Header*/
 .mini-header{
@@ -174,12 +159,8 @@ mark{
 	right: 0;
 	top: 0;
 	padding: .5rem;
-	-webkit-transition: all .5s ease-in 0s;
-	-moz-transition: all .5s ease-in 0s;	
-	-ms-transition: all .5s ease-in 0s;	
-	-webkit-transform: translate(0,-100px);
-	-moz-transform: translate(0,-100px);
-	-ms-transform: translate(0,-100px);		
+	transition: all .5s ease-in 0s;
+	transform: translate(0,-100px);
 }
 .mini-header .mini-logo{
 	top: 0;
@@ -207,17 +188,13 @@ mark{
 	margin: .5rem 1rem;
 	color: #fff;
 	top: 1rem;
-	-webkit-transition: all .15s ease-in 0s;
-	-moz-transition: all .15s ease-in 0s;
-	-ms-transition: all .15s ease-in 0s;
+	transition: all .15s ease-in 0s;
 }
 .mini-header .nav a{
 	color: #fff;
 	opacity: .8;
 	color: #fff;
-	-webkit-transition: all .15s ease-in 0s;
-	-moz-transition: all .15s ease-in 0s;
-	-ms-transition: all .15s ease-in 0s;	
+	transition: all .15s ease-in 0s;
 }
 .mini-header .nav a:hover{
 	opacity: 1;
@@ -225,9 +202,7 @@ mark{
 }
 .mini-show{
 	display: block;
-	-webkit-transform: translate(0,0);	
-	-moz-transform: translate(0,0);
-	-ms-transform: translate(0,0);	
+	transform: translate(0,0);	
 }
 /*~Search Bar*/
 .search-bar{
@@ -294,9 +269,7 @@ mark{
 	background: #fff;
 	height: 100%;
 	padding: 3em 0 2em;
-	-webkit-transition: background .15s ease-in 0s;
-	-moz-transition: background .15s ease-in 0s;
-	-ms-transition: background .15s ease-in 0s;	
+	transition: background .15s ease-in 0s;
 }
 .item:hover .inner-item{
 }
@@ -309,9 +282,7 @@ h1{
 	line-height: 1.26;
 	z-index: 999;
 	padding: 0 .5em;
-	-webkit-transition: color .15s ease-in 0s;
-	-moz-transition: color .15s ease-in 0s;
-	-ms-transition: color .15s ease-in 0s;
+	transition: color .15s ease-in 0s;
 }
 .single-page h1{
 	padding-top: .5em;
@@ -322,9 +293,7 @@ h1 a{
 }
 h1 a:hover{
 	color: #f60c3e;
-	-webkit-transition: color .15s ease-in 0s;
-	-moz-transition: color .15s ease-in 0s;
-	-ms-transition: color .15s ease-in 0s;	
+	transition: color .15s ease-in 0s;
 }
 h1 span{
 	opacity: 1;
@@ -332,12 +301,6 @@ h1 span{
 	vertical-align: super;
 	font-size: 0.5em;
 	margin-right: .5em;	
-}
-h1 span:before{
-	content: "№ ";
-}
-.item:hover h1 span{
-	opacity: 1;
 }
 .item-desc{
 	color: #666;
@@ -493,9 +456,7 @@ h2 .h2-icon{
 	border: none !important;
 	margin: 0 1.2em;
 	color: #333;
-	-webkit-transition: all .15s ease-in 0s;
-	-moz-transition: all .15s ease-in 0s;
-	-ms-transition: all .15s ease-in 0s;		
+	transition: all .15s ease-in 0s;
 	vertical-align: middle;	
 }
 .item:hover .item-btn{
@@ -513,14 +474,10 @@ h2 .h2-icon{
 	color: #fff;
 }
 .item-btn img{
-	-webkit-transition: all .15s ease-in 0s;
-	-moz-transition: all .15s ease-in 0s;
-	-ms-transition: all .15s ease-in 0s;	
+	transition: all .15s ease-in 0s;
 }
 .item-btn:hover img{
-	-webkit-transform: scale(1.2);
-	-moz-transform: scale(1.2);
-	-ms-transform: scale(1.2);
+	transform: scale(1.2);
 }
 /*~Page bar*/
 .page-bar{
@@ -631,9 +588,7 @@ h2 .h2-icon{
 	margin: .2em .2em 0;
 	line-height: 1.8rem;
 	vertical-align: middle;
-	-webkit-transition: all .12s ease-in 0s;
-	-moz-transition: all .12s ease-in 0s;
-	-ms-transition: all .12s ease-in 0s;	
+	transition: all .12s ease-in 0s;
 	font-family: sans-serif;
 }
 .about-links a:hover{
@@ -785,9 +740,7 @@ h2 .h2-icon{
 	border-radius: 0 !important;
 	border: none !important;
 	margin: 15px 0 0 5px !important;
-	-webkit-transition: all .15s ease-in 0s !important;
-	-moz-transition: all .15s ease-in 0s !important;
-	-ms-transition: all .15s ease-in 0s !important;	
+	transition: all .15s ease-in 0s !important;
 }
 .ds-textarea-wrapper textarea{
 	background: #fff !important;
@@ -846,9 +799,7 @@ h2 .h2-icon{
 	background: #333 !important;
 	color: #fff !important;
 	border-radius: 0 !important;
-	-webkit-transition: all .15s ease-in-out 0s;
-	-moz-transition: all .15s ease-in-out 0s;
-	-ms-transition: all .15s ease-in-out 0s;
+	transition: all .15s ease-in-out 0s;
 	width: 5rem !important;
 	height: 2rem !important;
 }
@@ -885,8 +836,6 @@ h2 .h2-icon{
 	padding: 4em 2em 4.3em;
 	line-height: 1.2;
 	font-weight: 300;
-	-webkit-transition: all .15s ease-in;
-	-moz-transition: all .15s ease-in;
 	transition: all .15s ease-in;
 	background: #fff;
 	text-decoration: none;
@@ -901,8 +850,6 @@ h2 .h2-icon{
 	width: auto;
 	color: #333;
 	margin-top: .1em;
-	-webkit-transition: all .15s ease-in;
-	-moz-transition: all .15s ease-in;
 	transition: all .15s ease-in;	
 }
 .next-entry a:hover{
@@ -980,9 +927,7 @@ h2 .h2-icon{
 /*~Mobile*/
 @media screen and (max-device-width: 480px){
 	*{
-		-webkit-transition: none !important;
-		-moz-transition: none !important;
-		-ms-transition: none !important;
+		transition: none !important;
 	}
 	.mobile-hide{
 		display: none !important;

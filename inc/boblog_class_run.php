@@ -458,7 +458,7 @@ class getblogs extends boblog {
 	}
 
 	function output ($entry, $way='excerpt', $contentonly=false) {
-		global $mbcon, $section_body, $permission, $adminlist, $userdetail, $config, $categories, $weather, $t, $section_bodys, $part, $page, $template, $lnc, $tptvalue, $flset;
+		global $mbcon, $section_body, $permission, $adminlist, $userdetail, $config, $categories, $weather, $t, $section_bodys, $part, $page, $template, $lnc, $tptvalue, $flset, $pagedesc;
 		if (!@is_a($t, 'template')) {
 			$t=new template;
 		}
@@ -470,7 +470,7 @@ class getblogs extends boblog {
 		list($entrydatey, $entrydatem, $entrydated)=explode('/', gmdate('Y/n/j', ($entry['pubtime']+3600*$config['timezone'])));
 		$entrydatemnamefull=gmdate('F', ($entry['pubtime']+3600*$config['timezone']));
 		$entrydatemnameshort=gmdate('M', ($entry['pubtime']+3600*$config['timezone']));
-		
+
 		$time0 = time()+3600*$config['timezone'];  //获取当前时间戳
 		$today0am = strtotime(date('Y-m-d',$time0));   //获取今天凌晨的时间戳
 		$yesterday0am = strtotime(date('Y-m-d',strtotime('-1 day',$time0)));  //获取昨天凌晨的时间戳
@@ -566,16 +566,10 @@ class getblogs extends boblog {
 				$aprotectedone=1;
 			} else {
 				if ($way=='excerpt') {
-					if ($entry['entrysummary']) {
-						$entry['content']=$entry['entrysummary'];
+					$entry['content']=str_replace('[newpage]', '[separator]', $entry['content']);
+					if (strstr($entry['content'], '[separator]'))  {
+						@list($entry['content'])=@explode('[separator]', $entry['content']);
 						$notfinish=1;
-					}
-					else {
-						$entry['content']=str_replace('[newpage]', '[separator]', $entry['content']);
-						if (strstr($entry['content'], '[separator]'))  {
-							@list($entry['content'])=@explode('[separator]', $entry['content']);
-							$notfinish=1;
-						}
 					}
 				}
 				else {
@@ -642,7 +636,7 @@ class getblogs extends boblog {
 		
 		//Episode Number
 		if ($entry['originsrc']) {
-			$entrysourcewithlink="<span>{$entry['originsrc']}</span>";
+			$entrysourcewithlink="<span>№ {$entry['originsrc']}</span>";
 		}
 		
 		//Play Audio
@@ -652,7 +646,13 @@ class getblogs extends boblog {
 		else {
 			$playaudio="";
 		}
-		
+		//Set page meta description
+		if ($entry['entrysummary']){
+			$pagedesc = $entry['entrysummary'];
+		}
+		else {
+			$pagedesc = "由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客，曾入选 2015 年度 Apple 年度最佳播客榜单";
+		}
 		//Hosts Name
 		if ($entry['pinged']) {
 			$hostsname="<span class=\"item-text item-meta-hosts\">{$entry['pinged']}</span>";	
@@ -660,7 +660,7 @@ class getblogs extends boblog {
 		
 
 		//Start Template
-		$section_bodys[]=$t->set($way, array('entryid'=>$entry['blogid'], 'entryicon'=>$entryicon, 'entrytitle'=>$entrytitle, 'entrydate'=>$entrydate,  'entrytime'=>$entrytime, 'entryauthor'=>$entryauthor, 'entrycontent'=>$entrycontent, 'iftags'=>$iftags, 'tags'=>$tags, 'alltags'=>$alltags, 'entrycate'=>$entrycate, 'entrycateicon'=>$entrycateicon, 'entrycomment'=>$entrycomment, 'entrytb'=>$entrytb, 'entrycatealias'=>$entrycatealias, 'entryviews'=>$entryviews, 'ifadmin'=>$ifadmin, 'adminbar'=>$adminbar, 'tbbar'=>$tbbar, 'previous'=>$previous, 'next'=>$next, 'ifedited'=>$editby, 'toolbar'=>$toolbar, 'topid'=>$topid, 'entrystar'=>$entrystar, 'entrytitletext'=>$entry['title'], 'entryrelurl'=>get_entry_url($entry['blogid'], $entry['blogalias']), 'entryabsurl'=>"{$config['blogurl']}/".get_entry_url($entry['blogid'], $entry['blogalias']), 'entrydatey'=>$entrydatey, 'entrydatem'=>$entrydatem, 'entrydater'=>$entrydater, 'todaydate'=>$todaydate, 'entrydated'=>$entrydated, 'entrycommentnum'=>$entry['replies'], 'entrytbnum'=>$entry['tbs'], 'entryviewsnum'=>$entry['views'], 'entrytbnumwithlink'=>$entrytbnumwithlink, 'entrytburl'=>$entrytburl, 'previousentryexist'=>$previousentryexist, 'previousentrytitle'=>$previousentrytitle, 'previousentryurl'=>$previousentryurl, 'nextentryexist'=>$nextentryexist, 'nextentrytitle'=>$nextentrytitle, 'nextentryurl'=>$nextentryurl, 'entrydatemnamefull'=>$entrydatemnamefull, 'entrydatemnameshort'=>$entrydatemnameshort, 'entrysourcewithlink'=>$entrysourcewithlink, 'pinged'=>$pinged, 'playaudio'=>$playaudio, 'hostsname'=>$hostsname, 'entrysource'=>$entry['comefrom'], 'entrysourcelink'=>$entry['originsrc'], 'adminlink'=>$adminlink));
+		$section_bodys[]=$t->set($way, array('entryid'=>$entry['blogid'], 'entryicon'=>$entryicon, 'entrytitle'=>$entrytitle, 'entrydate'=>$entrydate,  'entrytime'=>$entrytime, 'entryauthor'=>$entryauthor, 'entrycontent'=>$entrycontent, 'iftags'=>$iftags, 'tags'=>$tags, 'alltags'=>$alltags, 'entrycate'=>$entrycate, 'entrycateicon'=>$entrycateicon, 'entrycomment'=>$entrycomment, 'entrytb'=>$entrytb, 'entrycatealias'=>$entrycatealias, 'entryviews'=>$entryviews, 'ifadmin'=>$ifadmin, 'adminbar'=>$adminbar, 'tbbar'=>$tbbar, 'previous'=>$previous, 'next'=>$next, 'ifedited'=>$editby, 'toolbar'=>$toolbar, 'topid'=>$topid, 'entrystar'=>$entrystar, 'entrytitletext'=>$entry['title'], 'entryrelurl'=>get_entry_url($entry['blogid'], $entry['blogalias']), 'entryabsurl'=>"{$config['blogurl']}/".get_entry_url($entry['blogid'], $entry['blogalias']), 'entrydatey'=>$entrydatey, 'entrydatem'=>$entrydatem, 'entrydater'=>$entrydater, 'todaydate'=>$todaydate, 'entrydated'=>$entrydated, 'entrycommentnum'=>$entry['replies'], 'entrytbnum'=>$entry['tbs'], 'entryviewsnum'=>$entry['views'], 'entrytbnumwithlink'=>$entrytbnumwithlink, 'entrytburl'=>$entrytburl, 'previousentryexist'=>$previousentryexist, 'previousentrytitle'=>$previousentrytitle, 'previousentryurl'=>$previousentryurl, 'nextentryexist'=>$nextentryexist, 'nextentrytitle'=>$nextentrytitle, 'nextentryurl'=>$nextentryurl, 'entrydatemnamefull'=>$entrydatemnamefull, 'entrydatemnameshort'=>$entrydatemnameshort, 'entrysourcewithlink'=>$entrysourcewithlink, 'pinged'=>$pinged, 'playaudio'=>$playaudio, 'hostsname'=>$hostsname, 'entrysource'=>$entry['comefrom'], 'entrysourcelink'=>$entry['originsrc'], 'entrydesc'=>$entry['entrysummary'], 'adminlink'=>$adminlink));
 	}
 
 	function save_a_text ($entry) {
@@ -760,7 +760,7 @@ class getblogs extends boblog {
 	}
 
 	function rss_xml ($rssbody) {
-		global $mbcon, $adminlist, $userdetail, $config, $categories, $pagetitle, $t, $langname;
+		global $mbcon, $adminlist, $userdetail, $config, $categories, $pagetitle, $t, $langname, $pagedesc;
 		if (!@is_a($t, 'template')) {
 			$t=new template;
 		}
@@ -925,6 +925,7 @@ class getblogs extends boblog {
 			$t=new template;
 		}
 		$entrytitle=$entry['pagetitle'];
+
 		$entrydate=zhgmdate("{$mbcon['timeformat']}", ($entry['pagetime']+3600*$config['timezone'])); 
 		$entrytime=gmdate('H:i', ($entry['pagetime']+3600*$config['timezone'])); 
 		list($entrydatey, $entrydatem, $entrydated)=explode('/', gmdate('Y/n/j', ($entry['pagetime']+3600*$config['timezone'])));
@@ -941,6 +942,7 @@ class getblogs extends boblog {
 		//Start Template
 		$section_bodys[]=$t->set('viewpage', array('entrytitle'=>$entrytitle, 'entrydate'=>$entrydate,  'entrytime'=>$entrytime, 'entryauthor'=>$entryauthor, 'entrycontent'=>$entrycontent, 'entrytitletext'=>$entry['pagetitle'],'entrydatey'=>$entrydatey, 'entrydatem'=>$entrydatem, 'entrydated'=>$entrydated));
 		return $section_bodys;
+		
 	}
 
 
@@ -989,4 +991,3 @@ class getblogs extends boblog {
 		return $outhtml;
 	}
 }
-

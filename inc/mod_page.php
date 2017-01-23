@@ -33,4 +33,4 @@ if ($plugin_closesidebar==1) $elements['mainpage']=str_replace("class=\"content\
 $ifannouncement="none";
 $bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none', 'ifannouncement'=>'none', 'topannounce'=>'', 'mainpart'=>@implode('', $section_body_main), 'previouspageexists'=>'', 'nextpageexists'=>''));
 
-$pagetitle="{$records[0]['pagetitle']} × ";
+$pagetitle="{$records[0]['pagetitle']} • ";

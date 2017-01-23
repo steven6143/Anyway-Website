@@ -3,11 +3,11 @@ $elements['header']=<<<eot
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cmn-Hans">
 	<head>
-		<meta charset="utf-8">
+		<title>{pagetitle}Anyway.FM 设计杂谈 • UI 设计师 JJ 和 Leon 主播的设计播客</title>
+		<meta charset="UTF-8">
 		<meta content="all" name="robots" />
 		<meta name="author" content="JJ Ying" />
-		<meta name="description" content="Anyway.FM × 设计杂谈，由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客，曾入选 2015 年度 Apple 年度最佳播客榜单" />
-		<title>{pagetitle}Anyway.FM × 设计杂谈 × 由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客</title>
+		<meta name="description" content="{pagedesc}"/>
 		{baseurl}
 		<link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="all" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -51,7 +51,9 @@ $elements['displayheader']=<<<eot
 			<div class="section header">
 				<div class="inner-section inner-header">
 					<div class="logo">
-						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition"><img src="http://anyway-web.b0.upaiyun.com/images/logo.gif" alt="Anyway.FM × 设计杂谈" /></a>
+						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition">
+						<img src="http://anyway-web.b0.upaiyun.com/images/logo.gif" alt="Anyway.FM 设计杂谈 • UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客" />
+						<span class="desc">Anyway.FM 设计杂谈 • UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客</span></a>
 					</div>
 					<div class="tagline" id="t"><i>Anyway.FM</i> 是一档<mark>播客</mark>节目，<ins>1</ins><br />
 						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们<em>，</em><ins>0.4</ins><del>就喜欢扯谈设计</del><ins>0.4</ins><del>专注嘴炮 30 年</del><ins>0.4</ins><del>想赚一些奶粉钱<ins>0.4</ins></del><ins>0.6</ins>想让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
@@ -77,7 +79,7 @@ $elements['mainpage']=<<<eot
 			</div>
 		</div>
 
-		<div class="section page-bar">
+		<div class="section page-bar" style="display: {ifbottompage}">
 			<div class="inner-section">
 				{pagebar}
 			</div>
@@ -319,9 +321,8 @@ function relativetime($time) {
 
 
 $elements['viewentry']=<<<eot
-<div class="item  {entrycatealias} single-page">
+<div class="item {entrycatealias} single-page">
 	<div class="inner-item">
-		
 		<h1 class="item-text">{entrysourcewithlink}{entrytitle}</h1>
 		<div class="item-meta">
 			{hostsname}<span class="item-text item-meta-date">{entrydater}</span>{ifadmin}

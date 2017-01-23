@@ -99,7 +99,7 @@ if ($job=='comment') {
 
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>$innerpages, 'iftoppage'=>$iftoppage, 'ifbottompage'=>$ifbottompage, 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>@implode('', $section_body_main), 'currentpage'=>$pageitems['currentpage'], 'previouspageurl'=>$pageitems['previouspageurl'], 'nextpageurl'=>$pageitems['nextpageurl'], 'turningpages'=>$pageitems['turningpages'], 'totalpages'=>$pageitems['totalpages'], 'previouspageexists'=>$pageitems['previouspageexists'], 'nextpageexists'=>$pageitems['nextpageexists']));
-	$pagetitle="{$lnc[196]} × ";
+	$pagetitle="{$lnc[196]} • ";
 }
 
 if ($job=='tb') {
@@ -119,7 +119,7 @@ if ($job=='tb') {
 
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>$innerpages, 'iftoppage'=>$iftoppage, 'ifbottompage'=>$ifbottompage, 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>@implode('', $section_body_main), 'currentpage'=>$pageitems['currentpage'], 'previouspageurl'=>$pageitems['previouspageurl'], 'nextpageurl'=>$pageitems['nextpageurl'], 'turningpages'=>$pageitems['turningpages'], 'totalpages'=>$pageitems['totalpages'], 'previouspageexists'=>$pageitems['previouspageexists'], 'nextpageexists'=>$pageitems['nextpageexists']));
-	$pagetitle="{$lnc[198]} × ";
+	$pagetitle="{$lnc[198]} • ";
 }
 
 if ($job=='userlist') {
@@ -162,7 +162,7 @@ if ($job=='userlist') {
 	$section_body_main=$t->set('contentpage', array('title'=>$lnc[208], 'contentbody'=>$section_table));
 	announcebar();
 	$bodymenu=$t->set('mainpage', array('pagebar'=>$innerpages, 'iftoppage'=>$iftoppage, 'ifbottompage'=>$ifbottompage, 'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>$pageitems['currentpage'], 'previouspageurl'=>$pageitems['previouspageurl'], 'nextpageurl'=>$pageitems['nextpageurl'], 'turningpages'=>$pageitems['turningpages'], 'totalpages'=>$pageitems['totalpages'], 'previouspageexists'=>$pageitems['previouspageexists'], 'nextpageexists'=>$pageitems['nextpageexists']));
-	$pagetitle="{$lnc[208]} × ";
+	$pagetitle="{$lnc[208]} • ";
 }
 
 if ($job=='archivelist') {

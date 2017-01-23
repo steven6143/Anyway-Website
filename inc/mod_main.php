@@ -98,7 +98,7 @@ switch ($job) {
 		$counter_now=$blog->countbyquery("SELECT COUNT(blogid) FROM `{$db_prefix}blogs` {$limitation2}  `category` in ({$all_needed_cates})");
 		$urlpattern=getlink_category($itemid, '%s', '1');
 		if ($flset['modeselectable']!=1) $pagebaritem="";
-		$pagetitle="{$categories[$itemid]['catename']} × ";
+		$pagetitle="{$categories[$itemid]['catename']} • ";
 		if ($mbcon['cate_list']==1) {
 			$partialquery="{$limitation2} `category` in ({$all_needed_cates}) ORDER BY `sticky`DESC, `pubtime` DESC";
 			$perpagevalue=$mbcon['listitemperpage'];
@@ -138,7 +138,7 @@ switch ($job) {
 
 		$timeperiod_start=gmmktime(0, 0, 0, $month, 1, $year);
 		$archiveformat=($mbcon['archiveformat']=='custom') ? $mbcon['customarchiveformat'] : $mbcon['archiveformat'];
-		$pagetitle=zhgmdate($archiveformat, $timeperiod_start)." {$lnc[106]} × ";
+		$pagetitle=zhgmdate($archiveformat, $timeperiod_start)." {$lnc[106]} • ";
 
 		if ($mbcon['archive_list']==1) {
 			$perpagevalue=$mbcon['listitemperpage'];
@@ -161,7 +161,7 @@ switch ($job) {
 		$counter_now=$blog->countbyquery("SELECT COUNT(blogid) FROM `{$db_prefix}blogs` {$limitation2}  `pubtime`>'{$timeperiod_start}' AND `pubtime`<'{$timeperiod_end}' ORDER BY `pubtime` DESC");
 		$urlpattern=getlink_date($year, $month, $day, '%s', '1');
 		if ($flset['modeselectable']!=1) $pagebaritem="";
-		$pagetitle="{$year}/{$month}/{$day} {$lnc[106]} × ";
+		$pagetitle="{$year}/{$month}/{$day} {$lnc[106]} • ";
 		$partialquery="{$limitation2} `pubtime`>'{$timeperiod_start}' AND `pubtime`<'{$timeperiod_end}' ORDER BY `pubtime` DESC";
 		if ($mbcon['showday_list']==1) {
 			$perpagevalue=$mbcon['listitemperpage'];
