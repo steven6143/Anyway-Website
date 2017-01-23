@@ -873,3 +873,17 @@ input[name='newmin']{
 	left: 190px;
 	background: #fff;
 }
+#summaryway{
+	display: none;
+}
+.entrysummary{
+	width: 890px;
+}
+#entrysummary{
+	width: 100% !important;
+	margin: 3px 0;
+}
+#charnumber{
+	font-size: .75em;
+	opacity: .4;
+}

@@ -135,9 +135,7 @@ if ($job=='edit') { //Initialize Edit only items
 	}
 	$records['pub_tmp']=gmdate('Y-n-j-H-i-s', $records['pubtime']+$config['timezone']*3600);
 
-	if ($records['entrysummary']) $entrysummaryplus1=" selected";
-	elseif ($records['frontpage']==1) $entrysummaryplus2=" selected";
-	else $entrysummaryplus0=" selected";
+	$entrysummaryplus0=" selected";
 
 	$quickbutton_bottom=($records['property']>=3) ? "<input type=button value=\"Draft\" class=\"formbutton formbutton2\" onclick=\"publishdraftnow();\";>" : "<input type=button value=\"Draft\" class=\"formbutton formbutton2\" onclick=\"savetodraftnow();\";>";
 
@@ -275,11 +273,12 @@ $display_overall.= <<<eot
 
 <div class="editor-meta-row editor-meta-row-4">
 	<div class="editor-meta-column">
+		<span class="editor-meta-title">摘要</span><div id="charnumber"></div>
 		<select name='summaryway' id='summaryway'><option value="0"{$entrysummaryplus0}>-more- 标签</option><option value="2"{$entrysummaryplus2}>不出现在首页</option><option value="1"{$entrysummaryplus1}>额外指定摘要</option></select>
 	</div>
 	<div class="editor-meta-column editor-meta-column-4">	
-		<div id='entrysummary'>
-			<textarea style="width: 790px; height: 100px" name="entrysummary" id="entrysummary">{$records['entrysummary']}</textarea>
+		<div class='entrysummary'>
+			<textarea style="width: 790px; height: 100px" name="entrysummary" id="entrysummary" onkeyup="keypress2()" onblur="keypress2()">{$records['entrysummary']}</textarea>
 		</div>
 	</div>
 </div>
@@ -386,7 +385,7 @@ if ($job=='store' || $job=='restore') {
 		$content=safe_convert($content, 1, 1);
 	}
 
-	if ($summaryway==1) {
+	if ($summaryway==0) {
 		//Get content-summary
 		$entrysummary=$_POST['entrysummary'];
 		//If magic quotes is on, strip the slashes automatically added
@@ -407,7 +406,7 @@ if ($job=='store' || $job=='restore') {
 		}
 	} else $entrysummary='';
 
-	$frontpage=($summaryway==2) ? 1 : 0;
+	$frontpage = 0;
 
 	$title=safe_convert(stripslashes($title));
 
