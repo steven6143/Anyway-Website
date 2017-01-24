@@ -125,12 +125,12 @@ form{
 .edit-entry{
 	font-size:16px;
 	line-height:27px;
-	width:100%;
+	width: 100%;
 	box-sizing: border-box;
 	color:#444;
-	height:380px;
+	height: 480px;
 	padding:18px;
-	margin:10px 0 0;
+	margin: 10px 0 0;
 	background: #fcfcfc;	
 	border-color: #e1e1e1;
 }
@@ -801,7 +801,7 @@ input[name='newmin']{
 .editor-meta{
 	width: 100%;
 	clear: both;
-	height: 240px;
+	height: 176px;
 }
 .editor-meta-row{
 	width: 100%;

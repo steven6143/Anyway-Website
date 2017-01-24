@@ -278,7 +278,7 @@ $display_overall.= <<<eot
 	</div>
 	<div class="editor-meta-column editor-meta-column-4">	
 		<div class='entrysummary'>
-			<textarea style="width: 790px; height: 100px" name="entrysummary" id="entrysummary" onkeyup="keypress2()" onblur="keypress2()">{$records['entrysummary']}</textarea>
+			<textarea style="width: 790px; height: 40px" name="entrysummary" id="entrysummary" onkeyup="keypress2()" onblur="keypress2()">{$records['entrysummary']}</textarea>
 		</div>
 	</div>
 </div>
