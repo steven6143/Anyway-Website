@@ -14,7 +14,7 @@ $elements['header']=<<<eot
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/t.min.js"></script>
 		<link rel="alternate" type="application/rss+xml" title="Anyway.FM" href="http://anyway.fm/rss.xml" />
-		<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/favicon.ico" />
+		<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/images/favicon.png" />
 		<link rel="apple-touch-icon" href="http://anyway-web.b0.upaiyun.com/images/apple-touch-icon-precomposed.png">
 		<script type="text/javascript">
 		/*<![CDATA[*/
@@ -60,11 +60,11 @@ $elements['displayheader']=<<<eot
 					</div>		<a name="title"></a>
 					<div class="nav">
 						<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
-						<span class="mobile-hide"></span>
+						<span></span>
 						<a href="http://music.163.com/#/djradio?id=4969001" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-header-nav'])" data-balloon="在网易云音乐上订阅"><img src="http://anyway-web.b0.upaiyun.com/images/netease.svg" class="nav-icon"/> 网易云音乐</a>
 						<span></span>
 						<a class="mobile-hide" href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"  data-balloon="在其他泛用型播客客户端中可以直接输入这个 RSS 来订阅"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a>
-						<span></span>
+						<span class="mobile-hide"></span>
 						<a href="https://tinyletter.com/anyway-fm" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> Anyway 邮报</a>
 					</div>
 				</div>
@@ -134,7 +134,8 @@ $elements['displayfooter']=<<<eot
 
 <div class="section subscribe">
 	<div class="inner-section inner-subscribe">
-		<div class="body-text subscribe-text">在 <img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/>iOS 播客 App 里收听请<mark><a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-subscribe-section'])">点这里</a></mark>或者搜索 Anyway.FM，<br />使用泛用型播客客户端可通过 <mark><a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/>RSS</a></mark> 订阅，<br /><mark><a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/>荔枝 FM</a></mark> 和 <mark><a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg"/>网易云音乐</a></mark> 上也能找到我们。
+		<div class="body-text subscribe-text">在 <img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/>Apple 播客 App 里收听请<mark><a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-subscribe-section'])">点这里</a></mark>或者搜索 Anyway.FM，<br />使用泛用型播客客户端可通过 <mark><a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/>RSS</a></mark> 订阅，<br />
+		 <mark><a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg"/>网易云音乐</a></mark> 和 <mark><a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/>荔枝 FM</a></mark> 上也能找到我们。
 		</div>
 
 	</div>
@@ -158,7 +159,7 @@ $elements['displayfooter']=<<<eot
 		<a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/> RSS</a><span></span>
 		<a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/> 荔枝 FM</a><span></span>
 		<a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg" class="nav-icon"/> 网易云音乐</a><span></span>
-		<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/> iOS 播客</a>
+		<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/> Apple 播客</a>
 	</div>
 </div>
 

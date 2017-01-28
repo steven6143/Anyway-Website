@@ -9,10 +9,29 @@ http://jjying.com*/
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
+/*~Fonts*/
+@font-face {
+    font-family: 'Anyway Type';
+    src: url('http://anyway-web.b0.upaiyun.com/font/calluna-sans-regular.woff') format('woff'),
+	    	url('http://anyway-web.b0.upaiyun.com/font/calluna-sans-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+}
+@font-face {
+    font-family: 'Anyway Type';
+	src: url('http://anyway-web.b0.upaiyun.com/font/calluna-sans-bold.woff') format('woff'),
+    		url('http://anyway-web.b0.upaiyun.com/font/calluna-sans-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;    
+}
+/*~Main*/
 body{
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	font-size: 62.5%;
-	font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Anyway Type', 'Myriad Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	text-align: center;
 	color: #333;
 	line-height: 1;
@@ -24,7 +43,6 @@ body{
 a{
 	color: #333;
 	cursor: hand;
-	z-index: 9999;
 	transition: color .15s ease-in 0s;
 }
 ::selection{ 
@@ -86,7 +104,7 @@ a{
 	height: 9rem;
 	font-weight: 900;
 	overflow: visible !important;
-	font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	font-family: 'Anyway Type', 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 	opacity: 0;
 }
 .tagline i{
@@ -276,13 +294,16 @@ mark{
 .item:hover .item-text{
 }
 h1{
-	font-size: 3rem;
+	font-size: 2.7rem;
 	color: #333;
 	font-weight: 400;
 	line-height: 1.26;
 	z-index: 999;
 	padding: 0 .5em;
 	transition: color .15s ease-in 0s;
+	max-width: 80%;
+	margin: 0 auto;
+	letter-spacing: -.03em;
 }
 .single-page h1{
 	padding-top: .5em;
@@ -296,21 +317,29 @@ h1 a:hover{
 	transition: color .15s ease-in 0s;
 }
 h1 span{
-	opacity: 1;
-	font-weight: 100;
-	vertical-align: super;
-	font-size: 0.5em;
-	margin-right: .5em;	
+	font-size: .5em;
+	margin: .2em auto 0;
+	font-weight: 700;
+	letter-spacing: -.08em;
+	display: block;
+	-moz-font-feature-settings: 'tnum';
+	-webkit-font-feature-settings: 'tnum';		
+	font-feature-settings: 'tnum';
+}
+h1 span:before,
+h1 span:after{
+	content: "-";
+	letter-spacing: 0;
+	margin: 0 .35em;
 }
 .item-desc{
-	color: #666;
+	color: #333;
 	font-size: 1rem;
 	text-align: left;
 	margin: 1.2em auto 1em;
-	line-height: 1.65;
+	line-height: 1.75;
 	position: relative;
 	text-align: justify;
-	font-weight: 300;
 	text-justify: ideographic;
 }
 .item-desc:before{
@@ -321,10 +350,10 @@ h1 span{
 	position: absolute;
 	width: 1em;
 	height: 1em;
-	display: none;
-	font-size: 3em;
-	left: -0.7em;
+	font-size: 1.4em;
+	left: -1.4em;
 	top: -0.3em;
+	background-size: cover;
 }
 .single-page .item-desc:before{
 	opacity: 1;
@@ -353,13 +382,13 @@ h1 span{
 	margin: .3em .0em;
 	color: #fff;
 	display: inline;
-	padding: .1em .5em .1em;
+	padding: .25em .5em .25em;
 	background: #f60c3e;
 }
 /*~Text*/
 .single-page .text{
 	color: #333;
-	font-weight: 300;
+	font-weight: 400;
 }
 .text a{
 	text-decoration: none;
@@ -418,7 +447,9 @@ h2 .h2-icon{
 .contents-time,
 .contents-time:after,
 .hosts-name:after{
-	font-family: "Courier New", Courier, monospace;
+	-moz-font-feature-settings: 'tnum';
+	font-feature-settings: 'tnum';
+	-webkit-font-feature-settings: 'tnum';
 	font-weight: 400;
 }
 .module h2:before{
@@ -537,12 +568,12 @@ h2 .h2-icon{
 }
 .about-name{
 	font-size: 2.6rem;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: -.04em;
 	margin: 0 .5em 0 0;
 }
 .about-name span{
-	font-weight: 100;
+	font-weight: 400;
 }
 .about-name:before{
 	margin:0 .3em 0 0;
@@ -611,7 +642,7 @@ h2 .h2-icon{
 	color: #fff;
 	line-height: 1.75;
 	letter-spacing: -0.05em;
-	font-weight: 300;	
+	font-weight: 400;	
 }
 .subscribe-text a{
 	text-decoration: none;
@@ -623,7 +654,7 @@ h2 .h2-icon{
 }
 .subscribe-text mark{
 	border-bottom-color: #fff;
-	font-weight: 700;
+	font-weight: 400;
 }
 .subscribe-text img{
 	height: .9em;
@@ -887,6 +918,7 @@ h2 .h2-icon{
 	}
 	h1{
 		font-size: 1.8rem;
+		max-width: 95%;
 	}
 	.subscribe-text{
 		font-size: 1.2rem;
@@ -933,7 +965,7 @@ h2 .h2-icon{
 		display: none !important;
 		visibility: hidden;
 	}
-	.about-name, .ds-user-name, h2{
+	h2{
 		font-family: sans-serif !important;
 	}
 	.item-desc:before,
