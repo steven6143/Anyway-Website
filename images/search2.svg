@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="play" stroke="#333333" stroke-width="3">
-            <polygon id="Triangle" transform="translate(16.000000, 15.000000) rotate(90.000000) translate(-16.000000, -15.000000) " points="16 11 22 19 10 19"></polygon>
-            <circle id="Oval" cx="14.8945312" cy="14.8945312" r="11.8945312"></circle>
+        <g id="search2" stroke="#FFFFFF">
+            <circle id="Oval" stroke-width="3" cx="12.3457031" cy="12.4462891" r="9"></circle>
+            <path d="M22.5,22.5 L25.5,25.5" id="Line" stroke-width="5"></path>
         </g>
     </g>
 </svg>
