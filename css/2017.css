@@ -82,6 +82,11 @@ a{
 	padding-top: 2.5rem;
 	border-bottom: 0.125rem dotted #ddd;
 	overflow: hidden;
+	left: 0;
+	top: 0;
+	width: 20%;
+	position: fixed;
+	z-index: 999;
 }
 .logo{
 	max-width: 20em;
@@ -468,9 +473,6 @@ h2 .h2-icon{
 .contents h2:before{background-image: url('http://anyway-web.b0.upaiyun.com/images/list.svg');}
 .ref h2:before{background-image: url('http://anyway-web.b0.upaiyun.com/images/ref.svg');}
 .sponsor h2:before{background-image: url('http://anyway-web.b0.upaiyun.com/images/sponsor.svg');}
-.ref ol li{
-	text-align: left;
-}
 /*~Btns*/
 .item-btns{
 	margin: 1.4em auto 0;
