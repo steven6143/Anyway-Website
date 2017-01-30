@@ -52,7 +52,7 @@ $elements['displayheader']=<<<eot
 				<div class="inner-section inner-header">
 					<div class="logo">
 						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition">
-						<img src="http://anyway-web.b0.upaiyun.com/images/logo.gif" alt="Anyway.FM 设计杂谈 • UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客" />
+						<img src="http://anyway-web.b0.upaiyun.com/images/logo3.png" alt="Anyway.FM 设计杂谈 • UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客" />
 						<span class="desc">Anyway.FM 设计杂谈 • UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客</span></a>
 					</div>
 					<div class="tagline" id="t"><i>Anyway.FM</i> 是一档<mark>播客</mark>节目，<ins>1</ins><br />
@@ -279,20 +279,6 @@ eot;
 
 $elements['excerptontop']=<<<eot
 <div class="textbox">
-<div class="textbox-title-top" style="width: 100%;">
-			<h2>
-			<a href="javascript: showhidediv('{topid}');">+ {entrytitletext}</a>
-			</h2>
-			<div class="title-label"><div class="inner">{entrydater} &#8226; <span class="entry-cate">{entrycate}</span></div></div>
-			<div class="textbox-adminbar">{ifadmin}</div>
-  </div>
-	<div id="{topid}" style="display: none;">
-	
-	<div class="textbox-content">
-		{entrycontent}
-	</div>
-	<div class="sep"></div>
-	</div>
 </div>
 eot;
 
