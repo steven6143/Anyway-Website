@@ -48,7 +48,7 @@ $elements['displayheader']=<<<eot
 
 <div class="main">
 			<div class="mask mt"></div><div class="mask mb"></div><div class="mask mv ml"></div><div class="mask mv mr"></div><div class="mask mv ml2"></div><div class="mask mv mr2"></div>
-			<div class="section header">
+			<header class="section header">
 				<div class="inner-section inner-header">
 					<div class="logo">
 						<a href="#" onclick="_hmt.push(['_trackEvent', 'nav', 'back-to-home', 'from-header-logo'])" data-type="page-transition">
@@ -68,32 +68,32 @@ $elements['displayheader']=<<<eot
 						<a href="https://tinyletter.com/anyway-fm" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> Anyway 邮报</a>
 					</div>
 				</div>
-			</div>  <!--End of 'Header'-->
+			</header>  <!--End of 'Header'-->
 
 eot;
 
 $elements['mainpage']=<<<eot
-		<div class="section content">
+		<main class="section content">
 			<div class="inner-section inner-content">
 				{mainpart}
 			</div>
-		</div>
+		</main>
 
-		<div class="section page-bar" style="display: {ifbottompage}">
+		<section class="section page-bar" style="display: {ifbottompage}">
 			<div class="inner-section">
 				{pagebar}
 			</div>
-		</div>
+		</section>
 eot;
 
 $elements['otherpage']=<<<eot
-		<div class="section content">
+		<main class="section content">
 			<div class="inner-section inner-content">
 				<div class="formbox">
 						{mainpart}
 					</div>
 			</div>
-		</div>
+		</main>
 eot;
 
 $url_this = "http://".$_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
@@ -105,7 +105,7 @@ $elements['displayfooter']=<<<eot
 
 </div><!--End of 'Main'-->
 
-<div class="about">
+<section class="about">
 	<div class="section body-text inner-about">
 	
 		<div class="about-single about-jj">
@@ -130,25 +130,25 @@ $elements['displayfooter']=<<<eot
 
 		
 	</div>			
-</div> <!--End of 'About'-->
+</section> <!--End of 'About'-->
 
-<div class="section subscribe">
+<section class="section subscribe">
 	<div class="inner-section inner-subscribe">
 		<div class="body-text subscribe-text">在 <img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/>Apple 播客 App 里收听请<mark><a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-subscribe-section'])">点这里</a></mark>或者搜索 Anyway.FM，<br />使用泛用型播客客户端可通过 <mark><a href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/rss2.svg" class="nav-icon"/>RSS</a></mark> 订阅，<br />
 		 <mark><a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg"/>网易云音乐</a></mark> 和 <mark><a href="http://www.lizhi.fm/1824901/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Lizhi', 'from-subscribe-section'])"><img src="http://anyway-web.b0.upaiyun.com/images/lizhi2.svg" class="nav-icon"/>荔枝 FM</a></mark> 上也能找到我们。
 		</div>
 
 	</div>
-</div>  <!--End of 'Subscribe'-->
+</section>  <!--End of 'Subscribe'-->
 
-<div class="footer">
+<footer class="footer">
 	<div class="inner-section inner-footer">
 		© 2015 ~ $thisYear <a href="http://anyway.fm">Anyway.FM</a> 保留所有权利<em>×</em>Proudly powered by <a href="http://bo-blog.com/" title="Bo-Blog 2, a free-of-charge weblog engine based on PHP script and MySQL storage.">Bo-Blog</a>
 	</div>
-</div> <!--End of 'Footer'-->
+</footer> <!--End of 'Footer'-->
 
 <!--Mini Header-->
-<div class="mini-header">
+<nav class="mini-header">
 	<div class="mini-logo">
 		<a href="#"><img src="http://anyway-web.b0.upaiyun.com/images/logo-mini.png" alt="Anyway × FM 设计杂谈" /></a>
 	</div>
@@ -161,7 +161,7 @@ $elements['displayfooter']=<<<eot
 		<a href="http://music.163.com/m/djradio/4969001" data-log="link" data-app="true" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/netease2.svg" class="nav-icon"/> 网易云音乐</a><span></span>
 		<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-mini-header'])"><img src="http://anyway-web.b0.upaiyun.com/images/itunes2.svg" class="nav-icon"/> Apple 播客</a>
 	</div>
-</div>
+</nav>
 
 <!--Search Bar-->
 <div class="search-bar">
@@ -264,7 +264,7 @@ $elements['displaybody']=<<<eot
 eot;
 
 $elements['excerpt']=<<<eot
-<div class="item  {entrycatealias}">
+<article class="item  {entrycatealias}">
 	<div class="inner-item">
 		<h1 class="item-text">{entrysourcewithlink}{entrytitle}</h1>
 		<div class="item-meta">
@@ -274,26 +274,10 @@ $elements['excerpt']=<<<eot
 			{entrycontent}
 		</div>
 	</div>
-</div>
+</article>
 eot;
 
 $elements['excerptontop']=<<<eot
-<div class="textbox">
-<div class="textbox-title-top" style="width: 100%;">
-			<h2>
-			<a href="javascript: showhidediv('{topid}');">+ {entrytitletext}</a>
-			</h2>
-			<div class="title-label"><div class="inner">{entrydater} &#8226; <span class="entry-cate">{entrycate}</span></div></div>
-			<div class="textbox-adminbar">{ifadmin}</div>
-  </div>
-	<div id="{topid}" style="display: none;">
-	
-	<div class="textbox-content">
-		{entrycontent}
-	</div>
-	<div class="sep"></div>
-	</div>
-</div>
 eot;
 
 $elements['list']=<<<eot
@@ -322,7 +306,7 @@ function relativetime($time) {
 
 
 $elements['viewentry']=<<<eot
-<div class="item {entrycatealias} single-page">
+<article class="item {entrycatealias} single-page">
 	<div class="inner-item">
 		<h1 class="item-text">{entrysourcewithlink}{entrytitle}</h1>
 		<div class="item-meta">
@@ -364,7 +348,7 @@ var duoshuoQuery = {short_name:"anyway"};
 
 	</div>
 </div>
-</div>
+</article>
 
 eot;
 
@@ -441,22 +425,9 @@ $elements['contentpage']=<<<eot
 eot;
 
 $elements['taglist']=<<<eot
-<table width="98%" align="center" cellpadding="4" cellspacing="0">
-<tr><td>{tagcategory}</td></tr>
-<tr><td class="taglist" style="word-break: none; word-wrap: break-word;">{tagcontent}</td></tr>
-<tr><td>{tagextra}</td></tr>
-</table>
-<br/><br/>
 eot;
 
 $elements['register']=<<<eot
-<form name="register" method="post" action="{job}">
-<table cellspacing="1" width="500px" align="center" class="formbox">
-  <tr><td class="formbox-title" colspan="2">{title} </td></tr>
-  {registerbody}
-  <tr><td colspan="2" align="center"><input type="submit" value="Submit" class="button"/> </td></tr>
-</table>
-</form>
 eot;
 
 $elements['normaltable']=<<<eot
@@ -473,37 +444,15 @@ $elements['normaltablewithtitle']=<<<eot
 eot;
 
 $elements['form_eachline']=<<<eot
-  <tr>
-    <td class="formbox-rowheader">{text}</td>
-    <td class="formbox-content">{formelement}</td>
-  </tr>
 eot;
 
 $elements['eachlink']=<<<eot
-<div class="linkbody">
-<div class="linktxt"><span class="linktitle">{title}</span><span class="linkdesc">{desc}</span></div>
-</div>
 eot;
 
 $elements['linkdiv']=<<<eot
-<div class="linkover">
-<div class="linkgroup">{title}</div>
-<hr>
-<div class="linkgroupcontent">{tablebody}</div>
-</div>
 eot;
 
 $elements['viewpage']=<<<eot
-<div class="pagebox">
-	<div class="pagebox-title">
-		<h2>
-		{entrytitle}
-		</h2>
-	</div>
-	<div class="pagebox-content">
-		{entrycontent}
-	</div>
-</div>
 eot;
 
 
