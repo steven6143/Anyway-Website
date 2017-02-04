@@ -210,13 +210,15 @@ mark{
 }
 .mini-header .nav a{
 	color: #fff;
-	opacity: .8;
+	opacity: .9;
+	font-weight: 700;	
 	color: #fff;
 	transition: all .15s ease-in 0s;
 }
 .mini-header .nav a:hover{
 	opacity: 1;
 	color: #fff;
+	font-weight: 700;
 }
 .mini-show{
 	display: block;
