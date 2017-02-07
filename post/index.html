@@ -11,7 +11,11 @@
 	<style>
 	*{
 		margin: 0; 
-		padding: 0; 
+		padding: 0;
+		vertical-align: baseline;
+		outline: none;
+		box-sizing: border-box;
+		-webkit-tap-highlight-color: transparent;
 	}
 	body{ 
 		text-rendering: optimizeLegibility;
@@ -19,8 +23,9 @@
 		font-size: 62.5%;
 		font-family: 'Songti SC', 'Anyway Type', 'Myriad Pro', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 		background: #fff;
-		color: #4d4d4d;
+		color: #585858;
 		text-align: center;
+		border-top: 8px solid #333;
 	}
 	@font-face {
 	    font-family: 'Anyway Type';
@@ -38,22 +43,50 @@
 	    font-style: normal;
 	    font-display: fallback;    
 	}
+	.responsive{
+		margin: .2em auto;
+		max-width: 85%;
+	}
 	header{
-		background: #f5f5f5;
+		background: #fff;
+		border-bottom: 3px solid #777;
 	}
 	.hero{
-		width: 50%;
+		width: 80%;
+	}
+	nav{
+		border-bottom: 1px solid #777;
+		border-top: 1px solid #777;
+		font-size: 1.6em;
+		padding: .5em 0;
+		text-align: justify;
+		text-align-last: justify;
 	}
 	.submit-form{
-		font-size: 3em;
+		font-size: 1.6em;
 		padding: 1em;
 		font-weight: 700;
+		width: 38%;
+		float: left;
+	}
+	.tagline{
+		font-size: 2em;
+	}
+	hr{
+		width: 30%;
+		margin: 3em auto;
+		border: none;
+		background: #e7b836;
+		display: block;
+		height: 2px;
 	}
 	.faq{
 		text-align: left;
-		width: 80em;
-		max-width: 90%;
-		margin: 0 auto;
+		padding: 2em 2em 2em 6em;
+		width: 61%;
+		float: right;
+		border-left: 1px dotted #777;
+		margin-bottom: .2em;
 	}
 	.faq-item{
 		margin: 0 0 3em;
@@ -64,8 +97,8 @@
 		position: relative;
 	}
 	.faq-details{
-		font-size: 1.6em;
-		color: #666;
+		font-size: 2em;
+		color: #777;
 		line-height: 1.8;
 		position: relative;
 		font-family: sans-serif;
@@ -83,54 +116,123 @@
 	h2:before{
 		content: "Q: ";
 	}
+	footer{
+		font-size: 1.6em;
+		clear: both;
+		border-bottom: 3px solid #777;
+		margin-bottom: 4em !important;
+	}
+	footer .inner{
+		padding: .7em;
+		border-top: 1px solid #777;
+		border-bottom: 1px solid #777;
+		margin-bottom: .2em;
+	}
+	.badget{
+		position: absolute;
+		top: 0;
+		right: 7.5%;
+		font-family: avenir next;
+		background: #333;
+		color: #fff;
+		padding: .5em 1em;
+		font-size: .5em;
+		width: 10em;
+	}
+	.badget p{
+		font-size: 4em;
+		text-align: justify;
+		text-align-last: justify;
+		text-transform: uppercase;
+		font-weight: 900;
+	}
+	/*~Mobile*/
+	@media screen and (max-width: 1000px){
+		body{
+			font-size: 50%;
+		}
+		.badget{
+			display: none;
+		}
+		.responsive{
+			max-width: 90%;
+		}
+		.submit-form,
+		.faq{
+			width: 100%;
+			border: none;
+		}
+		.submit-form{
+			border-bottom: 1px solid #777;
+		}
+		.hero{
+			width: 100%;
+		}
+	}
 	</style>
 </head>
 
 <body>
-	<header>
+	<header class="responsive">
 		<img class="hero" src="http://anyway-web.b0.upaiyun.com/images/post.jpg" alt="Anyway.Post 安妮薇邮报" />
 	</header>
 	
-	<main>
+	<nav class="responsive">
+		VOL.XII Sun-01-2017 Back-to-Anyway.FM
+	</nav>
+	
+	<main class="responsive">
 		<form class="submit-form" action="https://tinyletter.com/anyway-fm" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/anyway-fm', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
 			
-			<p><label for="tlemail">请填写您的邮件地址然后点击「订阅」</label></p>
+			<p class="tagline"><label for="tlemail">请填写您的邮件地址然后点击「订阅」</label></p>
 			<p><input type="text" style="width:140px" name="email" id="tlemail" /></p>
 			<input type="hidden" value="1" name="embed"/>
 			<input type="submit" value="订阅" />
-			<p>
+			<hr />
+			<p class="form-desc">如果因为「众所周知的原因」订阅不成功，可直接发邮件给我们告知你的邮件地址，我们可以帮你手动加上。</p>
+
 		</form>
+		
+		<section class="faq">
+				
+					<div class="faq-title">常见问题 FAQ</div>
+					<div class="faq-content">
+					
+						<div class="faq-item">
+							<h2>这个邮报有哪些内容？</h2>
+							<div class="faq-details">设计文章链接分享、设计新闻快报、设计招聘信息。</div>
+						</div>
+						
+						<div class="faq-item">
+							<h2>大概多久更新一次呢？</h2>
+							<div class="faq-details">两周，就在我们节目的间歇期，但是你懂的，我们很任性的。</div>
+						</div>
+						
+						<div class="faq-item">
+							<h2>如果我有自己的内容想推荐或者我们公司想招人可以发内容给你们吗？</h2>
+							<div class="faq-details">来，尽管发：hello@anyway.fm</div>
+						</div>
+						
+						<div class="faq-item">
+							<h2>你们的官网、聚会通告页面还有这个订阅页面为啥风格都完全不一样？</h2>
+							<div class="faq-details">我！乐！意！</div>
+						</div>
+						
+					</div>
+		
+			</section>
 	</main>
 	
-	<section class="faq">
-		
-			<div class="faq-title">常见问题 FAQ</div>
-			<div class="faq-content">
-			
-				<div class="faq-item">
-					<h2>这个邮报有哪些内容？</h2>
-					<div class="faq-details">饮料、蛋糕、各种奖品等等等等，啊？你问在专业上会有哪些内容？请参阅下一条。</div>
-				</div>
-				
-				<div class="faq-item">
-					<h2>大概多久更新一次呢？</h2>
-					<div class="faq-details">〈Anyway, We Built A Podcast〉是来自 Leon 的分享，标题党版本就是「Anyway.FM 从创建到发展的秘闻，想看就转，不转不是设计师」，除了一些趣闻、从未播出过的片段之外还有两个主播日久天长的友谊片段！</div>
-				</div>
-				
-				<div class="faq-item">
-					<h2>如果我有自己的内容想推荐或者我们公司想招人可以发内容给你们吗？</h2>
-					<div class="faq-details">你真聪明！就是酱紫的！当然如果你说你只是 Leon 的迷妹，想听完他的现场演讲就肥家 JJ 也是可以接受的~这个分享其实来自之前某次同样需要售票的分享活动，但当初因为某司某总监的事件导致分享取消，所以也是从未公开分享过的哟（其实 JJ 只是想为他属于准备而实现找好借口）Anyway，他想要介绍一下这些年来做设计过程中的「失败案例」，剖析一下哪些项目做砸了、有哪些教训以及从中学到了些什么。</div>
-				</div>
-				
-				<div class="faq-item">
-					<h2>你们的官网、聚会通告页面还有这个订阅页面为啥风格都完全不一样？</h2>
-					<div class="faq-details">我！乐！意！</div>
-				</div>
-				
-			</div>
-
-	</section>
-	        
+	
+	
+	
+	
+	<footer class="responsive">
+		<div class="inner">
+			© 2017 <a href="http://anyway.fm">Anyway.FM</a> 保留所有权利</a>
+		</div>
+	</footer>
+	<div class="badget"><p>F r e e</p>Till Hell Freezes</div>
 	
 <!-- ~Baidu Analytics -->
 <script>
