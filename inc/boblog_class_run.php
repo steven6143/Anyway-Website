@@ -646,13 +646,15 @@ class getblogs extends boblog {
 		else {
 			$playaudio="";
 		}
+		
 		//Set page meta description
-		if ($entry['entrysummary']){
+		if ($way=='viewentry') {
 			$pagedesc = $entry['entrysummary'];
 		}
 		else {
 			$pagedesc = "由 UI 设计师 JJ Ying 和 Leon Gao 主播的设计杂谈播客，曾入选 2015 年度 Apple 年度最佳播客榜单";
 		}
+		
 		//Hosts Name
 		if ($entry['pinged']) {
 			$hostsname="<span class=\"item-text item-meta-hosts\">{$entry['pinged']}</span>";	
