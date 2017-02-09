@@ -215,6 +215,9 @@ mark{
 	color: #fff;
 	transition: all .15s ease-in 0s;
 }
+.mini-header .nav:hover a{
+	opacity: .6;
+}
 .mini-header .nav a:hover{
 	opacity: 1;
 	color: #fff;
