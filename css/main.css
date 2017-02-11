@@ -35,7 +35,7 @@ body{
 	text-align: center;
 	color: #333;
 	line-height: 1;
-	background: #fff;
+	background: #f60c3e;
 }
 .section{
 	width: 100%;	
@@ -528,6 +528,7 @@ h2 .h2-icon{
 	border-bottom: 0.125rem dotted #ddd;
 	padding: 3em 0;
 	font-size: 2em;
+	background: #fff;
 }
 .page-total,
 .pagebar-selections{
@@ -554,7 +555,10 @@ h2 .h2-icon{
 	border: .1em solid #f60c3e;
 }
 /*~About*/
-.about{}
+.about{
+	background: #fff;
+	overflow: hidden;
+}
 .inner-about{
 	margin: 0 auto;
 	padding: 2em 0em;
