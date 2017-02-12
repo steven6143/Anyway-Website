@@ -5,7 +5,7 @@ $elements['header']=<<<eot
 	<head>
 		<title>{pagetitle}Anyway.FM 设计杂谈 • UI 设计师 JJ 和 Leon 主播的设计播客</title>
 		<meta charset="UTF-8">
-		<meta content="all" name="robots" />
+		<meta name="robots" content="noodp"/>
 		<meta name="author" content="JJ Ying" />
 		<meta name="description" content="{pagedesc}"/>
 		{baseurl}
