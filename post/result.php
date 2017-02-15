@@ -96,8 +96,7 @@
 	.nav-3{
 		text-align: right;
 	}
-	.tagline{		
-		border-bottom: 1px solid #777;
+	.tagline{
 		padding: 2em 0;
 		margin-bottom: 1em;
 		font-size: 1rem;
@@ -105,7 +104,7 @@
 		line-height: 1.75;
 	}
 	h1{
-		font-size: 2.5rem;
+		font-size: 4rem;
 		line-height: 1.22;
 		font-weight: 900;
 		margin-bottom: .2em;
@@ -117,6 +116,11 @@
 		width: 38%;
 		text-align: left;
 		float: right;
+	}
+	.tagline .submit-form{
+		float: none;
+		margin: 0 auto;
+		padding: 0;
 	}
 	h3{
 		font-size: .75rem;
@@ -282,6 +286,13 @@
 	.badget i{
 		opacity: 0;
 	}
+	.go-back{
+		font-size: 1.5em;
+		font-weight: 700;
+		text-decoration: none;
+		margin: 1em 0 0;
+		display: block;
+	}
 	/*~Small*/
 	@media screen and (max-width: 1000px){
 		*,*:before{
@@ -324,7 +335,7 @@
 			padding-left: 2rem;
 		}
 		h1{
-			font-size: 1.4rem;
+			font-size: 3rem;
 		}
 		.instructions,
 		h2{
@@ -347,7 +358,38 @@
 	}
 	</style>
 </head>
+<?php
+	if ($_GET['email']) {
+		$email = $_GET['email'];
+		if (preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$email)) {
+			$logFile = fopen('address.txt', "a");
+			fwrite($logFile, $email."\n");
+			fclose($logFile);
+			$content="
+				<h1>&nbsp&nbsp订阅成功！</h1>
+				感谢你的支持~ <strong> " . $email . " </strong> 已经加入订阅列表中了，敬请期待下一期的发布~ <br />
+				友情提示：因为所使用邮件组服务的局限性，有时候也有可能会出现在垃圾邮箱里哦~ <br />
+				可以把我们的发件地址「<strong>hello@anyway.fm</strong>」加到邮箱的白名单中~
+				<p><a href='http://Anyway.FM' class='go-back'>☜ 返回 Anyway.FM 官网</a></p>
+				";
+		}
+		else {
+			$content="
+				<h1>地址好像有问题啊亲</h1>
+				你刚刚填的 <strong> " . $email . " </strong> 似乎不是一个合法的邮箱地址~ 请重新提交~
+				
+				<form class='submit-form' action='result.php' method='get'>
+					<div class='subscribe'><input type='text' name='email' id='tlemail' class='input-box'/><input type='submit' value='提 交  ✓' class='btn'/></div>
+				</form>
+			";
+		}
+	}
+	
+	else {
+		$content="kkk";
+	}
 
+?>
 <body>
 	<header class="responsive">
 		<svg class="logo" xmlns="http://www.w3.org/2000/svg" width="834" height="362.469" viewBox="0 0 834 362.469">
@@ -368,52 +410,19 @@
 	</header>
 	
 	<nav class="responsive">
-		<span class="nav-1">现已发行壹期</span>
+		<span class="nav-1">订阅费 $0.00</span>
 		<span class="nav-2">创刊于二〇一七年二月</span>
 		<span class="nav-3">Anyway.FM<span class="mobile-hide"> 旗下产品</span></span>
 	</nav>
 	
 	<main class="responsive">
-		<section class="tagline"><h1>读者诸君你好，欢迎订阅 Anyway.Post「安妮薇邮报」</h1>这是一份双周更新的由 Anyway.FM 发行的坊间小报。我们在此为你提供与设计行业相关的职业信息、业内新闻以及视频等内容。</section>
-		<form class="submit-form" action="result.php" method="get">
-			<h3>立即订阅</h3>
-			<div class="instructions">
-				<label for="tlemail">
-				<span>1.</span> 填写邮件地址然后点击「提交」<br />
-				<span>2.</span> 其实没有第二步了<br />
-				<span>3.</span> 也没第三步了<br />
-				</label>
-			</div>
-			<div class="subscribe"><input type="text" name="email" id="tlemail" class="input-box"/><input type="submit" value="提 交  ✓" class="btn"/></div>
+		<section class="tagline">
+			<?php echo($content);?>
 			
-			
-			<div class="form-desc">不过因为所使用邮件组服务的局限性，邮报内容也可能会出现在垃圾邮箱里哦~ 可以把我们的邮件地址 <strong>hello@anyway.fm</strong> 加到邮箱的白名单中~</div>
+		</section>
 
-		</form>
 		
-		<section class="faq">
-				
-					<h3>常见问题 FAQ</h3>
-					<div class="faq-content">
-						
-						<div class="faq-item">
-							<h2>为什么是两周一次更新呢？</h2>
-							<div class="faq-details">因为我们的播客节目差不多也是两周一期，所以 Anyway.Post 会在我们节目更新的间歇期发布。但是你懂的，我们很任性的。</div>
-						</div>
-						
-						<div class="faq-item">
-							<h2>有内容想推荐或者我们公司想招人可以发给你们吗？</h2>
-							<div class="faq-details">来，尽管发：<a href="mailto:hello@anyway.fm">hello@anyway.fm</a></div>
-						</div>
-						
-						<div class="faq-item">
-							<h2>你们的官网、聚会通告页面还有这个订阅页面为啥风格都完全不一样？</h2>
-							<div class="faq-details">我！乐！意！</div>
-						</div>
-						
-					</div>
-		
-			</section>
+
 	</main>
 	
 
@@ -429,7 +438,7 @@
 			Till Hell Freezes<br /><i>and</i>
 		</div>
 	</div>
-	
+
 <!-- ~Baidu Analytics -->
 <script>
 	var _hmt = _hmt || [];
