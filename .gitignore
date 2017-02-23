@@ -20,3 +20,5 @@ rss.txt
 Website - History
 Source
 *.psd
+post/
+post/*.*
