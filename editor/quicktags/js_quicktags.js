@@ -660,3 +660,6 @@ function edShowExtraCookie() {
 	}
 	return false;
 }
+$.key('cmd+b', function() {edInsertTag(edCanvas, 0);});
+$.key('cmd+i', function() {edInsertTag(edCanvas, 2);});
+$.key('cmd+k', function() {edInsertLink(edCanvas, 1);});

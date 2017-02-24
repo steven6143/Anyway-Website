@@ -44,7 +44,8 @@ $display_overall.=<<<eot
 $initialjs
 <script type="text/javascript" src="lang/{$langback}/jslang.js"></script>
 <script type="text/javascript" src="images/js/common.js"></script>
-<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.key.js"></script>
 <script type="text/javascript">
 //<![CDATA[
 var ajaxloadingIMG='admin/theme/{$themename}/ajaxloader.gif';
