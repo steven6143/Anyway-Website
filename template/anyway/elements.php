@@ -41,7 +41,7 @@ $elements['header']=<<<eot
 		</script>
 	</head>
 	
-<body id="{pageID}" class="blog">
+<body id="{pageID}" class="blog" onload="addSwitchBtn()">
 eot;
 
 $elements['displayheader']=<<<eot
@@ -182,6 +182,57 @@ $(function() {
 		}
 	    setTimeout(arguments.callee, 40);
 });
+</script>
+
+<!-- Link Target Switch -->
+<script type="text/javascript">
+function addSwitchBtn() {
+	$(".ref").children("h2").append("<a href='#' class='switch-target'></a>");
+	
+	var isNewWindow = getCookie("isNewWindow");
+	var switchBtnSelf = "<span class='selected'>当前页面打开</span><span>新开页面";
+	var switchBtnBlank = "<span>当前页面打开</span><span class='selected'>新开页面</span>";
+	
+	if (isNewWindow == "Yes") {
+		$(".switch-target").html(switchBtnBlank);
+		$(".ref").find("a").attr({target:"_blank"});
+	}
+	else{
+		$(".switch-target").html(switchBtnSelf);
+	}
+	
+	$(".switch-target").bind("click",function(e){
+		
+		e.preventDefault();
+		
+		if (isNewWindow == "Yes") {
+			$(".switch-target").html(switchBtnSelf);
+			isNewWindow = "No";
+			$(".ref").find("a").attr({target:"_self"});
+			document.cookie="isNewWindow=" + isNewWindow +";domain=anyway.fm;path=/;expires=Sat, 17 May 2027 23:38:25 GMT";
+		}
+		else {
+			$(".switch-target").html(switchBtnBlank);
+			isNewWindow = "Yes";
+			$(".ref").find("a").attr({target:"_blank"});
+			document.cookie="isNewWindow=" +  isNewWindow +";domain=anyway.fm;path=/;expires=Sat, 17 May 2027 23:38:25 GMT";
+		}		
+	})
+}
+
+function getCookie(c_name){
+	if (document.cookie.length>0){
+		c_start=document.cookie.indexOf(c_name + "=")
+		if (c_start!=-1){ 
+			c_start=c_start + c_name.length+1 
+			c_end=document.cookie.indexOf(";",c_start)
+			if (c_end==-1) c_end=document.cookie.length
+			return unescape(document.cookie.substring(c_start,c_end))
+		} 
+	}
+	return ""
+}
+
 </script>
 
 <!-- Load Search JS -->
@@ -461,25 +512,27 @@ $elements['tips']=<<<eot
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cmn-Hans">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta http-equiv="Content-Language" content="UTF-8" />
-{csslocation}
-<link rel="stylesheet" rev="stylesheet" href="http://localhost:8888/anyway/admin/theme/iconmoon/common.css" type="text/css" media="all" />
-<title>{blogname} - {blogdesc}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Language" content="UTF-8" />
+	{csslocation}
+	<link rel="stylesheet" rev="stylesheet" href="admin/theme/iconmoon/common.css" type="text/css" media="all" />
+	<title>{blogname} - {blogdesc}</title>
 </head>
 <body id="messagebox">
-<center>
-<div class="messagebox textbox">
-  <h3>{title}</h3>
-   <hr>
-  <div class="messagebox-content">
-  {tips}
-  </div>
-  <hr>
-  <div class="messagebox-bottom"><a href="javascript: window.history.back();">{$lnc[263]}</a> | <a href="index.php">{$lnc[88]}</a> {admin_plus}</div>
-</div>
-</center>
-</div>
+	<center>
+		<div class="messagebox textbox">
+			<h3>{title}</h3>
+
+			<div class="messagebox-content">
+			{tips}
+			</div>
+	
+			<div class="messagebox-bottom">
+				<a href="javascript: window.history.back();">{$lnc[263]}</a> | <a href="index.php">{$lnc[88]}</a> {admin_plus}
+			</div>
+			
+		</div>
+	</center>
 </body>
 </html>
 eot;
