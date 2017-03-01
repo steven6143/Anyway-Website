@@ -532,7 +532,6 @@ h2 .h2-icon{
 #switch-demo .switch-target{
 	margin: 0 auto;
 	float: none;
-	
 }
 #switch-demo{
 	text-align: center;
@@ -550,6 +549,7 @@ h2 .h2-icon{
 }
 .switch-target .selected:before{
 	content: "✔ ";
+	color: #fff;
 }
 /*~Page bar*/
 .page-bar{
@@ -973,6 +973,12 @@ h2 .h2-icon{
 	}
 	.mask{
 		border-width: .3em;
+	}
+	.switch-target{
+		margin: .7em 0 0;
+	}
+	.switch-target .selected:before{
+		display: none;
 	}
 }
 @media screen and (max-width: 900px) {
