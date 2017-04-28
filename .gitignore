@@ -22,4 +22,5 @@ Source
 *.psd
 post/
 post/*.*
+node_modules/
 post
