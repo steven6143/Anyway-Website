@@ -13,6 +13,7 @@ $elements['header']=<<<eot
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/t.min.js"></script>
+		
 		<link rel="alternate" type="application/rss+xml" title="Anyway.FM" href="http://anyway.fm/rss.xml" />
 		<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/images/favicon.png" />
 		<link rel="apple-touch-icon" href="http://anyway-web.b0.upaiyun.com/images/apple-touch-icon-precomposed.png">
@@ -111,7 +112,7 @@ $elements['displayfooter']=<<<eot
 		<div class="about-single about-jj">
 			<div class="about-name">JJ <span>Ying</span></div>
 			<div class="about-desc">
-				勉强算 85 后 <i>/</i> 理科出身，从做皮肤开始误入设计圈 <i>/</i> 专职 UI 设计，偶尔码码 CSS <i>/</i> 在惠普待了 4 年做打印机界面，来到百度做输入法和浏览器，目前是 MUX 上海部门的负责人，虽然待的地方都是大公司，但却是个野路子 + 实战派设计师 <i>/</i> 写了快十年设计博客：<a href="http://TuYueZhi.com">图月志</a> <i>/</i> 最近几年<a href="http://www.zhihu.com/people/jjying">知乎</a>上的比较多 <i>/</i> 十多年的红魔伪球迷 <i>/</i> 声音没 Leon 有磁性，大家多担待
+				勉强算 85 后 <i>/</i> 理科出身，从做皮肤开始误入设计圈 <i>/</i> 专职 UI 设计，偶尔码码 CSS <i>/</i> 在惠普待了 4 年设计打印机的操作界面，来到百度做过输入法和浏览器，目前在 UXC 上海部门做搜索产品，虽然待的地方都是大公司，但却是个野路子 + 实战派设计师 <i>/</i> 写了快十年设计博客：<a href="http://TuYueZhi.com">图月志</a> <i>/</i> 最近几年<a href="http://www.zhihu.com/people/jjying">知乎</a>上的比较多 <i>/</i> 十多年的红魔伪球迷 <i>/</i> 声音没 Leon 有磁性，大家多担待
 			</div>
 			<div class="about-links">
 				<a href="http://JJYing.com" class="about-link"><i class="icon-home"></i></a><a href="http://dribbble.com/JJYing" class="about-link"><i class="icon-dribbble"></i></a><a href="http://weibo.com/yingjunjiu/" class="about-link"><i class="icon-weibo"></i></a><a href="https://github.com/jjying" class="about-link"><i class="icon-github"></i></a><a href="http://instagram.com/jjying" class="about-link"><i class="icon-instagram"></i></a><a href="https://twitter.com/JJYing" class="about-link"><i class="icon-twitter"></i></a><a href="http://www.flickr.com/photos/jjying/" class="about-link"><i class="icon-flickr"></i></a><a href="http://www.linkedin.com/in/jjying" class="about-link"><i class="icon-linkedin-squared"></i></a>
@@ -121,7 +122,7 @@ $elements['displayfooter']=<<<eot
 		<div class="about-single about-leon">
 			<div class="about-name">Leon <span>Gao</span></div>
 			<div class="about-desc">
-				男 <i>/</i> 上海宁 <i>/</i> 算算时间大概能挤进中国大陆第二批图形界面设计民工潮 <i>/</i> 9 年工作经验，换了肯定不止 9 家公司，至今没啥能拿的出手的产品来显摆，跟人吹牛逼的时候只好晒晒微软、惠普、frogdesign、小米以及我锤的工作经历 <i>/</i> 网络蝗虫，只要是新的互联网产品基本都能搜到这颗红色的头像 <i>/</i> 为人刻薄，怕麻烦不喜欢交朋友（漂亮妹子除外）<i>/</i> 哦，基本就这些
+				男 <i>/</i> 上海宁 <i>/</i> 算算时间大概能挤进中国大陆第二批图形界面设计民工潮 <i>/</i> 10 年工作经验，换了肯定不止 10 家公司，至今没啥能拿的出手的产品来显摆，跟人吹牛逼的时候只好晒晒微软、惠普、frogdesign、小米以及我锤的工作经历 <i>/</i> 网络蝗虫，只要是新的互联网产品基本都能搜到这颗红色的头像 <i>/</i> 为人刻薄，怕麻烦不喜欢交朋友（漂亮妹子除外）<i>/</i> 哦，基本就这些
 			</div>
 			<div class="about-links">
 				<a href="http://leongao.com" class="about-link"><i class="icon-home"></i></a><a href="http://dribbble.com/leongao" class="about-link"><i class="icon-dribbble"></i></a><a href="http://weibo.com/leongao/" class="about-link"><i class="icon-weibo"></i></a><a href="http://instagram.com/leongao" class="about-link"><i class="icon-instagram"></i></a><a href="http://twitter.com/leongao" class="about-link"><i class="icon-twitter"></i></a><a href="https://www.flickr.com/photos/leongao/" class="about-link"><i class="icon-flickr"></i></a>
