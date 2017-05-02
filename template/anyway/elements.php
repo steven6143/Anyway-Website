@@ -316,7 +316,7 @@ $elements['displaybody']=<<<eot
 eot;
 
 $elements['excerpt']=<<<eot
-<article class="item  {entrycatealias}">
+<article class="item {entrycatealias}">
 	<div class="inner-item">
 		<h1 class="item-text">{entrysourcewithlink}{entrytitle}</h1>
 		<div class="item-meta">
