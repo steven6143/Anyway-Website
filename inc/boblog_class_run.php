@@ -611,10 +611,15 @@ class getblogs extends boblog {
 			}
 
 			if ($entry['previousid']!='') {
-				$previousentryexist='inline';
-				$previousentrytitle=$entry['previoustitle'];
-				$previousentryurl=getlink_entry($entry['previousid'], $entry['previousblogalias']);
-				$previous="<div class=\"next-entry\"><div class=\"inner\"><a href=\"{$previousentryurl}#title\" title=\"上一期节目： {$entry['previoustitle']}\" onclick=\"_hmt.push(['_trackEvent', 'nav', 'previous-post', '{$entry['previoustitle']}'])\">上一期节目：<br /><span>{$entry['previoustitle']}</span></a></div></div>";
+				if ($entry['category']=='1') {
+					$previousentryexist='none';
+				}
+				else {
+					$previousentryexist='inline';
+					$previousentrytitle=$entry['previoustitle'];
+					$previousentryurl=getlink_entry($entry['previousid'], $entry['previousblogalias']);
+					$previous="<div class=\"next-entry\"><div class=\"inner\"><a href=\"{$previousentryurl}#title\" title=\"上一期节目： {$entry['previoustitle']}\" onclick=\"_hmt.push(['_trackEvent', 'nav', 'previous-post', '{$entry['previoustitle']}'])\">上一期节目：<br /><span>{$entry['previoustitle']}</span></a></div></div>";
+				}
 			} else $previousentryexist='none';
 			if ($entry['nextid']!='') {
 				$nextentryexist='inline';
