@@ -101,7 +101,6 @@ $thisYear = (int)date('Y');
 
 $elements['displayfooter']=<<<eot
 
-
 </div><!--End of 'Main'-->
 
 <section class="about">
@@ -479,7 +478,7 @@ $elements['subscribe-page']=<<<eot
 	<div class="inner-item">
 		<h1 class="item-text">{title}</h1>
 		<div class="item-text body-text item-desc text">
-			我台自 2015 年底诞生以来已经陆续登录多个平台以尽量满足大家的需求和日常使用习惯，请对号入座寻找适合自己的平台：
+			我台自 2015 年底诞生以来已经陆续登陆多个平台以尽量满足大家的需求和日常使用习惯，请对号入座寻找适合自己的平台：
 			<br/><br/>
 
 			<div class="subscribe-section">
@@ -497,12 +496,12 @@ $elements['subscribe-page']=<<<eot
 				<strong>文艺青年推荐使用泛用型播客客户端</strong>
 				<p>什么是「泛用型」？简单来说就是音频文件并不放在他们服务器上的，他们的软件只是聚合一下各个内容提供商产出的播客，优点是内容比较专注 Podcast，并且节目简介里可以直接点击参考链接等内容，通过以下链接或者在软件里搜索「Anyway.FM」可以找到我们：</p>
 				<div class="subscribe-links">
-					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" >iOS 播客</a>
-					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" >macOS iTunes</a>
-					<a href="http://supertop.co/castro/" >Castro</a>
-					<a href="http://pca.st/QUtT" >Pocket Casts</a>
-					<a href="https://overcast.fm/itunes1053786200/anyway-fm" >Overcast</a>
-					<a href="http://anyway.fm/rss.xml" >RSS</a>
+					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200">iOS 播客</a>
+					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200">macOS iTunes</a>
+					<a href="http://supertop.co/castro/">Castro</a>
+					<a href="http://pca.st/QUtT">Pocket Casts</a>
+					<a href="https://overcast.fm/itunes1053786200/anyway-fm">Overcast</a>
+					<a href="http://anyway.fm/rss.xml">也可使用 RSS 订阅</a>
 				</div>
 			</div>
 
@@ -510,11 +509,11 @@ $elements['subscribe-page']=<<<eot
 				<strong><s>其他青年</s>其他信息发布平台在这里</strong>
 				<p>微信公众号尚未开启，微信听众群目前仅在测试中，成员仅限之前两次线下活动中购票的朋友，后续不定期考虑开放。</p>
 				<div class="subscribe-links">
-					<a href="https://zhuanlan.zhihu.com/anyway-fm" >知乎专栏</a>
-					<a href="http://weibo.com/anywayfm" >新浪微博</a>
+					<a href="https://zhuanlan.zhihu.com/anyway-fm">知乎专栏</a>
+					<a href="http://weibo.com/anywayfm">新浪微博</a>
 					<a href="https://twitter.com/Anyway__FM" >Twitter</a>
-					<a href="http://anyway.fm/post/" >安妮薇邮报</a>
-					<a href="mailto:hello@anyway.fm" >电子邮件</a>
+					<a href="http://anyway.fm/post/">安妮薇邮报</a>
+					<a href="mailto:hello@anyway.fm">电子邮件</a>
 				</div>
 
 			</div>
@@ -554,8 +553,6 @@ eot;
 $elements['viewpage']=<<<eot
 eot;
 
-
-//Message page
 $elements['tips']=<<<eot
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cmn-Hans">

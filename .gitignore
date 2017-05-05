@@ -20,9 +20,6 @@ rss.txt
 Website - History
 Source
 *.psd
-post/
-post/*.*
 node_modules/
-post
 build/
-build/*
+build/*.*
