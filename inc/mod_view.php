@@ -166,98 +166,12 @@ if ($job=='userlist') {
 }
 
 if ($job=='subscribe') {
-	$archivepagetitle="Anyway.FM 订阅方式";
-	$section_body_main=$t->set('subscribe-page', array('title'=>$archivepagetitle, 'contentbody'=>''));
+	$subscribepagetitle="Anyway.FM 订阅方式";
+	$pagedesc='目前 Anyway.FM 已经登陆包括网易云音乐、荔枝 FM、喜马拉雅 FM 等多个主流播客平台';
+	$section_body_main=$t->set('subscribe-page', array('title'=>$subscribepagetitle, 'contentbody'=>''));
 	$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none',  'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
 }
 
-//if ($job=='archivelist') {
-//	$allvaliddates=$blog->getarraybyquery("SELECT `pubtime` FROM `{$db_prefix}blogs` WHERE property='0' ORDER BY `pubtime` DESC");
-//	$allvaliddates=$allvaliddates['pubtime'];
-//	$resultdates=array();
-//	$dayarticlenum=array();
-//	$dayhot=array();
-//	
-// Archive Page Infographics
-//	$the_current_time=time();
-//	$totaldays=floor(($the_current_time-1154998861)/(24*60*60));
-//	$averageposts=floor($totaldays /$statistics['entries']*10)/10;
-//	$totalvisits=floor(($statistics['total'])/10000);
-//	$totalvisits2=floor(($totalvisits*10/8)/2.5)/10;
-//	$totalwords=floor($statistics['entries']*1500/660000*10)/10;	
-//	$result="
-//	<link rel=\"stylesheet\" rev=\"stylesheet\" href=\"css/archive.css\" type=\"text/css\" media=\"all\" />
-//	<div class=\"archive-infographics\">
-//		<div class=\"main-counters infographics-total-entries\">
-//			<div class=\"counters-numbers\">{$totaldays}</div>
-//			<div class=\"counters-desc\">天前建站<span><i class=\"font-icon icon-asterisk\"></i> 平均每 {$averageposts} 天一篇博文</span></div>
-//		</div>
-//		<div class=\"main-counters infographics-total-visits\">
-//			<div class=\"counters-numbers\">{$totalvisits}</div>
-//			<div class=\"counters-desc\">万次访问<span><i class=\"font-icon icon-asterisk\"></i> 访客需要装 {$totalvisits2} 个上海体育场</span></div>
-//		</div>
-//		<div class=\"main-counters infographics-total-entries\">
-//			<div class=\"counters-numbers\">{$statistics['entries']}</div>
-//			<div class=\"counters-desc\">篇博文<span><i class=\"font-icon icon-asterisk\"></i> 总字数相当于 {$totalwords} 本《新华字典》</span></div>
-//		</div>
-//	</div>
-//
-//	<div class=\"archive-list\">";
-//	
-//	if (is_array($allvaliddates)) {
-//		foreach ($allvaliddates as $time) {
-//			$y1=gmdate('Y', $time+3600*$config['timezone']);
-//			$m1=gmdate('n', $time+3600*$config['timezone']);
-//			$d1=gmdate('d', $time+3600*$config['timezone']);
-//			$resultdates[$y1][$m1]+=1;
-//			$dayarticlenum[$y1][$m1][$d1]+=1;
-//		}
-//		$uniquedates=array_keys($resultdates);
-//		for ($i=0; $i<count($uniquedates); $i++) {
-//			$y=$uniquedates[$i];
-//			$yeararchivecount=0;		
-//			for ($j=1; $j<13; $j++) {
-//				$resultdates[$y][$j]=floor($resultdates[$y][$j]);
-//				$yeararchivecount+=$resultdates[$y][$j];
-//			}
-//			
-//			$result.="<div class=\"archive-year-$y\"><div class=\"archive-year\">{$y}<span class=\"archive-year-count\">{$yeararchivecount} 篇博文</span></div>";
-//			
-//$yearhot=$blog->getgroupbyquery("SELECT * FROM `{$db_prefix}blogs` WHERE year(from_unixtime(pubtime)) =$y and property='0' ORDER BY `views` DESC LIMIT 0 , 10");
-//if (is_array($yearhot)) {
-//$viewhows='<div class="archive-hot">';
-//$hotnum=0;
-//foreach ($yearhot as $onehotview) {
-//$hotnum++;
-//if ($onehotview['comefrom']!="") {
-//	$viewhows.="<div class=\"archive-hot-single\" style=\"background-image:url(".$onehotview['pinged'].")\"><div class=\"inner\"><div class=\"hot-single-num\"><i>#</i>$hotnum</div><a href=\"{$onehotview['comefrom']}\" target='_blank'\">{$onehotview['title']}</a></div></div>";	
-//}
-//elseif($onehotview['blogalias']=="") {
-//	$viewhows.="<div class=\"archive-hot-single\" style=\"background-image:url(".$onehotview['pinged'].")\"><div class=\"inner\"><div class=\"hot-single-num\"><i>#</i>$hotnum</div><a href=\"read.php?".$onehotview['blogid']."\">{$onehotview['title']}</a></div></div>";
-//} else {
-//	 $viewhows.="<div class=\"archive-hot-single\" style=\"background-image:url(".$onehotview['pinged'].")\"><div class=\"inner\"><div class=\"hot-single-num\"><i>#</i>$hotnum</div><a href=\"".$onehotview['blogalias']."\">{$onehotview['title']}</a></div></div>";	
-//}
-//
-//}
-//$viewhows.="</div>";  
-//} else {
-//$viewhows='</ol>今年才过了几天，没内容呢亲，饶了博主吧~';
-//}
-//			$result.=$viewhows;
-//			$result.='</div><div class="clear"></div>';
-//		}
-//	}
-//	//End of a year
-//	
-//	$result.='</div>
-//	<div class="archive-end">
-//		<i class="font-icon icon-asterisk blue"></i>
-//		<br />
-//		THE END
-//	</div>
-//	';
-//	$archivepagetitle="";
-//	$section_body_main=$t->set('contentpage', array('title'=>$archivepagetitle, 'contentbody'=>$result));
-//	announcebar();
-//	$bodymenu=$t->set('mainpage', array('pagebar'=>'', 'iftoppage'=>'none', 'ifbottompage'=>'none',  'ifannouncement'=>$ifannouncement, 'topannounce'=>$topannounce, 'mainpart'=>$section_body_main, 'currentpage'=>'', 'previouspageurl'=>'', 'nextpageurl'=>'', 'turningpages'=>'', 'totalpages'=>'', 'previouspageexists'=>'', 'nextpageexists'=>''));
-//}
+if ($job=='archivelist') {
+
+}
