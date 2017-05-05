@@ -1,0 +1,44 @@
+.subscribe-section{
+	margin: 0 0 3em;
+	clear: both;
+}
+.subscribe-section strong{
+	display: inline-block;
+	padding: 0 .5em;
+	background: #f60c3e;
+	color: #fff;
+}
+.subscribe-section p{
+	margin: .5em 0 0;
+}
+.subscribe-links{
+	clear: both;
+	overflow: hidden;
+	margin: .5em 0 0;
+}
+.subscribe-links a{
+	font-weight: 700;
+	margin: 0 1em 0 0;
+	border: none;
+}
+.subscribe-links a:hover{
+	color: #f60c3e;
+}
+.subscribe-links a:before{
+	display: inline-block;
+	content: "•";
+	font-size: 1.2em;
+	margin: 0 .2em 0 0;
+}
+/*.subscribe-links .subscribe-netease:before{
+	background: #b71903;
+}
+.subscribe-links .subscribe-lizhi:before{
+	background: #f45076;
+}
+.subscribe-links .subscribe-qie:before{
+	background: #dab86c;
+}
+.subscribe-links .subscribe-ximalaya:before{
+	background: #ff3900;
+}*/

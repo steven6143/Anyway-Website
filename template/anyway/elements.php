@@ -13,35 +13,35 @@ $elements['header']=<<<eot
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/t.min.js"></script>
-		
+
 		<link rel="alternate" type="application/rss+xml" title="Anyway.FM" href="http://anyway.fm/rss.xml" />
 		<link rel="shortcut icon" href="http://anyway-web.b0.upaiyun.com/images/favicon.png" />
 		<link rel="apple-touch-icon" href="http://anyway-web.b0.upaiyun.com/images/apple-touch-icon-precomposed.png">
 		<script type="text/javascript">
 		/*<![CDATA[*/
-		var fin=!1;		
+		var fin=!1;
 		$(function(){
 			$('.tagline').css("opacity","1");
 			$('#t').t({
 				speed:57,
 				delay:0.8,
 				speed_vary:true,
-				mistype:40,				
+				mistype:40,
 				typing:function(elem,chars_total,chars_left,_char){
 				if(_char=='*')foo();
-				},			
-				fin:function(){			
+				},
+				fin:function(){
 					if(fin==!1){
 						fin=!!1; //avoids triggering after 'add' cmd
 							$('#t').find('.t-caret').css("display","none");
 					}
-				}			
-			});		
+				}
+			});
 		});
 		/*]]>*/
 		</script>
 	</head>
-	
+
 <body id="{pageID}" class="blog" onload="addSwitchBtn()">
 eot;
 
@@ -60,17 +60,16 @@ $elements['displayheader']=<<<eot
 						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们<em>，</em><ins>0.4</ins><del>就喜欢扯谈设计</del><ins>0.4</ins><del>专注嘴炮 30 年</del><ins>0.4</ins><del>想赚一些奶粉钱<ins>0.4</ins></del><ins>0.6</ins>想让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
 					</div>		<a name="title"></a>
 					<div class="nav">
-						<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
-						<span></span>
+						<a class="mobile-hide" href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
+						<span class="mobile-hide"></span>
 						<a href="http://music.163.com/#/djradio?id=4969001" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Netease', 'from-header-nav'])" data-balloon="在网易云音乐上订阅"><img src="http://anyway-web.b0.upaiyun.com/images/netease.svg" class="nav-icon"/> 网易云音乐</a>
 						<span></span>
-						<a class="mobile-hide" href="http://anyway.fm/rss.xml" onclick="_hmt.push(['_trackEvent', 'subscribe', 'RSS', 'from-header-nav'])"  data-balloon="在其他泛用型播客客户端中可以直接输入这个 RSS 来订阅"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> RSS 订阅</a>
-						<span class="mobile-hide"></span>
-						<a href="http://anyway.fm/post/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> Anyway 邮报</a>
+						<a href="http://anyway.fm/subscribe.php#title" onclick="_hmt.push(['_trackEvent', 'subscribe', 'More', 'from-header-nav'])"  data-balloon="查阅更多订阅平台"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> 更多订阅方式</a>
+						<span></span>
+						<a href="http://anyway.fm/post/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> 安妮薇邮报</a>
 					</div>
 				</div>
 			</header>  <!--End of 'Header'-->
-
 eot;
 
 $elements['mainpage']=<<<eot
@@ -98,17 +97,16 @@ $elements['otherpage']=<<<eot
 eot;
 
 $url_this = "http://".$_SERVER['HTTP_HOST']. $_SERVER['REQUEST_URI'];
-eot;
-
 $thisYear = (int)date('Y');
+
 $elements['displayfooter']=<<<eot
-	
+
 
 </div><!--End of 'Main'-->
 
 <section class="about">
 	<div class="section body-text inner-about">
-	
+
 		<div class="about-single about-jj">
 			<div class="about-name">JJ <span>Ying</span></div>
 			<div class="about-desc">
@@ -118,7 +116,7 @@ $elements['displayfooter']=<<<eot
 				<a href="http://JJYing.com" class="about-link"><i class="icon-home"></i></a><a href="http://dribbble.com/JJYing" class="about-link"><i class="icon-dribbble"></i></a><a href="http://weibo.com/yingjunjiu/" class="about-link"><i class="icon-weibo"></i></a><a href="https://github.com/jjying" class="about-link"><i class="icon-github"></i></a><a href="http://instagram.com/jjying" class="about-link"><i class="icon-instagram"></i></a><a href="https://twitter.com/JJYing" class="about-link"><i class="icon-twitter"></i></a><a href="http://www.flickr.com/photos/jjying/" class="about-link"><i class="icon-flickr"></i></a><a href="http://www.linkedin.com/in/jjying" class="about-link"><i class="icon-linkedin-squared"></i></a>
 			</div>
 		</div>
-		
+
 		<div class="about-single about-leon">
 			<div class="about-name">Leon <span>Gao</span></div>
 			<div class="about-desc">
@@ -129,8 +127,8 @@ $elements['displayfooter']=<<<eot
 			</div>
 		</div>
 
-		
-	</div>			
+
+	</div>
 </section> <!--End of 'About'-->
 
 <section class="section subscribe">
@@ -168,7 +166,7 @@ $elements['displayfooter']=<<<eot
 <div class="search-bar">
 	<div class="search-text">标题、内容都可以搜~<br />实在搜不到请出门右转发邮件</div>
 	<input type="text" class="st-default-search-input">
-	
+
 	<a href="javascript:closeSearchbar();" class="search-close">取消</a>
 </div>
 
@@ -189,11 +187,11 @@ $(function() {
 <script type="text/javascript">
 function addSwitchBtn() {
 	$(".ref").children("h2").append("<a href='#' class='switch-target'></a>");
-	
+
 	var isNewWindow = getCookie("isNewWindow");
 	var switchBtnSelf = "<span class='selected'>当前页面打开</span><span>新开页面";
 	var switchBtnBlank = "<span>当前页面打开</span><span class='selected'>新开页面</span>";
-	
+
 	if (isNewWindow == "Yes") {
 		$(".switch-target").html(switchBtnBlank);
 		$(".ref").find("a").attr({target:"_blank"});
@@ -201,11 +199,11 @@ function addSwitchBtn() {
 	else{
 		$(".switch-target").html(switchBtnSelf);
 	}
-	
+
 	$(".switch-target").bind("click",function(e){
-		
+
 		e.preventDefault();
-		
+
 		if (isNewWindow == "Yes") {
 			$(".switch-target").html(switchBtnSelf);
 			isNewWindow = "No";
@@ -217,19 +215,19 @@ function addSwitchBtn() {
 			isNewWindow = "Yes";
 			$(".ref").find("a").attr({target:"_blank"});
 			document.cookie="isNewWindow=" +  isNewWindow +";domain=anyway.fm;path=/;expires=Sat, 17 May 2027 23:38:25 GMT";
-		}		
+		}
 	})
 }
 
 function getCookie(c_name){
 	if (document.cookie.length>0){
 		c_start=document.cookie.indexOf(c_name + "=")
-		if (c_start!=-1){ 
-			c_start=c_start + c_name.length+1 
+		if (c_start!=-1){
+			c_start=c_start + c_name.length+1
 			c_end=document.cookie.indexOf(";",c_start)
 			if (c_end==-1) c_end=document.cookie.length
 			return unescape(document.cookie.substring(c_start,c_end))
-		} 
+		}
 	}
 	return ""
 }
@@ -241,19 +239,19 @@ function getCookie(c_name){
 function loadScript(url,callback){
 	$('.search-bar').addClass('search-bar-show');
    var script = document.createElement("script");
-   script.type = "text/javascript"; 
+   script.type = "text/javascript";
    script.src = url;
-   if (script.readyState){//IE 
-      script.onreadystatechange = function(){ 
-         if (script.readyState ==  "loaded" || script.readyState == "complete"){ 
+   if (script.readyState){//IE
+      script.onreadystatechange = function(){
+         if (script.readyState ==  "loaded" || script.readyState == "complete"){
             script.onreadystatechange = null;
             eval(callback + '()');
-         } 
-      }; 
-   } else { //Others: Firefox, Safari, Chrome, and Opera 
-      script.onload = function(){ 
+         }
+      };
+   } else { //Others: Firefox, Safari, Chrome, and Opera
+      script.onload = function(){
          eval(callback + '()');
-      }; 
+      };
    }
    document.body.appendChild(script);
 }
@@ -268,7 +266,7 @@ function closeSearchbar() {
 	(function() {
 	  var hm = document.createElement("script");
 	  hm.src = "//hm.baidu.com/hm.js?d6fc362c05908e5ce8d17df52dbc2586";
-	  var s = document.getElementsByTagName("script")[0]; 
+	  var s = document.getElementsByTagName("script")[0];
 	  s.parentNode.insertBefore(hm, s);
 	})();
 </script>
@@ -378,7 +376,7 @@ $elements['viewentry']=<<<eot
 
 <div class="section comments-section">
 <div class="inner-section">
-<div class="comments body-text">	
+<div class="comments body-text">
 	<a name="topreply"></a>
 
 <!-- 多说评论框 start -->
@@ -392,7 +390,7 @@ var duoshuoQuery = {short_name:"anyway"};
 		ds.type = 'text/javascript';ds.async = true;
 		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
 		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
+		(document.getElementsByTagName('head')[0]
 		 || document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
 	</script>
@@ -443,7 +441,7 @@ $elements['login']=<<<eot
   </tr>
   <tr>
     <td class="formbox-rowheader">{$lnc[255]}</td>
-    <td class="formbox-content"><input name="savecookie" type="radio" id="savecookie" value="0"/>{$lnc[256]} <input name="savecookie" type="radio" id="savecookie" value="3600"/>{$lnc[257]} <input name="savecookie" type="radio" id="savecookie" value="86400"/>{$lnc[258]}  <input name="savecookie" type="radio" id="savecookie" value="604800"/>{$lnc[259]}  <input name="savecookie" type="radio" id="savecookie" value="2592000"/>{$lnc[260]}   <input name="savecookie" type="radio" id="savecookie" value="31104000"/>{$lnc[261]}   
+    <td class="formbox-content"><input name="savecookie" type="radio" id="savecookie" value="0"/>{$lnc[256]} <input name="savecookie" type="radio" id="savecookie" value="3600"/>{$lnc[257]} <input name="savecookie" type="radio" id="savecookie" value="86400"/>{$lnc[258]}  <input name="savecookie" type="radio" id="savecookie" value="604800"/>{$lnc[259]}  <input name="savecookie" type="radio" id="savecookie" value="2592000"/>{$lnc[260]}   <input name="savecookie" type="radio" id="savecookie" value="31104000"/>{$lnc[261]}
   </tr>
   {lvstart}
   <tr>
@@ -464,16 +462,65 @@ $elements['login']=<<<eot
 eot;
 
 $elements['contentpage']=<<<eot
-<div class="textbox">
-	<div class="textbox-title">
-			<h2>
-				{title}
-			</h2>
-  </div>
-	<div class="textbox-content">
-	{contentbody}
+
+<article class="item">
+	<div class="inner-item">
+		<h1 class="item-text">{title}</h1>
+		<div class="item-text body-text item-desc text">
+			{contentbody}
+		</div>
 	</div>
-</div>
+</article>
+eot;
+
+$elements['subscribe-page']=<<<eot
+<link rel="stylesheet" rev="stylesheet" href="css/subscribe.css" type="text/css" media="all" />
+<article class="item">
+	<div class="inner-item">
+		<h1 class="item-text">{title}</h1>
+		<div class="item-text body-text item-desc text">
+			我台自 2015 年底诞生以来已经陆续登录多个平台以尽量满足大家的需求和日常使用习惯，请对号入座寻找适合自己的平台：
+			<br/><br/>
+
+			<div class="subscribe-section">
+				<strong>普通青年建议使用国内播客平台</strong>
+				<p>好处是速度快，平常适合国情的内容更多，但缺点是普遍都不支持在简介当中插链接，所以请配合我们的官网（本站）里每一期的参考链接服用：</p>
+				<div class="subscribe-links">
+					<a href="http://music.163.com/#/djradio?id=4969001" class="subscribe-netease">网易云音乐</a>
+					<a href="http://www.lizhi.fm/1824901/" class="subscribe-lizhi">荔枝 FM</a>
+					<a href="https://fm.qq.com/album/rd001ILuwm2d5Xoq_39126_40071" class="subscribe-qie">企鹅 FM</a>
+					<a href="http://www.ximalaya.com/40480243/album/3524184" class="subscribe-ximalaya">喜马拉雅 FM</a>
+				</div>
+			</div>
+
+			<div class="subscribe-section">
+				<strong>文艺青年推荐使用泛用型播客客户端</strong>
+				<p>什么是「泛用型」？简单来说就是音频文件并不放在他们服务器上的，他们的软件只是聚合一下各个内容提供商产出的播客，优点是内容比较专注 Podcast，并且节目简介里可以直接点击参考链接等内容，通过以下链接或者在软件里搜索「Anyway.FM」可以找到我们：</p>
+				<div class="subscribe-links">
+					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" >iOS 播客</a>
+					<a href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" >macOS iTunes</a>
+					<a href="http://supertop.co/castro/" >Castro</a>
+					<a href="http://pca.st/QUtT" >Pocket Casts</a>
+					<a href="https://overcast.fm/itunes1053786200/anyway-fm" >Overcast</a>
+					<a href="http://anyway.fm/rss.xml" >RSS</a>
+				</div>
+			</div>
+
+			<div class="subscribe-section">
+				<strong><s>其他青年</s>其他信息发布平台在这里</strong>
+				<p>微信公众号尚未开启，微信听众群目前仅在测试中，成员仅限之前两次线下活动中购票的朋友，后续不定期考虑开放。</p>
+				<div class="subscribe-links">
+					<a href="https://zhuanlan.zhihu.com/anyway-fm" >知乎专栏</a>
+					<a href="http://weibo.com/anywayfm" >新浪微博</a>
+					<a href="https://twitter.com/Anyway__FM" >Twitter</a>
+					<a href="http://anyway.fm/post/" >安妮薇邮报</a>
+					<a href="mailto:hello@anyway.fm" >电子邮件</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</article>
 eot;
 
 $elements['taglist']=<<<eot
@@ -527,11 +574,11 @@ $elements['tips']=<<<eot
 			<div class="messagebox-content">
 			{tips}
 			</div>
-	
+
 			<div class="messagebox-bottom">
 				<a href="javascript: window.history.back();">{$lnc[263]}</a> | <a href="index.php">{$lnc[88]}</a> {admin_plus}
 			</div>
-			
+
 		</div>
 	</center>
 </body>
