@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     plugins = gulpLoadPlugins();
  
 var cdnUrl = [
-	[ 'css/main.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/main.min.css' ]
+	[ 'css/main.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/main.min.css' ],
+	[ 'css/subscribe.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/subscribe.min.css' ]	
 ];
  
 gulp.task('watch', function() {
