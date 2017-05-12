@@ -599,7 +599,7 @@ class getblogs extends boblog {
 			$entrycontent=$this->getcontent($entry['content'],  $entry['htmlstat'], $entry['ubbstat'], $entry['emotstat'], 1);
 			$entrycontent=$this->keep_htmlcode_matches($entrycontent);
 			if ($notfinish==1) {
-				$entrycontent.=$t->set('entryadditional', array('readmore'=>"<a class=\"item-btn\" href=\"".get_entry_url($entry['blogid'], $entry['blogalias'])."#title\" title=\"阅读全文\"><img src=\"http://anyway-web.b0.upaiyun.com/images/info.svg\" class=\"svg\"/> 查看详情</a>"));
+				$entrycontent.=$t->set('entryadditional', array('readmore'=>"<a class=\"item-btn\" href=\"".get_entry_url($entry['blogid'], $entry['blogalias'])."#title\" title=\"阅读全文\"><img src=\"http://anyway-web.b0.upaiyun.com/images/info.svg\" class=\"svg\"/> 查看详情</a>",'readmoreAMP'=>"<a class=\"item-btn\" href=\"".get_entry_url($entry['blogid'], $entry['blogalias'])."#title\" title=\"阅读全文\">查看详情</a>"));
 			}
 			if ($way=='viewentry') { //Load plugin: entryend
 				$entrycontent.=plugin_get('entrycontentend');
@@ -647,9 +647,11 @@ class getblogs extends boblog {
 		//Play Audio
 		if ($entry['comefrom']) {
 			$playaudio="<a onclick=\"_hmt.push(['_trackEvent', 'audio', 'play', 'Nº {$entry['originsrc']}'])\" target=\"blank\" class=\"item-btn\" href=\"{$entry['comefrom']}\" title=\"立即播放第 {$entry['originsrc']} 节目\"><img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
+			$playaudioAMP="<a class=\"item-btn\" href=\"{$entry['comefrom']}\" title=\"立即播放第 {$entry['originsrc']} 节目\"><amp-img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
 		}
 		else {
 			$playaudio="";
+			$playaudioAMP="";
 		}
 		
 		//Set page meta description
@@ -667,7 +669,7 @@ class getblogs extends boblog {
 		
 
 		//Start Template
-		$section_bodys[]=$t->set($way, array('entryid'=>$entry['blogid'], 'entryicon'=>$entryicon, 'entrytitle'=>$entrytitle, 'entrydate'=>$entrydate,  'entrytime'=>$entrytime, 'entryauthor'=>$entryauthor, 'entrycontent'=>$entrycontent, 'iftags'=>$iftags, 'tags'=>$tags, 'alltags'=>$alltags, 'entrycate'=>$entrycate, 'entrycateicon'=>$entrycateicon, 'entrycomment'=>$entrycomment, 'entrytb'=>$entrytb, 'entrycatealias'=>$entrycatealias, 'entryviews'=>$entryviews, 'ifadmin'=>$ifadmin, 'adminbar'=>$adminbar, 'tbbar'=>$tbbar, 'previous'=>$previous, 'next'=>$next, 'ifedited'=>$editby, 'toolbar'=>$toolbar, 'topid'=>$topid, 'entrystar'=>$entrystar, 'entrytitletext'=>$entry['title'], 'entryrelurl'=>get_entry_url($entry['blogid'], $entry['blogalias']), 'entryabsurl'=>"{$config['blogurl']}/".get_entry_url($entry['blogid'], $entry['blogalias']), 'entrydatey'=>$entrydatey, 'entrydatem'=>$entrydatem, 'entrydater'=>$entrydater, 'todaydate'=>$todaydate, 'entrydated'=>$entrydated, 'entrycommentnum'=>$entry['replies'], 'entrytbnum'=>$entry['tbs'], 'entryviewsnum'=>$entry['views'], 'entrytbnumwithlink'=>$entrytbnumwithlink, 'entrytburl'=>$entrytburl, 'previousentryexist'=>$previousentryexist, 'previousentrytitle'=>$previousentrytitle, 'previousentryurl'=>$previousentryurl, 'nextentryexist'=>$nextentryexist, 'nextentrytitle'=>$nextentrytitle, 'nextentryurl'=>$nextentryurl, 'entrydatemnamefull'=>$entrydatemnamefull, 'entrydatemnameshort'=>$entrydatemnameshort, 'entrysourcewithlink'=>$entrysourcewithlink, 'pinged'=>$pinged, 'playaudio'=>$playaudio, 'hostsname'=>$hostsname, 'entrysource'=>$entry['comefrom'], 'entrysourcelink'=>$entry['originsrc'], 'entrydesc'=>$entry['entrysummary'], 'adminlink'=>$adminlink));
+		$section_bodys[]=$t->set($way, array('entryid'=>$entry['blogid'], 'entryicon'=>$entryicon, 'entrytitle'=>$entrytitle, 'entrydate'=>$entrydate,  'entrytime'=>$entrytime, 'entryauthor'=>$entryauthor, 'entrycontent'=>$entrycontent, 'iftags'=>$iftags, 'tags'=>$tags, 'alltags'=>$alltags, 'entrycate'=>$entrycate, 'entrycateicon'=>$entrycateicon, 'entrycomment'=>$entrycomment, 'entrytb'=>$entrytb, 'entrycatealias'=>$entrycatealias, 'entryviews'=>$entryviews, 'ifadmin'=>$ifadmin, 'adminbar'=>$adminbar, 'tbbar'=>$tbbar, 'previous'=>$previous, 'next'=>$next, 'ifedited'=>$editby, 'toolbar'=>$toolbar, 'topid'=>$topid, 'entrystar'=>$entrystar, 'entrytitletext'=>$entry['title'], 'entryrelurl'=>get_entry_url($entry['blogid'], $entry['blogalias']), 'entryabsurl'=>"{$config['blogurl']}/".get_entry_url($entry['blogid'], $entry['blogalias']), 'entrydatey'=>$entrydatey, 'entrydatem'=>$entrydatem, 'entrydater'=>$entrydater, 'todaydate'=>$todaydate, 'entrydated'=>$entrydated, 'entrycommentnum'=>$entry['replies'], 'entrytbnum'=>$entry['tbs'], 'entryviewsnum'=>$entry['views'], 'entrytbnumwithlink'=>$entrytbnumwithlink, 'entrytburl'=>$entrytburl, 'previousentryexist'=>$previousentryexist, 'previousentrytitle'=>$previousentrytitle, 'previousentryurl'=>$previousentryurl, 'nextentryexist'=>$nextentryexist, 'nextentrytitle'=>$nextentrytitle, 'nextentryurl'=>$nextentryurl, 'entrydatemnamefull'=>$entrydatemnamefull, 'entrydatemnameshort'=>$entrydatemnameshort, 'entrysourcewithlink'=>$entrysourcewithlink, 'pinged'=>$pinged, 'playaudio'=>$playaudio, 'playaudioAMP'=>$playaudioAMP, 'hostsname'=>$hostsname, 'entrysource'=>$entry['comefrom'], 'entrysourcelink'=>$entry['originsrc'], 'entrydesc'=>$entry['entrysummary'], 'adminlink'=>$adminlink));
 	}
 
 	function save_a_text ($entry) {
