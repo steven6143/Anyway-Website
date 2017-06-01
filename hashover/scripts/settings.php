@@ -31,33 +31,33 @@ class Settings
 	public    $notificationEmail	= 'hello@Anyway.FM';	// E-mail for notification of new comments
 	protected $encryptionKey	= 'eRtodLkdncYLu12';			// Unique encryption key
 	protected $adminName		= 'Anyway-FM';			// Login name to gain admin rights (case-sensitive)
-	protected $adminPassword	= '!QAZ2wsx3edc';			// Login password to gain admin rights (case-sensitive)
+	protected $adminPassword	= 'testatesta';			// Login password to gain admin rights (case-sensitive)
 
 	// Primary settings
 	public $language		= 'zh-cn';			// UI language, for example 'en', 'de', etc. 'auto' to use system locale
-	public $theme			= 'default';			// Comment Cascading Style Sheet (CSS)
+	public $theme			= 'anyway';			// Comment Cascading Style Sheet (CSS)
 	public $usesModeration		= false;			// Whether comments must be approved before they appear to other visitors
 	public $dataFormat		= 'json';			// Format comments will be stored in; options: xml, json, sql
-	public $defaultName		= '访客';			// Default name to use when one isn't given
+	public $defaultName		= 'AnywayER';			// Default name to use when one isn't given
 	public $allowsImages		= true;				// Whether external image URLs wrapped in [img] tags are embedded
 	public $allowsLogin		= true;				// Whether users can login and logout (when false form cookies are still set)
-	public $allowsLikes		= true;				// Whether a "Like" link is displayed
+	public $allowsLikes		= false;				// Whether a "Like" link is displayed
 	public $allowsDislikes		= false;			// Whether a "Dislike" link is displayed; allowing Reddit-style voting
 	public $usesAJAX		= true;				// Whether AJAX is used for posting, editing, and loading comments
 	public $collapsesUI		= false;			// Whether the comment form, thread, and end links are all initially hidden
-	public $collapsesComments	= true;				// Whether to hide comments and display a link to show them
+	public $collapsesComments	= false;				// Whether to hide comments and display a link to show them
 	public $collapseLimit		= 3;				// Number of comments that aren't hidden
 	public $replyMode		= 'thread';			// Whether to display replies as a 'thread' or as a 'stream'
 	public $streamDepth		= 3;				// In stream mode, the number of reply indentions to allow before the thread flattens
-	public $popularityThreshold	= 5;				// Minimum likes a comment needs to be popular
+	public $popularityThreshold	= 3;				// Minimum likes a comment needs to be popular
 	public $popularityLimit		= 2;				// Number of comments allowed to become popular
 
 	// Date and Time settings
 	public $serverTimezone		= 'Asia/Shanghai';	// Server timezone
 	public $usesUserTimezone	= true;				// Whether comment dates should use the user's timezone (JavaScript-mode)
 	public $usesShortDates		= true;				// Whether comment dates are shortened, for example "X days ago"
-	public $timeFormat		= 'g:ia';			// Time format, use 'H:i' for 24-hour format (see: http://php.net/manual/en/function.date.php)
-	public $dateFormat		= 'Y/m/d';			// Date format (see: http://php.net/manual/en/function.date.php)
+	public $timeFormat		= 'H:i';			// Time format, use 'H:i' for 24-hour format (see: http://php.net/manual/en/function.date.php)
+	public $dateFormat		= 'Y.m.d';			// Date format (see: http://php.net/manual/en/function.date.php)
 
 	// Field options, use true/false to enable/disable a field,
 	// use 'required' to require a field be properly filled
@@ -69,18 +69,18 @@ class Settings
 	);
 
 	// Behavior settings
-	public $displaysTitle		= true;				// Whether page title is shown or not
-	public $formPosition		= 'top';			// Position for primary form; options: 'top' or 'bottom'
+	public $displaysTitle		= false;				// Whether page title is shown or not
+	public $formPosition		= 'bottom';			// Position for primary form; options: 'top' or 'bottom'
 	public $usesAutoLogin		= true;				// Whether a user's first comment automatically logs them in
 	public $showsReplyCount		= true;				// Whether to show reply count separately from total
 	public $countIncludesDeleted	= true;				// Whether comment counts should include deleted comments
 	public $iconMode		= 'image';			// How to display avatar icons (either 'image', 'count' or 'none')
-	public $iconSize		= '45';				// Size of Gravatar icons in pixels
+	public $iconSize		= '100';				// Size of Gravatar icons in pixels
 	public $imageFormat		= 'png';			// Format for icons and other images (use 'svg' for HDPI)
 	public $usesLabels		= false;			// Whether to display labels above inputs
-	public $usesCancelButtons	= true;				// Whether forms have "Cancel" buttons
+	public $usesCancelButtons	= false;				// Whether forms have "Cancel" buttons
 	public $appendsCSS		= true;				// Whether to automatically add a CSS <link> element to the page <head>
-	public $displaysRSSLink		= true;				// Whether a comment RSS feed link is displayed
+	public $displaysRSSLink		= false;				// Whether a comment RSS feed link is displayed
 
 	// Technical settings
 	public $loginMethod		= 'defaultLogin';		// Login method class for handling user login information
