@@ -738,6 +738,7 @@ h2 .h2-icon{
 	margin: 0 auto;
 	min-height: 4rem;
 	padding: 0;
+	background: url('http://anyway-web.b0.upaiyun.com/anyway.fm/loading.gif') no-repeat center center;
 }
 .box{
 	margin:5px 20px 30px 0;
