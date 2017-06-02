@@ -4,7 +4,8 @@ var gulp = require('gulp'),
  
 var cdnUrl = [
 	[ 'css/main.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/main.min.css' ],
-	[ 'css/subscribe.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/subscribe.min.css' ]	
+	[ 'css/hashover.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/hashover.min.css' ],
+	[ 'css/subscribe.css', 'http://anyway-web.b0.upaiyun.com/anyway.fm/subscribe.min.css' ]
 ];
  
 gulp.task('watch', function() {
