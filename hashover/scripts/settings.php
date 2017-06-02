@@ -79,7 +79,7 @@ class Settings
 	public $imageFormat		= 'png';			// Format for icons and other images (use 'svg' for HDPI)
 	public $usesLabels		= false;			// Whether to display labels above inputs
 	public $usesCancelButtons	= false;				// Whether forms have "Cancel" buttons
-	public $appendsCSS		= true;				// Whether to automatically add a CSS <link> element to the page <head>
+	public $appendsCSS		= false;				// Whether to automatically add a CSS <link> element to the page <head>
 	public $displaysRSSLink		= false;				// Whether a comment RSS feed link is displayed
 
 	// Technical settings
