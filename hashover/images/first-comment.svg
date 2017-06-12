@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="45" width="45" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<metadata>
-<rdf:RDF>
-<cc:Work rdf:about="">
-<dc:format>image/svg+xml</dc:format>
-<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<dc:title/>
-</cc:Work>
-</rdf:RDF>
-</metadata>
-<path d="m4.5e-8 22.5v-22.5h22.5 22.5v22.5 22.5h-22.5-22.5z" fill-opacity=".19608"/>
-<path d="m27 31.895v-4.8h4.8c5.2184 0 7.2-1.2385 7.2-4.5s-1.9816-4.5-7.2-4.5h-4.8v-4.8c0-5.2184-1.2385-7.2-4.5-7.2s-4.5 1.9816-4.5 7.2v4.8h-4.8c-5.2184 0-7.2 1.2385-7.2 4.5s1.9816 4.5 7.2 4.5h4.8v4.8c0 5.2184 1.2862 7.0093 4.5477 7.0093 3.395-0.01844 4.4294-2.102 4.4523-7.0093z" fill="#fff"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>avatar</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="avatar">
+            <polygon id="Shape" fill="#F5F5F5" fill-rule="nonzero" points="4.50000002e-08 22.5 4.50000002e-08 0 22.5 0 45 0 45 22.5 45 45 22.5 45 4.50000003e-08 45"></polygon>
+            <path d="M23.0474905,33.5890341 C31.7833368,33.5890341 38.8651396,27.9550097 38.8651396,21.0050883 C38.8651396,14.055167 31.7833368,8.42114258 23.0474905,8.42114258 C14.3116441,8.42114258 7.22984135,14.055167 7.22984135,21.0050883 C7.22984135,22.464308 7.54203595,23.8655176 8.11618592,25.1687486 C8.67467634,26.4364348 9.27131773,28.7294329 6.79925838,34.0500703 C4.32719903,39.3707077 14.1980279,31.4780131 15.2099258,31.9381241 C17.5203158,32.9886607 20.1957739,33.5890341 23.0474905,33.5890341 Z" id="Oval" fill="#FFFFFF"></path>
+        </g>
+    </g>
 </svg>

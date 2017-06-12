@@ -821,7 +821,7 @@ class HTMLOutput
 			$main_avatar->appendChild ($this->avatar ($this->commentCounts['primary']));
 
 			// Add avatar element to inputs wrapper element
-			$main_inputs->appendChild ($main_avatar);
+
 		}
 
 		// Logged in
@@ -1254,52 +1254,8 @@ class HTMLOutput
 			'id' => 'hashover-end-links'
 		));
 
-		// Hide end links wrapper if comments are to be initially hidden
-		if ($this->mode === 'javascript' and $this->setup->collapsesUI === true) {
-			$end_links_wrapper->createAttribute ('style', 'display: none;');
-		}
-
-		// HashOver Comments hyperlink text
-		$homepage_link_text = $this->locale->get ('hashover-comments');
-
-		// Create link back to HashOver homepage (fixme! get a real page!)
-		$homepage_link = new HTMLTag ('a', array (
-			'href' => 'http://tildehash.com/?page=hashover',
-			'id' => 'hashover-home-link',
-			'target' => '_blank',
-			'title' => $homepage_link_text,
-			'innerHTML' => $homepage_link_text
-		), false);
-
-		// Add link back to HashOver homepage to end links wrapper element
-		$end_links_wrapper->innerHTML ($homepage_link->asHTML () . ' &#8210;');
-
 		// End links array
 		$end_links = array ();
-
-		if ($this->commentCounts['total'] > 1) {
-			if ($this->setup->displaysRSSLink === true
-			    and $this->setup->APIStatus ('rss') !== 'disabled')
-			{
-				// Create RSS feed link
-				$rss_link = new HTMLTag ('a', array (), false);
-				$rss_link->createAttribute ('href', $this->setup->httpRoot . '/api/rss.php');
-				$rss_link->appendAttribute ('href', '?url=' . $this->safeURLEncode ($this->setup->pageURL), false);
-
-				// RSS Feed hyperlink text
-				$rss_link_text = $this->locale->get ('rss-feed');
-
-				$rss_link->createAttributes (array (
-					'id' => 'hashover-rss-link',
-					'target' => '_blank',
-					'title' => $rss_link_text,
-					'innerHTML' => $rss_link_text
-				));
-
-				// Add RSS hyperlink to end links array
-				$end_links[] = $rss_link->asHTML ();
-			}
-		}
 
 		// Source Code hyperlink text
 		$source_link_text = $this->locale->get ('source-code');
