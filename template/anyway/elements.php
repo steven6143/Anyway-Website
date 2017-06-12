@@ -10,6 +10,7 @@ $elements['header']=<<<eot
 		<meta name="description" content="{pagedesc}"/>
 		{baseurl}
 		<link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="all" />
+		<link rel="mask-icon" href="http://anyway-web.b0.upaiyun.com/anyway.fm/mask-icon.svg" color="#f60c3e">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script type="text/javascript" src="http://anyway-web.b0.upaiyun.com/js/jquery-1.9.1.min.js"></script>
