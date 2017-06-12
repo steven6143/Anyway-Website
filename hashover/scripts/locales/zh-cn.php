@@ -21,7 +21,7 @@ if (basename ($_SERVER['PHP_SELF']) === basename (__FILE__)) {
 $locale = array (
 	'comment-form'		=> '在这里写点什么吧…',
 	'reply-form'		=> '请在这里输入你要回复的内容…',
-	'comment-formatting'	=> '查看支持的格式化',
+	'comment-formatting'	=> '查看支持的格式',
 	'accepted-format'	=> '接受 %s',
 	'accepted-html'		=> '&lt;b&gt;，&lt;u&gt;，&lt;i&gt;，&lt;s&gt;，&lt;big&gt;，&lt;em&gt;，&lt;small&gt;，&lt;strong&gt;，&lt;sub&gt;，&lt;sup&gt;，&lt;pre&gt;，&lt;ul&gt;，&lt;ol&gt;，&lt;li&gt;，&lt;blockquote&gt;，&lt;code&gt;转义 HTML，网址自动成为链接，[img]URL 在这里[/img] 将显示外部图像。',
 	'accepted-markdown'	=> '**胆大**，_强调_，*斜体*，~~删除线~~，`突出`，```code```转义 HTML。 HTML 和 Markdown可以在您的评论中一起使用。',
