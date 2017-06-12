@@ -737,7 +737,7 @@ h2 .h2-icon{
 .comments{
 	margin: 0 auto;
 	min-height: 4rem;
-	padding: 0;
+	padding: 2rem 0 0 0;
 	background: url('http://anyway-web.b0.upaiyun.com/anyway.fm/loading.gif') no-repeat center center;
 }
 .box{

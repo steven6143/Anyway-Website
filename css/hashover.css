@@ -1,6 +1,6 @@
 #hashover{
 	text-align: left;
-	padding-top: 2rem;
+	background: #f5f5f5;
 }
 
 #hashover-requiredFields,
@@ -499,12 +499,8 @@ code.hashover-inline {
 	color: #FF0000;
 }
 .hashover-message.hashover-message-error > * {
-	color: #ff0;
-	background-color: rgba(255, 225, 225, 0.25);
-}
-
-.hashover-formatting-message > * {
-	margin-top: -1px;
+	color: #fff;
+	background-color: #f60c3e;
 }
 
 .hashover-formatting-table {
