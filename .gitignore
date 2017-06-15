@@ -25,3 +25,4 @@ build/
 build/*.*
 hashover/pages/*
 hashover/scripts/settings.php
+build/main.min.css
