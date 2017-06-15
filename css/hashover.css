@@ -58,9 +58,9 @@
 }
 .hashover-reply,
 .hashover-reply-form {
-	background: linear-gradient(to right, rgba(0, 0, 0, .05) 0%,rgba(0, 0, 0, .02) 100%);
+	background: linear-gradient(to right, rgba(0, 0, 0, .03) 0%,rgba(0, 0, 0, .03) 100%);
 	padding: 1rem;
-	margin: 1rem 0 0 3rem;
+	margin: 1rem 0 0 2.5rem;
 }
 
 .hashover-comment-name {
@@ -347,7 +347,7 @@ input::-moz-focus-inner {
 .hashover-comment .hashover-avatar {
 	display: inline-block;
 	height: auto;
-	margin-right: 1rem;
+	margin-right: .5rem;
 	background: #f5f5f5;
 }
 .hashover-avatar-image *,
@@ -375,7 +375,7 @@ input::-moz-focus-inner {
 /*~Comment content*/
 .hashover-comment > .hashover-balloon {
 	padding: 0;
-	margin: .2rem 0 0 3rem;
+	margin: .2rem 0 0 2.5rem;
 }
 
 .hashover-comment .hashover-content img {
