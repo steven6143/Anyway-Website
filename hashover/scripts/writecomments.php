@@ -913,6 +913,10 @@ class WriteComments extends PostData
 				exit("Blocked.");
 			}
 			
+			if (mb_strlen($_POST["name"]) >= 30) {
+				exit("Username too long.");
+			}
+			
 			// Test for necessary comment data
 			$this->setupCommentData ();
 
