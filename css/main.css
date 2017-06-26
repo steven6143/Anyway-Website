@@ -780,8 +780,8 @@ h2 .h2-icon{
 	text-decoration: none;
 	background: #f60c3e;
 	color: #fff;
-	border-bottom: 0.125rem solid #f60c3e;
-	border-top: 0.125rem solid #f60c3e;	
+	border-bottom: 1px solid #f60c3e;
+	border-top: 1px solid #f60c3e;	
 }
 .next-entry a:hover span{
 	color: #fff;
