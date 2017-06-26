@@ -1436,11 +1436,13 @@ HashOver.init = function ()
 		if (validateComment (false, form, type, permalink, isReply, isEdit) === false) {
 			return false;
 		}
+		
+		
 
 		// Disable button
 		setTimeout (function () {
 			button.disabled = true;
-		}, 500);
+		}, 200);
 
 <?php if ($hashover->setup->usesAJAX !== false): ?>
 		var httpRequest = new XMLHttpRequest ();
@@ -2758,6 +2760,7 @@ HashOver.init = function ()
 	// Onclick
 	postButton.onclick = function ()
 	{
+		this.parentNode.className += " loading";
 		return postComment (sortDiv, HashOverForm, postButton, AJAXPost);
 	};
 
