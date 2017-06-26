@@ -248,6 +248,8 @@ class WriteComments extends PostData
 
 	protected function checkForSpam ()
 	{
+		
+	
 		// Check trap fields
 		foreach ($this->trapFields as $name) {
 			if (!empty ($_POST[$name])) {
@@ -256,6 +258,8 @@ class WriteComments extends PostData
 				return false;
 			}
 		}
+		
+		
 
 		// Check user's IP address against local blocklist
 		if ($this->spamCheck->checkList () === true) {
@@ -279,6 +283,8 @@ class WriteComments extends PostData
 				return false;
 			}
 		}
+		
+		
 
 		return true;
 	}
@@ -287,6 +293,7 @@ class WriteComments extends PostData
 	public function login ($kickback = true)
 	{
 		try {
+		
 			// Log the user in
 			$this->login->setLogin ();
 
@@ -900,6 +907,12 @@ class WriteComments extends PostData
 	public function postComment ()
 	{
 		try {
+			
+			//我的个人 Spam Check
+			if ($_POST["name"] == "李明") {
+				exit("Blocked.");
+			}
+			
 			// Test for necessary comment data
 			$this->setupCommentData ();
 
@@ -916,6 +929,8 @@ class WriteComments extends PostData
 
 			// Check if comment is SPAM
 			$this->checkForSpam ();
+			
+			
 
 			// Check if comment thread exists
 			$this->formatData->checkThread ();
