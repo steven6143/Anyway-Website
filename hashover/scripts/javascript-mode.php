@@ -1774,6 +1774,7 @@ HashOver.init = function ()
 		// Onclick
 		postReply.onclick = function ()
 		{
+			this.parentNode.className += " loading";
 			return postComment (destination, form, this, AJAXPost, 'reply', permalink, link.onclick, true, false);
 		};
 
