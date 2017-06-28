@@ -60,7 +60,7 @@ $elements['displayheader']=<<<eot
 					</div>
 					<div class="tagline" id="t"><i>Anyway.FM</i> 是一档<mark>播客</mark>节目，<ins>1</ins><br />
 						<del>主播是 JJ Ying 和 Leon Gao</del><ins>0.6</ins>我们<em>，</em><ins>0.4</ins><del>就喜欢扯谈设计</del><ins>0.4</ins><del>专注嘴炮 30 年</del><ins>0.4</ins><del>想赚一些奶粉钱<ins>0.4</ins></del><ins>0.6</ins>想让你的<mark>听觉</mark>更懂<mark>视觉</mark>。
-					</div>		<a name="title"></a>
+					</div>
 					<div class="nav">
 						<a class="mobile-hide" href="https://itunes.apple.com/cn/podcast/anyway.fm-she-ji-za-tan/id1053786200" onclick="_hmt.push(['_trackEvent', 'subscribe', 'iTunes', 'from-header-nav'])" data-balloon="在 iOS 播客 App / macOS iTunes 上收听"><img src="http://anyway-web.b0.upaiyun.com/images/itunes.svg" class="nav-icon"/> Apple 播客</a>
 						<span class="mobile-hide"></span>
@@ -69,7 +69,7 @@ $elements['displayheader']=<<<eot
 						<a href="http://anyway.fm/subscribe.php#title" onclick="_hmt.push(['_trackEvent', 'subscribe', 'More', 'from-header-nav'])"  data-balloon="查阅更多订阅平台"><img src="http://anyway-web.b0.upaiyun.com/images/rss.svg" class="nav-icon"/> 更多订阅方式</a>
 						<span></span>
 						<a href="http://anyway.fm/post/" onclick="_hmt.push(['_trackEvent', 'subscribe', 'Anyway.Post', 'from-header-nav'])"  data-balloon="推介招聘以及其他设计链接分享的双周邮件组"><img src="http://anyway-web.b0.upaiyun.com/images/mail.svg" class="nav-icon"/> 安妮薇邮报</a>
-					</div>
+					</div><a name="title"></a>
 				</div>
 			</header>  <!--End of 'Header'-->
 eot;
@@ -368,13 +368,25 @@ $elements['viewentry']=<<<eot
 			{entrycontent}
 			<div class="item-btns">
 				{playaudio}
-			</div>
+			</div>			
 		</div>
 
 	</div>
 </div>
 
+	<!--<script type="text/javascript">
+	$('[data-source]').click(function () {
+	    var id = $(this).attr('data-source');
+	    var src = '//music.163.com/outchain/player?type=3&id='+id+'&auto=1&height=66';
+	    var iframe ='<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=520 height=86 src="'+src+'"></iframe>';
+	    $(".audio-wrapper").html(iframe);
+	    $(".audio-wrapper").addClass("playing");	    
+	    return false;
+	});
+</script>-->
+
 {previous}
+
 
 <div class="section comments-section">
 <div class="inner-section">
