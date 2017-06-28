@@ -521,6 +521,16 @@ h2 .h2-icon{
 .item-btn:hover img{
 	transform: scale(1.2);
 }
+/*~Audio Player*/
+.audio-wrapper{
+	text-align: center;
+	opacity: 0;
+	transition: opacity .6s ease-in-out .2s;
+}
+.audio-wrapper.playing{
+	opacity: 1;
+}
+
 /*~Switch Target Button*/
 .switch-target{
 	font-size: .5em;	

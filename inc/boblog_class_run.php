@@ -646,12 +646,14 @@ class getblogs extends boblog {
 		
 		//Play Audio
 		if ($entry['comefrom']) {
-			$playaudio="<a onclick=\"_hmt.push(['_trackEvent', 'audio', 'play', 'Nº {$entry['originsrc']}'])\" target=\"blank\" class=\"item-btn\" href=\"{$entry['comefrom']}\" title=\"立即播放第 {$entry['originsrc']} 节目\"><img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
+			$playaudio="<a onclick=\"_hmt.push(['_trackEvent', 'audio', 'play', 'Nº {$entry['originsrc']}'])\" class=\"item-btn\" href=\"{$entry['comefrom']}\" target=\"_blank\" title=\"立即播放第 {$entry['originsrc']} 节目\"><img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
 			$playaudioAMP="<a class=\"item-btn\" href=\"{$entry['comefrom']}\" title=\"立即播放第 {$entry['originsrc']} 节目\"><amp-img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
+			$playaudioNetease="<a onclick=\"_hmt.push(['_trackEvent', 'audio', 'play', 'Nº {$entry['originsrc']}'])\" class=\"item-btn\" href=\"#\" title=\"立即播放第 {$entry['originsrc']} 节目\" data-source=\"{$entry['comefrom']}\"><img src=\"http://anyway-web.b0.upaiyun.com/images/play.svg\"/> 立即收听</a>";
 		}
 		else {
 			$playaudio="";
 			$playaudioAMP="";
+			$playaudioNetease="";
 		}
 		
 		//Set page meta description
