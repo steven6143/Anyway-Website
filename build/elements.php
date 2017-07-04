@@ -173,15 +173,42 @@ $elements['displayfooter']=<<<eot
 
 <!-- Nav Bar -->
 <script type="text/javascript">
-$(function() {
-		if ($(window).scrollTop() > $('.header').height()-20) {
-		  	$('.mini-header').addClass('mini-show');
-		}
-		else {
-		  	$('.mini-header').removeClass('mini-show');
-		}
-	    setTimeout(arguments.callee, 40);
-});
+
+	var didScroll;
+	var lastScrollTop = 0;
+	var delta = 50;
+	var navbarHeight = $('.mini-header').outerHeight();
+	
+	$(window).scroll(function(event){
+	    didScroll = true;
+	});
+	
+	setInterval(function() {
+	    if (didScroll) {
+	        hasScrolled();
+	        didScroll = false;
+	    }
+	}, 175);
+	
+	function hasScrolled() {
+	    var st = $(this).scrollTop();
+	    
+	    if(Math.abs(lastScrollTop - st) <= delta)
+	        return;
+	    
+	    if ((st > lastScrollTop && st > navbarHeight) || st <= 20){
+	        $('.mini-header').removeClass('mini-show').addClass('mini-hide');
+	    } else {
+	        if(st + $(window).height() < $(document).height()) {
+	            $('.mini-header').removeClass('mini-hide').addClass('mini-show');
+	        }
+	    }
+	    if(st <= 20){
+	    	$('.mini-header').removeClass('mini-show').addClass('mini-hide');
+	    }
+	    
+	    lastScrollTop = st;
+	}   
 </script>
 
 <!-- Link Target Switch -->
@@ -372,7 +399,7 @@ $elements['viewentry']=<<<eot
 		</div>
 
 	</div>
-</div>
+
 
 	<!--<script type="text/javascript">
 	$('[data-source]').click(function () {
@@ -385,26 +412,28 @@ $elements['viewentry']=<<<eot
 	});
 </script>-->
 
-{previous}
+	{previous}
 
 
-<div class="section comments-section">
-<div class="inner-section">
-<div class="comments body-text">
-	<a name="topreply"></a>
-
-	<script type="text/javascript" src="hashover/hashover.js"></script>
-
+	<div class="section comments-section">
+		<div class="inner-section">
+			<div class="comments body-text">
+				<a name="topreply"></a>
+			
+				<script type="text/javascript" src="hashover/hashover.js"></script>
+			
+			</div>
+		</div>
 	</div>
-</div>
 </article>
 
 eot;
 
 $elements['comment']=<<<eot
+3211123
 eot;
 
-$elements['trackback']=<<<eot
+$elements['comment']=<<<eot
 
 eot;
 
@@ -515,10 +544,22 @@ $elements['subscribe-page']=<<<eot
 					<a href="http://anyway.fm/post/">安妮薇邮报</a>
 					<a href="mailto:hello@anyway.fm">电子邮件</a>
 				</div>
-
+			</div>
+			
+			
+		</div>
+	</div>
+	
+	<div class="section comments-section">
+		<div class="inner-section">
+			<div class="comments body-text">
+			
+				<script type="text/javascript" src="hashover/hashover.js"></script>
+			
 			</div>
 		</div>
 	</div>
+	
 </article>
 eot;
 

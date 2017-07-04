@@ -174,11 +174,14 @@ mark{
 	height: auto;
 	position: fixed;
 	z-index: 9999;
-	right: 0;
+	left: 0;
 	top: 0;
+	transform: translateY(-5rem);
 	padding: .5rem;
-	transition: all .5s ease-in 0s;
-	transform: translate(0,-100px);
+	transition: all .25s cubic-bezier(0, 0, .2, 1);
+}
+.mini-show{
+	transform: translateY(0);
 }
 .mini-header .mini-logo{
 	top: 0;
@@ -206,7 +209,7 @@ mark{
 	margin: .5rem 1rem;
 	color: #fff;
 	top: 1rem;
-	transition: all .15s ease-in 0s;
+	transition: all .15s ease-in 0;
 }
 .mini-header .nav a{
 	color: #fff;
@@ -222,10 +225,6 @@ mark{
 	opacity: 1;
 	color: #fff;
 	font-weight: 700;
-}
-.mini-show{
-	display: block;
-	transform: translate(0,0);	
 }
 /*~Search Bar*/
 .search-bar{
