@@ -21,6 +21,6 @@ Website - History
 Source
 *.psd
 node_modules/
-build/
+build
 hashover/pages/*
 hashover/scripts/settings.php
