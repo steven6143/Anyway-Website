@@ -796,15 +796,15 @@ class WriteComments extends PostData
 
 	protected function sendNotification ($from, $comment, $reply = '', $permalink, $email, $header)
 	{
-		$subject  = $this->setup->domain . ' - 新';
+		$subject  = 'Anyway.FM 官网 - 新';
 		$subject .= !empty ($reply) ? '回复' : '评论';
 
 		// Message body to original poster
-		$message  = '来自用户' . $from . "：\r\n\r\n";
-		$message .= $comment . "\r\n\r\n";
-		$message .= '原评论：' . "\r\n\r\n" . $reply . "\r\n\r\n" . '----' . "\r\n\r\n";
-		$message .= '原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
-//		$message .= ' 原帖：' . $this->setup->pageURL;
+		$message  = "# 来自 Anyway.FM 听众 " . $from . "：\r\n\r\n";
+		$message .= "「".$comment ."」"."\r\n\r\n\r\n\r\n";
+		$message .= '# 原评论：' . "\r\n\r\n" . "「".$reply ."」". "\r\n\r\n\r\n\r\n" . '----' . "\r\n\r\n";
+		$message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
+//		$message .= ' # 原帖：' . $this->setup->pageURL;
 
 		// Send e-mail
 		mail ($email, $subject, $message, $header);
@@ -829,7 +829,7 @@ class WriteComments extends PostData
 				$reply_body = html_entity_decode (strip_tags ($reply_comment['body']), ENT_COMPAT, 'UTF-8');
 				$reply_body = $this->indentedWordwrap ($reply_body);
 				$reply_name = !empty ($reply_comment['name']) ? $reply_comment['name'] : $this->setup->defaultName;
-				$webmaster_reply = '原评论来自' . $reply_name . '：' . "\r\n\r\n" . $reply_body . "\r\n\r\n";
+				$webmaster_reply = "# 原评论来自 " . $reply_name . '：' . "\r\n\r\n" ."「". $reply_body ."」". "\r\n\r\n";
 
 				if (!empty ($reply_comment['email']) and !empty ($reply_comment['encryption'])) {
 					$reply_email = $this->encryption->decrypt ($reply_comment['email'], $reply_comment['encryption']);
@@ -848,14 +848,14 @@ class WriteComments extends PostData
 						}
 
 						// Message body to original poster
-						$reply_message  = '来自用户' . $from_line . "：\r\n\r\n";
-						$reply_message .= $mail_comment . "\r\n\r\n";
-						$reply_message .= '原评论：' . "\r\n\r\n" . $reply_body . "\r\n\r\n" . '----' . "\r\n\r\n";
-						$reply_message .= '原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
-//						$reply_message .= '原帖：' . $this->setup->pageURL;
+						$reply_message  = '# 来自 Anyway.FM 听众 ' . $from_line . "：\r\n\r\n";
+						$reply_message .= '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
+						$reply_message .= '# 原评论：' . "\r\n\r\n" . $reply_body . "\r\n\r\n\r\n\r\n" . '----' . "\r\n\r\n";
+						$reply_message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
+//						$reply_message .= '# 原帖：' . $this->setup->pageURL;
 
 						// Send
-						mail ($reply_email, $this->setup->domain . ' - 新回复', $reply_message, $this->userHeaders);
+						mail ($reply_email, 'Anyway.FM 官网 - 新回复', $reply_message, $this->userHeaders);
 					}
 				}
 			}
@@ -867,14 +867,14 @@ class WriteComments extends PostData
 					$from_line .= ' <' . $this->email . '>';
 				}
 
-				$webmaster_message  = '来自用户' . $from_line . "：\r\n\r\n";
-				$webmaster_message .= $mail_comment . "\r\n\r\n";
+				$webmaster_message  = '# 来自 Anyway.FM 听众  ' . $from_line . "：\r\n\r\n";
+				$webmaster_message .= '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
 				$webmaster_message .= $webmaster_reply . '----' . "\r\n\r\n";
-				$webmaster_message .= '原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
-//				$webmaster_message .= '原帖：' . $this->setup->pageURL;
+				$webmaster_message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
 
 				// Send
-				mail ($this->setup->notificationEmail, '新评论', $webmaster_message, $this->headers);
+				mail ($this->setup->notificationEmail, 'Anyway.FM 官网 - 新评论', $webmaster_message, $this->headers);
+				mail("trigger@applet.ifttt.com","Anyway.FM 新评论",$mail_comment,"From:yingjunjiu@gmail.com");
 			}
 
 			// Set/update user login cookie
