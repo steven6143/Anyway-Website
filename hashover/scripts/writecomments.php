@@ -874,7 +874,6 @@ class WriteComments extends PostData
 
 				// Send
 				mail ($this->setup->notificationEmail, 'Anyway.FM 官网 - 新评论', $webmaster_message, $this->headers);
-				mail("trigger@applet.ifttt.com","Anyway.FM 新评论",$mail_comment,"From:yingjunjiu@gmail.com");
 			}
 
 			// Set/update user login cookie
