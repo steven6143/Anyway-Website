@@ -431,12 +431,6 @@ input::-moz-focus-inner {
 	vertical-align: middle;
 }
 
-.hashover-name-twitter:before {
-	content: "@";
-	color: #00268F;
-	cursor: default;
-}
-
 .hashover-comment .hashover-title {
 	display: inline-block;
 	vertical-align: middle;
@@ -459,9 +453,11 @@ input::-moz-focus-inner {
 	white-space: pre;
 	padding: 5px;
 	margin: 0px;
+	color: #333;
 	font-family: monospace;
 	font-size: 12px;
-	background-color: #EEEEEE;
+	border-left: 4px solid rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, .05);
 	overflow: auto;
 }
 
@@ -478,7 +474,7 @@ code.hashover-inline {
 }
 
 .hashover-comment blockquote {
-	border-left: 3px solid rgba(0, 0, 0, 0.3);
+	border-left: 3px solid rgba(0, 0, 0, .3);
 }
 /*~Comment footer*/
 .hashover-date,
@@ -486,11 +482,6 @@ code.hashover-inline {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: .6875rem;
-}
-.hashover-footer *,
-.hashover-form-footer * {
-	vertical-align: middle;
-	line-height: .5rem;
 }
 .hashover-date-permalink,
 .hashover-date-permalink:visited,
@@ -510,8 +501,18 @@ code.hashover-inline {
 .hashover-buttons a:hover{
 	color: #333;
 }
-/*~Formatting*/
-.hashover-formatting,
+/*~Subscribe & ~Formatting*/
+#hashover-subscribe{
+	vertical-align: top;	
+}
+
+.hashover-formatting{
+	color: #333;
+	height: auto;
+	display: inline-block;
+	font-weight: 700;
+	margin: 0 0 0 1em;
+}
 .hashover-formatting:hover{
 	color: #333;
 }
@@ -544,8 +545,9 @@ code.hashover-inline {
 	display: table-cell;
 	width: 50%;
 	padding: 0 1rem 0 1rem;
-	border-right: 1px solid #fff;
+	border-right: 1px dotted rgba(255, 255, 255, .5);
 	vertical-align: top;
+	line-height: 1.5;
 	color: #fff;
 }
 
@@ -564,7 +566,6 @@ code.hashover-inline {
 	border: 1px dashed #333;
 	text-align: center;
 	opacity: 1.0;
-	filter: alpha(opacity=100);
 }
 
 .hashover-more-link,
@@ -573,27 +574,9 @@ a.hashover-more-link {
 }
 
 .hashover-more-link:hover {
-	background-color: rgba(230, 237, 250, 1.0);
+	background-color: rgba(230, 237, 250, 1);
 }
 
-.hashover-loading:before {
-	content: " " ! important;
-	display: inline-block;
-	min-width: 16px;
-	min-height: 16px;
-	vertical-align: middle;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	background-image: url('../../images/loading.gif');
-
-	image-rendering: -o-crisp-edges;
-	image-rendering: -webkit-optimize-contrast;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: crisp-edges;
-	image-rendering: pixelated;
-	-ms-interpolation-mode: nearest-neighbor;
-}
 
 .hashover-embedded-image-wrapper.hashover-loading img {
 	filter: grayscale(1.0);
@@ -617,7 +600,7 @@ a.hashover-more-link {
 }
 
 .hashover-more-link.hashover-hide-more-link {
-	opacity: 0.0;
+	opacity: 0;
 }
 
 .hashover-more-link,
@@ -625,7 +608,7 @@ a.hashover-more-link {
 .hashover-message.hashover-message-animated > *,
 .hashover-formatting-message.hashover-message-animated,
 .hashover-formatting-message.hashover-message-animated > * {
-	transition: all 150ms cubic-bezier(0.7,0,0.3,1);
+	transition: all .15s cubic-bezier(0.7,0,0.3,1);
 }
 
 #hashover-end-links {
@@ -640,7 +623,7 @@ a.hashover-more-link {
 	.hashover-formatting-table > * {
 		display: table-row;
 		width: 100%;
-		border-bottom: 1px solid #AAAAAA;
+		border-bottom: 1px solid #aaa;
 	}
 
 	.hashover-formatting-table p {
