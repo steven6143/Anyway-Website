@@ -20,7 +20,7 @@
 // Display source code
 if (basename ($_SERVER['PHP_SELF']) === basename (__FILE__)) {
 	if (isset ($_GET['source'])) {
-		header ('Content-type: text/plain; charset=UTF-8');
+		header ('Content-type: text/html; charset=UTF-8');
 		exit (file_get_contents (basename (__FILE__)));
 	} else {
 		exit ('<b>HashOver</b>: This is a class file.');
@@ -852,7 +852,6 @@ class WriteComments extends PostData
 						$reply_message .= '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
 						$reply_message .= '# 原评论：' . "\r\n\r\n" . $reply_body . "\r\n\r\n\r\n\r\n" . '----' . "\r\n\r\n";
 						$reply_message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
-//						$reply_message .= '# 原帖：' . $this->setup->pageURL;
 
 						// Send
 						mail ($reply_email, 'Anyway.FM 官网 - 新回复', $reply_message, $this->userHeaders);
@@ -867,8 +866,8 @@ class WriteComments extends PostData
 					$from_line .= ' <' . $this->email . '>';
 				}
 
-				$webmaster_message  = '# 来自 Anyway.FM 听众  ' . $from_line . "：\r\n\r\n";
-				$webmaster_message .= '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
+				$webmaster_message  = '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
+				$webmaster_message .= '# 来自 Anyway.FM 听众  ' . $from_line . "：\r\n\r\n";
 				$webmaster_message .= $webmaster_reply . '----' . "\r\n\r\n";
 				$webmaster_message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
 

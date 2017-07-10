@@ -630,8 +630,8 @@ class HTMLOutput
 					'class' => 'hashover-formatting-table',
 
 					'children' => array (
-						$this->acceptedFormatCell ('HTML', 'accepted-html'),
-						$this->acceptedFormatCell ('Markdown', 'accepted-markdown')
+						$this->acceptedFormatCell ('关于头像', 'accepted-html'),
+						$this->acceptedFormatCell ('支持 Markdown', 'accepted-markdown')
 					)
 				))
 			)
