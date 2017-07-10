@@ -102,7 +102,7 @@ class HashOver
 				$reply_count = sprintf ($reply_locale, $total_count - 1);
 
 				// And append reply count
-				$comment_count .= ' (' . $reply_count . ')';
+				$comment_count  =  $reply_count;
 			}
 
 			// And return count with separate reply count
