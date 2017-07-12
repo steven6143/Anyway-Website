@@ -26,6 +26,7 @@ if (basename ($_SERVER['PHP_SELF']) === basename (__FILE__)) {
 	}
 }
 
+
 class WriteComments extends PostData
 {
 	protected $setup;
@@ -49,6 +50,7 @@ class WriteComments extends PostData
 	protected $website = '';
 	protected $commentData = array ();
 	protected $urls = array ();
+	
 	
 
 	// Fake inputs used as spam trap fields
@@ -799,11 +801,8 @@ class WriteComments extends PostData
 		$subject  = 'Anyway.FM 官网 - 新';
 		$subject .= !empty ($reply) ? '回复' : '评论';
 
-		// Message body to original poster
-		$message  = "# 来自 Anyway.FM 听众 " . $from . "：\r\n\r\n";
-		$message .= "「".$comment ."」"."\r\n\r\n\r\n\r\n";
-		$message .= '# 原评论：' . "\r\n\r\n" . "「".$reply ."」". "\r\n\r\n\r\n\r\n" . '----' . "\r\n\r\n";
-		$message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
+		
+		$message = '<body style="margin: 0; padding: 0;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="88%" style="border-collapse: collapse;"><tr><td style="padding:20px; font-size:18px;line-height:30px; color:#555;font-weight:300;text-align:left;">'.$comment.'</td></tr><tr><td style="padding: 20px; padding-top: 0;font-size:12px;text-align:right;color:#555;font-weight:700">—来自 '.$from.'</td></tr><tr><td style="padding: 20px; font-size:14px;color:#555;font-weight:300;">原评论：「<strong>'. $reply.'</strong>」</td></tr><tr><td style="margin:0;padding: 14px;padding-bottom:40px;font-size:14px;text-align:center;"><a href="'. $this->setup->pageURL . '#' . $permalink . '" style="margin: 0 auto;display:inline-block;padding:5px;padding-left:15px;padding-right:15px;background:#f60c3e;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.08em;">查看原帖</a></td></tr><tr><td style="margin:0;padding: 14px;font-size:12px;color:#aaa;border-top:1px dotted #ddd;text-align:center;">这是一封来自 Anyway.FM 官网的通知邮件</td></tr></table></body>';
 
 
 		// Send e-mail
@@ -823,16 +822,6 @@ class WriteComments extends PostData
 			$mail_comment = $this->indentedWordwrap ($mail_comment);
 			$webmaster_reply = '';
 			
-			$htmlBody1='<body style="margin: 0; padding: 0; text-align:center">
-			　　<table align="center" border="0" cellpadding="0" cellspacing="0" width="88%" style="border-collapse: collapse;">
-			　　　<tr><td style="padding: 30px; font-size:18px;color:#555;font-weight:300;"><span style="font-size:80px;text-align:left;color:#f5f5f5;font-weight:900;font-family:times,serif;">“</span>';
-			$htmlBody2='</td></tr>
-			　　　<tr><td style="padding: 30px; padding-top: 0;font-size:12px;text-align:right;color:#555;font-weight:700">—来自听众 ';
-			$htmlBody3='<tr><td style="margin:0;padding: 14px;padding-bottom:40px;font-size:14px;text-align:center;"><a href="';
-			$htmlBody4='" style="margin: 0 auto;display:inline-block;padding:5px;padding-left:15px;padding-right:15px;background:#f60c3e;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.08em;">查看原帖</a></td></tr>';
-			$htmlBody5='<tr><td style="margin:0;padding: 14px;font-size:12px;color:#aaa;border-top:1px dotted #ddd;text-align:center;">这是一封来自 Anyway.FM 的评论通知邮件</td></tr>
-			　　</table>
-			　</body>';
 
 			// Notify commenter of reply
 			if (!empty ($this->replyTo)) {
@@ -840,7 +829,7 @@ class WriteComments extends PostData
 				$reply_body = html_entity_decode (strip_tags ($reply_comment['body']), ENT_COMPAT, 'UTF-8');
 				$reply_body = $this->indentedWordwrap ($reply_body);
 				$reply_name = !empty ($reply_comment['name']) ? $reply_comment['name'] : $this->setup->defaultName;
-				$webmaster_reply = '<tr><td style="padding: 20px; font-size:14px;color:#555;font-weight:300;">原评论来自 ' . $reply_name . '：「'. $reply_body .'」</td></tr>';
+				$webmaster_reply = '<tr><td style="padding: 20px; font-size:14px;color:#555;font-weight:300;">原评论来自 <strong>' . $reply_name . '</strong>：「<strong>'. $reply_body .'</strong>」</td></tr>';
 
 				if (!empty ($reply_comment['email']) and !empty ($reply_comment['encryption'])) {
 					$reply_email = $this->encryption->decrypt ($reply_comment['email'], $reply_comment['encryption']);
@@ -859,10 +848,12 @@ class WriteComments extends PostData
 						}
 
 						// Message body to original poster
-						$reply_message  = '# 来自 Anyway.FM 听众 ' . $from_line . "：\r\n\r\n";
-						$reply_message .= '「'.$mail_comment .'」'. "\r\n\r\n\r\n\r\n";
-						$reply_message .= '# 原评论：' . "\r\n\r\n" . $reply_body . "\r\n\r\n\r\n\r\n" . '----' . "\r\n\r\n";
-						$reply_message .= '# 原帖：' . $this->setup->pageURL . '#' . $permalink . "\r\n\r\n";
+						
+						$reply_message = '<body style="margin: 0; padding: 0;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="88%" style="border-collapse: collapse;">
+						
+						<tr><td style="padding:20px;padding-bottom:0;font-size:14px;line-height:20px; color:#555;font-weight:700;text-align:left;">亲，你在 Anyway.FM 官网上的评论收到了一条新回复：</td></tr>
+						
+						<tr><td style="padding:20px; font-size:18px;line-height:30px; color:#555;font-weight:300;text-align:left;">'.$mail_comment.'</td></tr><tr><td style="padding: 20px; padding-top: 0;font-size:12px;text-align:right;color:#555;font-weight:700">—来自 '.$from_line.'</td></tr><tr><td style="padding: 20px; font-size:14px;color:#555;font-weight:300;">你的原评论：「<strong>'. $reply_body .'</strong>」</td></tr><tr><td style="margin:0;padding: 14px;padding-bottom:40px;font-size:14px;text-align:center;"><a href="'. $this->setup->pageURL . '#' . $permalink . '" style="margin: 0 auto;display:inline-block;padding:5px;padding-left:15px;padding-right:15px;background:#f60c3e;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.08em;">查看原帖</a></td></tr><tr><td style="margin:0;padding: 14px;font-size:12px;color:#aaa;border-top:1px dotted #ddd;text-align:center;">这是一封来自 Anyway.FM 官网的通知邮件</td></tr></table></body>';
 
 						// Send
 						mail ($reply_email, 'Anyway.FM 官网 - 新回复', $reply_message, $this->userHeaders);
@@ -875,15 +866,10 @@ class WriteComments extends PostData
 				// Add user's e-mail address to "From" line
 				if (!empty ($this->email)) {
 					$from_line .='<br /><span style="color:#bbb;font-weight:300;">'. $this->email.'</span>';
-				}
-				
-				
-				
+				}	
 
-				$webmaster_message  = $htmlBody1.$mail_comment.$htmlBody2.$from_line.'</td></tr>';
-				$webmaster_message .= $webmaster_reply;
-				$webmaster_message .= $htmlBody3. $this->setup->pageURL . '#' . $permalink . $htmlBody4;
-				$webmaster_message .=$htmlBody5;
+				$webmaster_message  = '<body style="margin: 0; padding: 0;"><table align="center" border="0" cellpadding="0" cellspacing="0" width="88%" style="border-collapse: collapse;"><tr><td style="padding:20px; font-size:18px;line-height:30px; color:#555;font-weight:300;text-align:left;">'.$mail_comment.'</td></tr><tr><td style="padding: 20px; padding-top: 0;font-size:12px;text-align:right;color:#555;font-weight:700">—来自 '.$from_line.'</td></tr>'.$webmaster_reply.'<tr><td style="margin:0;padding: 14px;padding-bottom:40px;font-size:14px;text-align:center;"><a href="'. $this->setup->pageURL . '#' . $permalink . '" style="margin: 0 auto;display:inline-block;padding:5px;padding-left:15px;padding-right:15px;background:#f60c3e;color:#fff;font-weight:700;text-decoration:none;letter-spacing:.08em;">查看原帖</a></td></tr><tr><td style="margin:0;padding: 14px;font-size:12px;color:#aaa;border-top:1px dotted #ddd;text-align:center;">这是一封来自 Anyway.FM 官网的通知邮件</td></tr></table></body>';
+
 
 				// Send
 				mail ($this->setup->notificationEmail, 'Anyway.FM 官网 - 新评论', $webmaster_message, $this->headers);
