@@ -149,6 +149,8 @@
 	outline: -webkit-focus-ring-color none;
 	border: 1px solid #fff;
 	transition: all .12s ease-in-out;
+	-webkit-appearance : none;
+	border-radius: 0;
 }
 
 #hashover form textarea:hover,
@@ -263,8 +265,6 @@
 .hashover-edit-delete:hover {
 	background-color: #FF6666;
 }
-
-
 .hashover-submit:hover {
 	cursor: pointer;
 }
@@ -291,7 +291,6 @@
 	display: inline-block;
 	background-color: rgba(200, 200, 200, 0.25);
 }
-
 .hashover-comment-label {
 	width: 100%;
 	display: block;
@@ -625,8 +624,18 @@ a.hashover-more-link {
 		width: 100%;
 		border-bottom: 1px solid #aaa;
 	}
-
-	.hashover-formatting-table p {
-		margin-bottom: 12px;
+	.hashover-input-cell{
+		width: 100%;
+		display: block;
+	}
+	.hashover-input-cell > *{
+		margin: 1rem 0 0;
+	}
+	#hashover .hashover-formatting-table p{
+		padding: 6px 0 16px;
+		margin: 0;
+	}
+	#hashover .hashover-formatting-table .hashover-title{
+		padding: 0;
 	}
 }
