@@ -17,13 +17,13 @@ gulp.task('default', function() {
 
 	gulp.src('template/anyway/elements.php')
 		.pipe(plugins.batchReplace(cdnUrl))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('builds'));
 
 	gulp.src('css/*.css')
 		.pipe(plugins.cleanCss({compatibility: 'ie8'}))
 		.pipe(plugins.rename({
 		      suffix: '.min'
 		    }))
-		.pipe(gulp.dest('build'));     
+		.pipe(gulp.dest('builds'));     
 });
 
