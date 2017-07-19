@@ -25,3 +25,9 @@ builds
 hashover/pages/*
 hashover/scripts/settings.php
 mail.php
+font/calluna-sans-regular.woff2
+font/calluna-sans-regular.eot
+font/calluna-sans-bold.eot
+font/calluna-sans-bold.woff
+font/calluna-sans-bold.woff2
+font/calluna-sans-regular.woff
